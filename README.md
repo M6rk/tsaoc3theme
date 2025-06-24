@@ -27,5 +27,5 @@ Primary Colours
 
 Secondary Colours
 - Red - [ #CC0000 ]
-- Yellow -[  #FFD912 ]
+- Yellow - [  #FFD912 ]
 - Blue - [ #005AAA ]
