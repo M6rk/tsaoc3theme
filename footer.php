@@ -5,11 +5,11 @@
             <div class="footer-column">
                 <h3>ABOUT US</h3>
                 <ul>
-                    <li><a href="#">Our Mission</a></li>
-                    <li><a href="#">Our History</a></li>
-                    <li><a href="#">Leadership Team</a></li>
-                    <li><a href="#">Annual Reports</a></li>
-                    <li><a href="#">News & Updates</a></li>
+                    <li><a href="#">Who We Are</a></li>
+                    <li><a href="#">Mission, Vision & Values</a></li>
+                    <li><a href="#">4 Guiding Principles</a></li>
+                    <li><a href="#">5 Areas of Focus</a></li>
+                    <li><a href="#">News & Press Releases</a></li>
                 </ul>
             </div>
 
@@ -17,11 +17,10 @@
             <div class="footer-column">
                 <h3>SERVICES</h3>
                 <ul>
-                    <li><a href="#">Education Programs</a></li>
-                    <li><a href="#">Community Outreach</a></li>
-                    <li><a href="#">Resources</a></li>
-                    <li><a href="#">Support Groups</a></li>
-                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Need Help?</a></li>
+                    <li><a href="#">Emergency Disaster Services</a></li>
+                    <li><a href="#">Westbank Thrift Store</a></li>
+                    <li><a href="#">Rutland Thrift Store</a></li>
                 </ul>
             </div>
 
@@ -29,11 +28,11 @@
             <div class="footer-column">
                 <h3>WAYS YOU CAN HELP</h3>
                 <ul>
+                    <li><a href="#">Volunteer Opportunities</a></li>
                     <li><a href="#">Make a Donation</a></li>
-                    <li><a href="#">Volunteer</a></li>
-                    <li><a href="#">Fundraise</a></li>
-                    <li><a href="#">Spread Awareness</a></li>
-                    <li><a href="#">Corporate Partnership</a></li>
+                    <li><a href="#">Christmas Campaign</a></li>
+                    <li><a href="#">Community Mission Partners</a></li>
+                    <li><a href="#">Make a Financial Donation</a></li>
                 </ul>
             </div>
 
@@ -41,16 +40,23 @@
             <div class="footer-column">
                 <h3>CONTACT US</h3>
                 <div class="contact-info">
-                    <p><strong>TSA of Orange County</strong></p>
-                    <p>123 Main Street<br>
-                    Irvine, CA 92602</p>
-                    <p>Phone: (714) 555-0123<br>
-                    Email: info@tsaoc.org</p>
+                    <p><strong>Okanagan Central Community Church & Ministries</strong></p>
+                    <p>Kelowna</p>
+                    <p>1470 Sutherland Ave<br>
+                    Kelowna, BC<br>
+                    V1Y 5Y5</p>
+                    <p>Phone: (250) 860-2329</p>
+                    <!-- <hr class="footer-line">
+                    <p>West Kelowna</p>
+                    <p>3531 Old Okanagan Hwy #101<br>
+                    Westbank, BC<br>
+                    V4T 3L7</p>
+                    <p>Phone: (250) 768-1850</p> -->
                 </div>
             </div>
         </div>
 
-        <!-- Social Icons Section -->
+        <!-- Social Icons -->
         <div class="footer-social">
             <a href="#" class="footer-social-link" aria-label="Facebook">
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
@@ -76,7 +82,7 @@
     </div>
 
     <div class="footer-bottom">
-        <p>&copy; <?php echo date('Y'); ?> TSA of Orange County. All rights reserved.</p>
+        <p>&copy; <?php echo date('Y'); ?> The Salvation Army. All rights reserved.</p>
     </div>
 </footer>
 

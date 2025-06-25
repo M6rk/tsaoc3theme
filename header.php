@@ -51,32 +51,29 @@
   </div>
 </div>
 <hr>
-<nav>
-    <?php
-      wp_nav_menu(['theme_location' => 'primary']);
-    ?>
-    <a href="#" class="donate-button">Donate</a>
-  </nav>
+<nav style="display: flex; align-items: center; justify-content: center; padding: 1rem; background-color: #fff; min-height: 60px;">
+    <div style="display: flex; align-items: center; justify-content: center; flex: 1;">
+        <?php
+          wp_nav_menu(['theme_location' => 'primary']);
+        ?>
+    </div>
+    <a href="#" class="donate-button" style="display: flex; align-items: center;">Donate</a>
+</nav>
   <hr>
 </header>
-
 <script>
+// Language selection logic
 document.addEventListener('DOMContentLoaded', function() {
     const langButtons = document.querySelectorAll('.lang-btn');
     
     langButtons.forEach(button => {
         button.addEventListener('click', function(e) {
             e.preventDefault();
-            
-            // Remove active class from all buttons
             langButtons.forEach(btn => btn.classList.remove('active'));
-            
-            // Add active class to clicked button
             this.classList.add('active');
-            
-            // Optional: Store language preference in localStorage
-            const selectedLang = this.getAttribute('data-lang');
-            localStorage.setItem('selectedLanguage', selectedLang);
+            // TODO: Language preference logic
+            // const selectedLang = this.getAttribute('data-lang');
+            // localStorage.setItem('selectedLanguage', selectedLang);
         });
     });
 });
