@@ -1,6 +1,7 @@
 # TSA OC3 WordPress Theme & General Site
 TODO/TOASK
 - [ ] Finish Header
+- [ ] Make footer WP dynamic
 - [ ] i18n or seperate translation tool?
 - [ ] Event plugin? 
 - [ ] Google Maps plugin for better address/location visualizaiton
