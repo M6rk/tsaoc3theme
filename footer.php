@@ -66,7 +66,7 @@
     </div>
 
     <div class="footer-bottom">
-        <p>&copy; <?php echo date('Y'); ?> The Salvation Army. All rights reserved.</p>
+        <p>&copy; <?php echo date('Y'); ?>  The Salvation Army - Okanagan Central. All rights reserved.</p>
     </div>
 </footer>
 
