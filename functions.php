@@ -7,7 +7,7 @@ function mytheme_setup() {
   add_theme_support('wp-block-styles');
   add_theme_support('responsive-embeds');
   
-  // Register navigation menu
+// Register navigation menu
   register_nav_menus(array(
     'primary' => 'Primary Menu',
   ));
@@ -179,3 +179,38 @@ function get_social_platforms() {
         )
     );
 }
+//Search Functionality
+function mytheme_search_pages_only($query) {
+    if (!is_admin() && $query->is_main_query() && is_search()) {
+        $query->set('post_type', array('page'));
+        $query->set('post_status', 'publish');
+    }
+}
+add_action('pre_get_posts', 'mytheme_search_pages_only');
+
+// Highlight search terms in results
+function mytheme_highlight_search_terms($text) {
+    if (is_search() && !is_admin()) {
+        $search_terms = get_search_query();
+        if (!empty($search_terms)) {
+            $search_terms = explode(' ', $search_terms);
+            foreach ($search_terms as $term) {
+                if (strlen($term) > 2) {
+                    $text = preg_replace('/(' . preg_quote($term, '/') . ')/i', '<mark style="background-color: #ffff00; padding: 0 2px;">$1</mark>', $text);
+                }
+            }
+        }
+    }
+    return $text;
+}
+add_filter('the_excerpt', 'mytheme_highlight_search_terms');
+add_filter('the_content', 'mytheme_highlight_search_terms');
+
+// Custom search excerpt length for pages
+function mytheme_search_excerpt_length($length) {
+    if (is_search()) {
+        return 40;
+    }
+    return $length;
+}
+add_filter('excerpt_length', 'mytheme_search_excerpt_length');

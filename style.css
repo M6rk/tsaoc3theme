@@ -8,24 +8,19 @@ Version: 1.0
    INITIAL SETTINGS & RESET
 ======================================== */
 
+/* Debugging Boxes* {
+    outline: 1px solid red !important;
+} */
 
-/* Reset all default margins and padding */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* Check for elements wider than viewport */
 
 body {
     margin: 0 !important;
     padding: 0 !important;
     font-family: Calibri, Arial, Helvetica, sans-serif;
-    min-height: 100vh; /* Add this */
-    display: flex; /* Add this */
-    flex-direction: column; /* Add this */
 }
 
-/* Apply font to all elements */
+/* Calibiri - baseline, Palatino - headings */
 * {
     font-family: Calibri, Arial, Helvetica, sans-serif;
 }
@@ -40,12 +35,6 @@ h6,
 .page-title {
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif !important;
 }
-
-/* Force remove WordPress admin bar spacing (unecessary just toggle admin bar in profile -> settings) */
-/* body.admin-bar {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
-} */
 
 html {
     margin: 0;
@@ -71,6 +60,8 @@ header {
     padding: 0.5rem 1rem;
     margin: 0;
     justify-content: space-between;
+    max-width: 100vw;
+    box-sizing: border-box;
 }
 
 .logo {
@@ -193,11 +184,13 @@ header {
 }
 
 .social-link:hover img {
-    filter: brightness(0) saturate(100%) invert(8%) sepia(96%) saturate(7444%) hue-rotate(3deg) brightness(90%) contrast(118%);
     transform: scale(1.1);
 }
 
-/* Navigation Menu Styles */
+/* ========================================
+   NAV-MENU STYLES (CLICK-TO-TOGGLE DROPDOWN)
+======================================== */
+
 .nav-menu-container {
     display: flex;
     justify-content: flex-end;
@@ -223,18 +216,28 @@ nav ul {
     align-items: center;
 }
 
+nav ul li {
+    position: relative;
+}
+
+/* Regular nav link styling */
 nav ul li a {
     text-decoration: none;
-    color: #CC0000;
+    color: #CC0000; 
     font-weight: 900;
     font-size: 1.3vw;
     padding: 0.5rem 1rem;
-    transition: all 0.2s ease;
-
+    transition: all 0.4s ease;
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    color: #aa0000;
+    font-size:1.32vw
+}
+
+/* Hide any sub-menus completely */
+nav ul li ul {
+    display: none !important;
 }
 
 .donate-button {
@@ -287,8 +290,6 @@ footer {
     color: #B10C0C;
     font-size: 20px;
     font-weight: 700;
-    margin-bottom: 1rem;
-    letter-spacing: 0.5px;
 }
 
 .footer-column ul {
@@ -299,7 +300,15 @@ footer {
 }
 
 .footer-column ul li {
-    margin-bottom: 0.5rem;
+    color: #7F7F7F;
+    font-size: 18px;
+    margin-bottom: 0rem;
+    line-height: 1.4;
+}
+
+.footer-column ul li[style*="font-weight: 600"] {
+    color: #333;
+    font-weight: 600;
 }
 
 .footer-column ul li a {
@@ -311,21 +320,6 @@ footer {
 
 .footer-column ul li a:hover {
     color: #CC0000;
-}
-
-.contact-info {
-    width: 100%;
-}
-
-.contact-info p {
-    color: #7F7F7F;
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 0.5rem;
-}
-
-.contact-info strong {
-    color: #000000;
 }
 
 /* Footer Social Icons */
@@ -363,13 +357,13 @@ footer {
    MAIN CONTENT STYLES
 ======================================== */
 
+/*Attempting to pad the baked in wp classes results in overflow*/
+
 .main-content {
-    max-width: 100%;
     margin: 0;
-    padding: 0;
     min-height: 50vh;
     width: 100%;
-    flex: 1; /* Add this - makes main content grow to fill space */
+    flex: 1;
 }
 
 .content-container {
@@ -435,8 +429,6 @@ hr {
     border: none;
     margin: 0;
 }
-
-
 
 .footer-line {
     width: 40%;
@@ -710,4 +702,45 @@ figure.full-width-padded {
     width: 100vw !important;
     margin-left: calc(50% - 50vw) !important;
     margin-right: calc(50% - 50vw) !important;
+}
+
+/* ========================================
+   SEARCH STYLING
+======================================== */
+.search-results-container {
+    padding: 2rem 1rem;
+}
+
+.search-result-item:hover {
+    background-color: #f9f9f9;
+    padding-left: 1rem;
+    transition: all 0.3s ease;
+}
+
+.search-pagination {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.search-pagination .page-numbers {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin: 0 0.25rem;
+    color: #CC0000;
+    text-decoration: none;
+    border: 1px solid #CC0000;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.search-pagination .page-numbers:hover,
+.search-pagination .page-numbers.current {
+    background-color: #CC0000;
+    color: white;
+}
+
+mark {
+    background-color: #ffff00;
+    padding: 0 2px;
+    border-radius: 2px;
 }

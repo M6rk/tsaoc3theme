@@ -12,24 +12,23 @@
   <header>
     <div class="navbar">
       <div class="logo">
-        <img class="logo" src="<?php echo get_template_directory_uri(); ?>/assets/images/main_logo.png" alt="Logo">
+        <a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name')); ?>">
+          <img class="logo" src="<?php echo get_template_directory_uri(); ?>/assets/images/main_logo.png" alt="<?php echo esc_attr(get_bloginfo('name')); ?> Logo">
+        </a>
       </div>
-      <form class="search-form" method="get" action="<?php echo home_url('/'); ?>">
+      <form class="search-form" method="get" action="<?php echo esc_url(home_url('/')); ?>">
         <div class="search-container">
           <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
             stroke-width="2">
             <circle cx="11" cy="11" r="8"></circle>
             <path d="m21 21-4.35-4.35"></path>
           </svg>
-          <input class="search-bar" type="search" name="s" placeholder="Search..." />
+          <input class="search-bar" type="search" name="s" placeholder="<?php _e('Search...', 'tsaoc3theme'); ?>"
+            value="<?php echo get_search_query(); ?>" />
         </div>
       </form>
       <div class="navbar-right">
-        <div class="language-switcher">
-          <a href="#" class="lang-btn active" data-lang="en">EN</a>
-          <div class="lang-separator"></div>
-          <a href="#" class="lang-btn" data-lang="fr">FR</a>
-        </div>
+        
         <div class="social-icons">
           <?php
           $social_platforms = get_social_platforms();
@@ -55,7 +54,8 @@
       <a href="#" class="donate-button">Donate</a>
     </nav>
   </header>
-  <script>
+  <!-- Language Switching logic unecessary -->
+  <!-- <script>
     // Language selection logic
     document.addEventListener('DOMContentLoaded', function () {
       const langButtons = document.querySelectorAll('.lang-btn');
@@ -71,4 +71,4 @@
         });
       });
     });
-  </script>
+  </script> -->
