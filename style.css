@@ -8,11 +8,11 @@ Version: 1.0
    INITIAL SETTINGS & RESET
 ======================================== */
 
-/* Debugging Boxes* {
+/* Red Debugging Boxes* {
     outline: 1px solid red !important;
 } */
 
-/* Check for elements wider than viewport */
+/* Calibiri -> paragraph, Palatino - heading */
 
 body {
     margin: 0 !important;
@@ -20,7 +20,6 @@ body {
     font-family: Calibri, Arial, Helvetica, sans-serif;
 }
 
-/* Calibiri - baseline, Palatino - headings */
 * {
     font-family: Calibri, Arial, Helvetica, sans-serif;
 }
@@ -70,7 +69,10 @@ header {
     min-width: 10vw;
 }
 
-/* Search Form Styles */
+/* =======================================
+    SEARCH BAR STYLES
+==========================================*/
+
 .search-form {
     flex: 2;
     max-width: 40vw;
@@ -112,47 +114,12 @@ header {
     color: #666;
 }
 
-/* Right-aligned container for language switcher and social icons */
 .navbar-right {
     display: flex;
     align-items: center;
     gap: 5rem;
 }
 
-/* Language switcher styles */
-.language-switcher {
-    display: flex;
-    align-items: center;
-    gap: 0.1em;
-}
-
-.lang-btn {
-    text-decoration: none;
-    font-weight: 600;
-    color: #000000;
-    font-size: clamp(.8rem, 1vw, 1.2rem);
-    padding: 0.25rem 0.5rem;
-    border-radius: 3px;
-    transition: background-color 0.2s ease;
-}
-
-.lang-btn:hover {
-    background-color: #f0f0f0;
-}
-
-.lang-btn.active {
-    font-weight: bold;
-    color: #B10C0C;
-}
-
-.lang-separator {
-    width: 1px;
-    height: 50px;
-    background-color: #1F1F1F;
-    margin: 0 0.5rem;
-}
-
-/* Social icons styles */
 .social-icons {
     display: flex;
     gap: 1rem;
@@ -188,7 +155,7 @@ header {
 }
 
 /* ========================================
-   NAV-MENU STYLES (CLICK-TO-TOGGLE DROPDOWN)
+   NAV-MENU STYLES 
 ======================================== */
 
 .nav-menu-container {
@@ -220,24 +187,209 @@ nav ul li {
     position: relative;
 }
 
-/* Regular nav link styling */
 nav ul li a {
     text-decoration: none;
-    color: #CC0000; 
+    color: #000000;
     font-weight: 900;
     font-size: 1.3vw;
     padding: 0.5rem 1rem;
-    transition: all 0.4s ease;
 }
 
 nav ul li a:hover {
-    color: #aa0000;
-    font-size:1.32vw
+    color: #CC0000;
+    transform: scale(1.05);
 }
 
-/* Hide any sub-menus completely */
 nav ul li ul {
     display: none !important;
+}
+
+/* ========================================
+   HAMBURGER MENU STYLES
+======================================== */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1001;
+    position: relative;
+}
+
+.hamburger-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: #CC0000;
+    margin: 3px 0;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+/* Hide hamburger icon when menu is active */
+.hamburger-menu.active {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.mobile-search {
+    margin: 3rem 0 2rem 0;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.mobile-search-form {
+    width: 100%;
+}
+
+.mobile-search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.mobile-search-icon {
+    position: absolute;
+    left: 1rem;
+    color: #BFC0C5;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.mobile-search-bar {
+    width: 100%;
+    height: 50px;
+    border: 1px solid #CC0000;
+    color: #000000;
+    border-radius: 8px;
+    padding: 0.75rem 1rem 0.75rem 3rem;
+    background-color: #ffffff;
+    transition: border-color 0.3s ease;
+    font-size: 18px;
+    outline: none;
+}
+
+.mobile-search-bar:focus {
+    border-color: #B10C0C;
+}
+
+.mobile-search-bar::placeholder {
+    color: #999;
+    font-size: 18px;
+}
+
+.mobile-search-bar:focus::placeholder {
+    color: #666;
+}
+
+.mobile-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 400px;
+    height: 100%;
+    background-color: white;
+    z-index: 1000;
+    transition: right 0.3s ease;
+    overflow-y: auto;
+    padding: 2rem;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    transform: translateX(100%);
+}
+
+.mobile-menu.active {
+    right: 0;
+    transform: translateX(0);
+}
+
+.mobile-menu-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 2.5rem;
+    color: #CC0000;
+    cursor: pointer;
+    padding: 0.5rem;
+    line-height: 1;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.mobile-menu-close:hover {
+    color: #aa0000;
+    transform: scale(1.1);
+}
+
+.mobile-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.mobile-menu ul li {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.mobile-menu ul li:last-child {
+    border-bottom: none;
+}
+
+.mobile-menu ul li a {
+    display: block;
+    padding: 1rem 0;
+    padding-left: 0.3rem;
+    color: #333;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.mobile-menu ul li.menu-item-has-children ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+.mobile-menu .sub-menu li a {
+    font-size: 1rem !important;
+    font-weight: 500 !important;
+    padding: 0.1rem 0 1.5rem 1.5rem !important;
+    color: #666 !important;
 }
 
 .donate-button {
@@ -263,7 +415,7 @@ nav ul li ul {
 footer {
     background-color: #f8f8f8;
     padding: 3rem 0 1rem;
-    margin-top: auto; 
+    margin-top: auto;
 }
 
 .footer-container {
@@ -322,7 +474,6 @@ footer {
     color: #CC0000;
 }
 
-/* Footer Social Icons */
 .footer-social {
     display: flex;
     justify-content: left;
@@ -340,7 +491,6 @@ footer {
     transform: translateY(-2px);
 }
 
-/* Footer Bottom */
 .footer-bottom {
     border-top: 1px solid #ddd;
     padding-top: 1rem;
@@ -351,71 +501,6 @@ footer {
     color: #666;
     font-size: 14px;
     margin: 0;
-}
-
-/* ========================================
-   MAIN CONTENT STYLES
-======================================== */
-
-/*Attempting to pad the baked in wp classes results in overflow*/
-
-.main-content {
-    margin: 0;
-    min-height: 50vh;
-    width: 100%;
-    flex: 1;
-}
-
-.content-container {
-    max-width: 100%;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-}
-
-.entry-header {
-    margin-bottom: 0rem;
-}
-
-.entry-title,
-.page-title {
-    color: #000000;
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-}
-
-.entry-content {
-    line-height: 1.6;
-    color: #333;
-    width: 100%;
-    padding: 0;
-}
-
-.entry-content h1,
-.entry-content h2,
-.entry-content h3,
-.entry-content h4,
-.entry-content h5,
-.entry-content h6 {
-    color: #000000;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-}
-
-.entry-content p {
-    margin-bottom: 1rem;
-}
-
-.entry-content ul,
-.entry-content ol {
-    margin-bottom: 1rem;
-    padding-left: 2rem;
-}
-
-.entry-content img {
-    max-width: 100%;
-    height: auto;
 }
 
 /* ========================================
@@ -430,43 +515,32 @@ hr {
     margin: 0;
 }
 
-.footer-line {
-    width: 40%;
-    height: 0.75px;
-    background-color: #7F7F7F;
-    border: none;
-    margin: 0;
-}
-
-.image-container {
-    position: relative;
-    display: inline-block;
-    width: 100%;
-    margin: 0;
-}
-
-.image-container img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
 /* ========================================
    RESPONSIVE STYLES
 ======================================== */
 
 @media screen and (max-width: 768px) {
 
-    /* Header Responsive */
+    /* Hide desktop nav menu */
+    .nav-menu-container {
+        display: none;
+    }
+
+    /* Show hamburger menu */
+    .hamburger-menu {
+        display: flex;
+    }
+
+    /* Adjust donate button for mobile */
+    .donate-button {
+        font-size: 14px !important;
+        padding: 0.5rem 0.8rem !important;
+        white-space: nowrap !important;
+        margin-left: 0rem !important;
+    }
+
+    /* Hide search (move to hamburger menu - for small devices < 768) */
     .search-form {
-        display: none !important;
-    }
-
-    .search-container {
-        display: none !important;
-    }
-
-    .search-icon {
         display: none !important;
     }
 
@@ -485,19 +559,6 @@ hr {
         min-width: 20vw !important;
     }
 
-    nav ul {
-        flex-wrap: nowrap !important;
-        justify-content: center !important;
-        gap: 0.3rem !important;
-        width: auto !important;
-    }
-
-    nav ul li a {
-        font-size: 16px !important;
-        padding: 0.4rem 0.6rem !important;
-        white-space: nowrap;
-    }
-
     .footer-columns {
         grid-template-columns: repeat(2, 1fr) !important;
         gap: 2rem !important;
@@ -506,31 +567,9 @@ hr {
     footer {
         margin-top: 2rem !important;
     }
-
-    .donate-button {
-        font-size: 14px !important;
-        padding: 0.5rem 0.8rem !important;
-        white-space: nowrap !important;
-        margin-left: 0rem !important;
-    }
-
-    .language-switcher {
-        display: flex;
-        align-items: center;
-        gap: 0.1em;
-    }
-
-    .lang-btn {
-        font-size: 16px;
-    }
-
-    .lang-separator {
-        height: 25px;
-    }
 }
 
 @media screen and (max-width: 480px) {
-    
     .navbar {
         flex-direction: column !important;
         gap: 1rem !important;
@@ -541,16 +580,14 @@ hr {
         gap: 2rem !important;
     }
 
-    nav ul {
-        flex-wrap: wrap !important;
-        justify-content: center !important;
-        gap: 1rem !important;
-    }
-
     .footer-columns {
         grid-template-columns: 1fr !important;
         gap: 2rem !important;
     }
+}
+
+body.menu-open {
+    overflow: hidden;
 }
 
 /* ========================================
@@ -564,98 +601,21 @@ hr {
     padding: 2rem;
 }
 
-/* Full-width container that spans entire viewport */
+/* Full-width container that spans full viewport */
 .full-width {
     width: 100vw;
     margin-left: calc(50% - 50vw);
     margin-right: calc(50% - 50vw);
 }
 
-/* Full-width with no padding */
-.full-width-no-padding {
-    width: 100vw;
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
-    padding: 0;
-}
 
-/* Full-width with some padding */
-.full-width-padded {
-    width: 100vw;
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
-    padding: 2rem 0;
-}
-
-/* Container for centered content within full-width sections */
-.inner-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
-
-/* Responsive padding utilities */
-.no-padding {
-    padding: 0;
-}
-
-.small-padding {
-    padding: 1rem;
-}
-
-.medium-padding {
-    padding: 2rem;
-}
-
-.large-padding {
-    padding: 4rem;
-}
-
-/* Section spacing utilities */
-.section-spacing {
-    margin: 4rem 0;
-}
-
-.hero-section {
-    min-height: 50vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 /* ========================================
    WORDPRESS GUTENBERG OVERRIDES
 ======================================== */
 
-/* Remove WordPress container constraints for full-width elements */
-.wp-site-blocks {
-    padding: 0 !important;
-    margin: 0 !important; 
-}
-
-.wp-block-group,
-.wp-block-group__inner-container {
-    max-width: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-/* Override WordPress default content width */
-.has-global-padding {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-}
-
-.has-global-padding>.alignfull {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    max-width: none !important;
-}
-
-/* Ensure full-width elements break out of containers */
-.full-width,
-.full-width-no-padding,
-.full-width-padded {
+/* Full-width elements break out of containers */
+.full-width {
     width: 100vw !important;
     max-width: none !important;
     margin-left: calc(50% - 50vw) !important;
@@ -666,81 +626,18 @@ hr {
     transform: translateX(-50%);
 }
 
-/* Specific fix for figures with full-width classes */
-figure.full-width,
-figure.full-width-no-padding,
-figure.full-width-padded {
+/* Figures with full-width classes */
+figure.full-width {
     width: 100vw !important;
     max-width: none !important;
     margin-left: calc(50% - 50vw) !important;
     margin-right: calc(50% - 50vw) !important;
 }
 
-/* Ensure images within full-width containers span full width */
-.full-width img,
-.full-width-no-padding img,
-.full-width-padded img {
+/* Images within full-width containers span full width */
+.full-width img {
     width: 100% !important;
     max-width: none !important;
     height: auto;
     display: block;
-}
-
-/* Remove any theme container padding that might interfere */
-.entry-content .full-width,
-.entry-content .full-width-no-padding,
-.entry-content .full-width-padded {
-    margin-left: calc(50% - 50vw) !important;
-    margin-right: calc(50% - 50vw) !important;
-    width: 100vw !important;
-}
-
-/* Alternative approach - target the specific WordPress containers */
-.wp-block-post-content .full-width,
-.wp-block-post-content .full-width-no-padding,
-.wp-block-post-content .full-width-padded {
-    width: 100vw !important;
-    margin-left: calc(50% - 50vw) !important;
-    margin-right: calc(50% - 50vw) !important;
-}
-
-/* ========================================
-   SEARCH STYLING
-======================================== */
-.search-results-container {
-    padding: 2rem 1rem;
-}
-
-.search-result-item:hover {
-    background-color: #f9f9f9;
-    padding-left: 1rem;
-    transition: all 0.3s ease;
-}
-
-.search-pagination {
-    margin-top: 3rem;
-    text-align: center;
-}
-
-.search-pagination .page-numbers {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    margin: 0 0.25rem;
-    color: #CC0000;
-    text-decoration: none;
-    border: 1px solid #CC0000;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-}
-
-.search-pagination .page-numbers:hover,
-.search-pagination .page-numbers.current {
-    background-color: #CC0000;
-    color: white;
-}
-
-mark {
-    background-color: #ffff00;
-    padding: 0 2px;
-    border-radius: 2px;
 }

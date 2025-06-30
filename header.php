@@ -28,7 +28,6 @@
         </div>
       </form>
       <div class="navbar-right">
-        
         <div class="social-icons">
           <?php
           $social_platforms = get_social_platforms();
@@ -48,27 +47,47 @@
     </div>
     <hr>
     <nav>
+      <!-- Desktop Navigation -->
       <div class="nav-menu-container">
         <?php wp_nav_menu(['theme_location' => 'primary']); ?>
       </div>
+
+      <!-- Mobile Hamburger Menu -->
+      <div class="hamburger-menu" id="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
       <a href="#" class="donate-button">Donate</a>
     </nav>
   </header>
-  <!-- Language Switching logic unecessary -->
-  <!-- <script>
-    // Language selection logic
-    document.addEventListener('DOMContentLoaded', function () {
-      const langButtons = document.querySelectorAll('.lang-btn');
 
-      langButtons.forEach(button => {
-        button.addEventListener('click', function (e) {
-          e.preventDefault();
-          langButtons.forEach(btn => btn.classList.remove('active'));
-          this.classList.add('active');
-          // TODO: Language preference logic
-          // const selectedLang = this.getAttribute('data-lang');
-          // localStorage.setItem('selectedLanguage', selectedLang);
-        });
-      });
-    });
-  </script> -->
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
+
+  <!-- Mobile Menu -->
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="mobile-menu-close" id="mobile-menu-close">&times;</button>
+    
+    <!-- Search form in mobile menu -->
+    <div class="mobile-search">
+      <form class="mobile-search-form" method="get" action="<?php echo esc_url(home_url('/')); ?>">
+        <div class="mobile-search-container">
+          <svg class="mobile-search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.35-4.35"></path>
+          </svg>
+          <input class="mobile-search-bar" type="search" name="s" placeholder="<?php _e('Search...', 'tsaoc3theme'); ?>" value="<?php echo is_search() ? get_search_query() : ''; ?>" />
+        </div>
+      </form>
+    </div>
+    
+    <!-- Navigation menu -->
+    <?php wp_nav_menu([
+      'theme_location' => 'primary',
+      'container' => false,
+      'menu_class' => 'mobile-nav-menu'
+    ]); ?>
+  </div>

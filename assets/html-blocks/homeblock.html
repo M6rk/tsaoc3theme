@@ -1,0 +1,301 @@
+<style>
+.home-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1400px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.location-column {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+    text-align: center;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.location-column:hover {
+    transform: translateY(-5px);
+}
+
+.center-column {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+.location-image {
+    object-fit: cover;
+    width: 100%;
+    max-width: 350px;
+    height: 280px;
+    border-radius: 15px;
+    margin: 0 auto 1.5rem auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.location-title {
+    font-weight: bold;
+    margin: 0 0 1rem 0;
+    color: #CC0000;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    font-size: 2rem;
+}
+
+.location-phone {
+    margin: 0.5rem 0;
+    color: #333;
+    font-weight: 600;
+    font-size: 1.1rem;
+    background: linear-gradient(135deg, #CC0000, #AA0000);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    display: inline-block;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.location-phone:hover {
+    background: linear-gradient(135deg, #AA0000, #880000);
+    transform: translateY(-2px);
+}
+
+.location-address {
+    margin: 1rem 0 0 0;
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.6;
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 10px;
+    border-left: 4px solid #CC0000;
+}
+
+.main-logo {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.welcome-text {
+    text-align: center;
+    font-size: clamp(18px, 3.5vw, 26px);
+    line-height: 1.4;
+    color: #444;
+    margin: 1.5rem 0;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    padding: 1.5rem;
+    border-radius: 15px;
+    border: 1px solid #dee2e6;
+    font-style: italic;
+}
+
+.service-time {
+    text-align: center;
+    font-size: clamp(22px, 4.5vw, 36px);
+    font-weight: bold;
+    color: #CC0000;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    background: linear-gradient(135deg, #fff, #f8f9fa);
+    padding: 1.5rem;
+    border-radius: 15px;
+    border: 2px solid #CC0000;
+}
+
+/* Tablet Styles */
+@media screen and (max-width: 768px) {
+    .home-container {
+        gap: 1.5rem;
+        margin: 1.5rem auto;
+        padding: 0 0.5rem;
+    }
+    
+    .location-column {
+        min-width: 280px;
+        padding: 1rem;
+    }
+    
+    .center-column {
+        min-width: 280px;
+        gap: 1rem;
+        order: -1; /* Move center column to top on tablets */
+    }
+    
+    .location-image {
+        height: 220px;
+        max-width: 300px;
+    }
+    
+    .location-title {
+        font-size: 1.8rem;
+    }
+    
+    .location-phone {
+        font-size: 1rem;
+        padding: 0.4rem 0.8rem;
+    }
+    
+    .location-address {
+        font-size: 0.95rem;
+        padding: 0.8rem;
+    }
+    
+    .welcome-text {
+        padding: 1.2rem;
+        margin: 1rem 0;
+    }
+    
+    .service-time {
+        padding: 1.2rem;
+    }
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 480px) {
+    .home-container {
+        flex-direction: column;
+        gap: 1.5rem;
+        margin: 1rem auto;
+        padding: 0 0.5rem;
+    }
+    
+    .location-column,
+    .center-column {
+        min-width: 100%;
+        max-width: 100%;
+    }
+    
+    .center-column {
+        order: -1; /* Center content at top */
+        gap: 1rem;
+    }
+    
+    .location-image {
+        height: 200px;
+        max-width: 280px;
+        margin-bottom: 1rem;
+    }
+    
+    .location-title {
+        font-size: 1.6rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .location-phone {
+        font-size: 0.95rem;
+        padding: 0.4rem 0.8rem;
+    }
+    
+    .location-address {
+        font-size: 0.9rem;
+        padding: 0.8rem;
+    }
+    
+    .main-logo {
+        max-width: 350px;
+    }
+    
+    .welcome-text {
+        padding: 1rem;
+        margin: 0.8rem 0;
+    }
+    
+    .service-time {
+        padding: 1rem;
+    }
+}
+
+/* Extra Small Mobile */
+@media screen and (max-width: 360px) {
+    .location-image {
+        height: 180px;
+        max-width: 250px;
+    }
+    
+    .location-title {
+        font-size: 1.4rem;
+    }
+    
+    .location-phone {
+        font-size: 0.9rem;
+        padding: 0.3rem 0.6rem;
+    }
+    
+    .location-address {
+        font-size: 0.85rem;
+        padding: 0.6rem;
+    }
+    
+    .main-logo {
+        max-width: 300px;
+    }
+    
+    .welcome-text {
+        padding: 0.8rem;
+    }
+    
+    .service-time {
+        padding: 0.8rem;
+    }
+}
+</style>
+
+<div class="home-container">
+  
+  <!-- Left Column - Kelowna -->
+  <div class="location-column">
+    <figure style="margin: 0;">
+      <img src="http://tsaoc3.local/wp-content/uploads/2025/06/header_church-1024x320.jpg" alt="Kelowna Salvation Army Church" class="location-image"/>
+      <h2 class="location-title">Kelowna</h2>
+      <a href="tel:+12508602329" class="location-phone">(250) 860-2329</a>
+      <div class="location-address">
+        1480 Sutherland Ave<br>
+        Kelowna, BC V1Y 5Y5
+      </div>
+    </figure>
+  </div>
+  
+  <!-- Middle Column - Logo & Church Info -->
+  <div class="center-column">
+    <figure style="margin: 0;">
+      <img src="http://tsaoc3.local/wp-content/uploads/2025/06/main_logo-1024x248.png" alt="The Salvation Army Logo" class="main-logo"/>
+    </figure>
+    
+    <div class="welcome-text">
+      The Salvation Army is a Christian church. You are welcome to worship with us!
+    </div>
+    
+    <div class="service-time">
+      Sundays at 10:30 AM
+    </div>
+  </div>
+  
+  <!-- Right Column - Vernon -->
+  <div class="location-column">
+    <figure style="margin: 0;">
+      <img src="http://tsaoc3.local/wp-content/uploads/2025/06/29798188_web1_220718-BPD-SALVATION-ARMY_1.jpg" alt="Westbank Salvation Army Church" class="location-image"/>
+      <h2 class="location-title">Westbank</h2>
+      <a href="tel:+12507681850" class="location-phone">(250) 768-1850</a>
+      <div class="location-address">
+        3531 Old Okanagan Hwy<br>
+        Westbank, BC V4T 3L7
+      </div>
+    </figure>
+  </div>
+</div>

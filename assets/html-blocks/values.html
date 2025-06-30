@@ -1,7 +1,138 @@
-<div style="margin-top: 1rem; display: flex; flex-wrap: wrap; gap: 1em; justify-content: space-between; text-align: center;">
-  <div style="flex: 1; max-width: 400px;">
+<style>
+.values-container {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.value-item {
+    flex: 1;
+    min-width: 280px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.value-icon {
+    margin-bottom: -25px;
+    display: flex;
+    justify-content: center;
+}
+
+.value-icon svg {
+    width: 34px;
+    height: 34px;
+    transition: transform 0.3s ease;
+}
+
+.value-item:hover .value-icon svg {
+    transform: scale(1.1);
+}
+
+.value-title {
+    margin-bottom: 0;
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+}
+
+.value-description {
+    margin: 0;
+    padding: 0 1rem;
+    font-size: 22px;
+    line-height: 1.4;
+    color: #666;
+}
+
+/* Tablet Styles */
+@media screen and (max-width: 768px) {
+    .values-container {
+        gap: 1.5rem;
+        padding: 0 0.5rem;
+    }
+    
+    .value-item {
+        min-width: 250px;
+        max-width: 350px;
+    }
+    
+    .value-icon svg {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .value-title {
+        font-size: 24px;
+    }
+    
+    .value-description {
+        font-size: 20px;
+        padding: 0 0.5rem;
+    }
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 480px) {
+    .values-container {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+        padding: 0;
+    }
+    
+    .value-item {
+        min-width: 100%;
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+    
+    .value-icon {
+        margin-bottom: -20px;
+    }
+    
+    .value-icon svg {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .value-title {
+        font-size: 22px;
+        margin-bottom: 0.5rem;
+    }
+    
+    .value-description {
+        font-size: 18px;
+        padding: 0;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+}
+
+/* Extra Small Mobile */
+@media screen and (max-width: 360px) {
+    .value-icon svg {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .value-title {
+        font-size: 20px;
+    }
+    
+    .value-description {
+        font-size: 16px;
+        line-height: 1.3;
+    }
+}
+</style>
+
+<div class="values-container">
+  <div class="value-item">
     <!-- Hope -->
-    <div style="margin-bottom: -25px;">
+    <div class="value-icon">
       <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
         <mask id="mask0_hope" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="34" height="34">
           <rect width="34" height="34" fill="#D9D9D9"/>
@@ -11,13 +142,13 @@
         </g>
       </svg>
     </div>
-    <h3 style="margin-bottom: 0; font-size:28px;">HOPE</h3>
-    <p style="margin: 0; padding: 0 1rem; font-size:22px;">We give hope through the power of the gospel of Jesus Christ.</p>
+    <h3 class="value-title">HOPE</h3>
+    <p class="value-description">We give hope through the power of the gospel of Jesus Christ.</p>
   </div>
 
-  <div style="flex: 1; max-width: 400px;">
+  <div class="value-item">
     <!-- Service -->
-    <div style="margin-bottom: -25px;">
+    <div class="value-icon">
       <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
         <mask id="mask0_service" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="34" height="34">
           <rect width="34" height="34" fill="#D9D9D9"/>
@@ -27,13 +158,13 @@
         </g>
       </svg>
     </div>
-    <h3 style="margin-bottom: 0; font-size:28px;">SERVICE</h3>
-    <p style="margin: 0; padding: 0 1rem; font-size:24px;">We reach out to support others without discrimination.</p>
+    <h3 class="value-title">SERVICE</h3>
+    <p class="value-description">We reach out to support others without discrimination.</p>
   </div>
 
-  <div style="flex: 1; max-width: 400px;">
+  <div class="value-item">
     <!-- Dignity -->
-    <div style="margin-bottom: -25px;">
+    <div class="value-icon">
       <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
         <mask id="mask0_dignity" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="34" height="34">
           <rect width="34" height="34" fill="#D9D9D9"/>
@@ -43,13 +174,13 @@
         </g>
       </svg>
     </div>
-    <h3 style="margin-bottom: 0; font-size:28px;">DIGNITY</h3>
-    <p style="margin: 0; padding: 0 1rem; font-size:24px;">We respect and value each other, recognizing everyone's worth.</p>
+    <h3 class="value-title">DIGNITY</h3>
+    <p class="value-description">We respect and value each other, recognizing everyone's worth.</p>
   </div>
 
-  <div style="flex: 1; max-width: 400px;">
+  <div class="value-item">
     <!-- Stewardship -->
-    <div style="margin-bottom: -25px;">
+    <div class="value-icon">
       <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
         <mask id="mask0_stewardship" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="34" height="34">
           <rect width="34" height="34" fill="#D9D9D9"/>
@@ -59,7 +190,7 @@
         </g>
       </svg>
     </div>
-    <h3 style="margin-bottom: 0; font-size:28px;">STEWARDSHIP</h3>
-    <p style="margin: 0; padding: 0 1rem; font-size:24px;">We responsibly manage the resources entrusted to us.</p>
+    <h3 class="value-title">STEWARDSHIP</h3>
+    <p class="value-description">We responsibly manage the resources entrusted to us.</p>
   </div>
 </div>
