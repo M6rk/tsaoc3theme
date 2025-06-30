@@ -2,12 +2,10 @@
 TODO/TOASK
 - [ ] Finish Header
 - [ ] Make footer WP dynamic
-- [ ] i18n or seperate translation tool?
 - [ ] Event plugin? 
 - [ ] Google Maps plugin for better address/location visualizaiton
-- [ ] Kurtis drone video? 
 - [ ] Take photos of the westbank/kelowna sites?
-- [ ] Additional custom plugins?
+- [ ] Test configuration of Polylang, Yoast SEO, OneTap Accessibility Widget, Jetpack, and Gravity Forms
 
 ## Stylistic Guidelines
 #### Typography
