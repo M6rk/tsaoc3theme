@@ -59,7 +59,7 @@
         <span></span>
       </div>
 
-      <a href="#" class="donate-button">Donate</a>
+      <a href="https://donate.salvationarmy.ca/page/62730/donate/1?location=Kelowna%20Community%20Church%2C%20Family%20Life&_ga=2.4114931.256822489.1595245103-509954737.1571324167" target="_blank" class="donate-button">Donate</a>
     </nav>
   </header>
 

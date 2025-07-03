@@ -21,11 +21,7 @@
     transition: transform 0.3s ease;
 }
 
-.location-column:hover {
-    transform: translateY(-5px);
-}
-
-.center-column {
+.church-column {
     flex: 1;
     min-width: 300px;
     max-width: 500px;
@@ -35,6 +31,8 @@
     justify-content: center;
     gap: 1.5rem;
     padding: 1rem;
+    background: #ffffff;
+    border-radius: 20px;
 }
 
 .location-image {
@@ -48,12 +46,38 @@
     transition: transform 0.3s ease;
 }
 
+.church-image {
+    object-fit: cover;
+    width: 100%;
+    max-width: 400px;
+    height: 320px;
+    border-radius: 15px;
+    margin: 0 auto 1rem auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
 .location-title {
     font-weight: bold;
-    margin: 0 0 1rem 0;
+    margin: 0 0 0.5rem 0;
     color: #CC0000;
     font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
     font-size: 2rem;
+}
+
+.church-title {
+    font-weight: bold;
+    margin: 0 0 0.5rem 0;
+    color: #CC0000;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    font-size: 2.2rem;
+}
+
+.location-subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    font-weight: 600;
+    margin: 0 0 1rem 0;
 }
 
 .location-phone {
@@ -86,21 +110,33 @@
     border-left: 4px solid #CC0000;
 }
 
+.church-address {
+    margin: 1rem 0;
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 10px;
+    border-left: 4px solid #CC0000;
+}
+
 .main-logo {
     width: 100%;
-    max-width: 450px;
+    max-width: 300px;
     height: auto;
     transition: transform 0.3s ease;
+    margin-bottom: 1rem;
 }
 
 .welcome-text {
     text-align: center;
-    font-size: clamp(18px, 3.5vw, 26px);
+    font-size: clamp(16px, 3vw, 22px);
     line-height: 1.4;
     color: #444;
-    margin: 1.5rem 0;
+    margin: 1rem 0;
     background: linear-gradient(135deg, #f8f9fa, #e9ecef);
-    padding: 1.5rem;
+    padding: 1.2rem;
     border-radius: 15px;
     border: 1px solid #dee2e6;
     font-style: italic;
@@ -108,17 +144,15 @@
 
 .service-time {
     text-align: center;
-    font-size: clamp(22px, 4.5vw, 36px);
+    font-size: clamp(20px, 4vw, 32px);
     font-weight: bold;
     color: #CC0000;
     font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
     background: linear-gradient(135deg, #fff, #f8f9fa);
-    padding: 1.5rem;
+    padding: 1.2rem;
     border-radius: 15px;
-    border: 2px solid #CC0000;
 }
 
-/* Tablet Styles */
 @media screen and (max-width: 768px) {
     .home-container {
         gap: 1.5rem;
@@ -131,10 +165,10 @@
         padding: 1rem;
     }
     
-    .center-column {
+    .church-column {
         min-width: 280px;
         gap: 1rem;
-        order: -1; /* Move center column to top on tablets */
+        order: -1; 
     }
     
     .location-image {
@@ -142,8 +176,21 @@
         max-width: 300px;
     }
     
+    .church-image {
+        height: 250px;
+        max-width: 320px;
+    }
+    
     .location-title {
         font-size: 1.8rem;
+    }
+    
+    .church-title {
+        font-size: 2rem;
+    }
+    
+    .location-subtitle {
+        font-size: 1rem;
     }
     
     .location-phone {
@@ -151,18 +198,18 @@
         padding: 0.4rem 0.8rem;
     }
     
-    .location-address {
+    .location-address, .church-address {
         font-size: 0.95rem;
         padding: 0.8rem;
     }
     
     .welcome-text {
-        padding: 1.2rem;
-        margin: 1rem 0;
+        padding: 1rem;
+        margin: 0.8rem 0;
     }
     
     .service-time {
-        padding: 1.2rem;
+        padding: 1rem;
     }
 }
 
@@ -176,13 +223,13 @@
     }
     
     .location-column,
-    .center-column {
+    .church-column {
         min-width: 100%;
         max-width: 100%;
     }
     
-    .center-column {
-        order: -1; /* Center content at top */
+    .church-column {
+        order: -1; 
         gap: 1rem;
     }
     
@@ -192,8 +239,24 @@
         margin-bottom: 1rem;
     }
     
+    .church-image {
+        height: 220px;
+        max-width: 300px;
+        margin-bottom: 1rem;
+    }
+    
     .location-title {
         font-size: 1.6rem;
+        margin-bottom: 0.4rem;
+    }
+    
+    .church-title {
+        font-size: 1.8rem;
+        margin-bottom: 0.4rem;
+    }
+    
+    .location-subtitle {
+        font-size: 0.9rem;
         margin-bottom: 0.8rem;
     }
     
@@ -202,13 +265,13 @@
         padding: 0.4rem 0.8rem;
     }
     
-    .location-address {
+    .location-address, .church-address {
         font-size: 0.9rem;
         padding: 0.8rem;
     }
     
     .main-logo {
-        max-width: 350px;
+        max-width: 250px;
     }
     
     .welcome-text {
@@ -228,8 +291,21 @@
         max-width: 250px;
     }
     
+    .church-image {
+        height: 200px;
+        max-width: 270px;
+    }
+    
     .location-title {
         font-size: 1.4rem;
+    }
+    
+    .church-title {
+        font-size: 1.6rem;
+    }
+    
+    .location-subtitle {
+        font-size: 0.8rem;
     }
     
     .location-phone {
@@ -237,13 +313,13 @@
         padding: 0.3rem 0.6rem;
     }
     
-    .location-address {
+    .location-address, .church-address {
         font-size: 0.85rem;
         padding: 0.6rem;
     }
     
     .main-logo {
-        max-width: 300px;
+        max-width: 220px;
     }
     
     .welcome-text {
@@ -258,11 +334,26 @@
 
 <div class="home-container">
   
-  <!-- Left Column - Kelowna -->
+  <!-- Left Column - Westbank -->
   <div class="location-column">
     <figure style="margin: 0;">
-      <img src="http://tsaoc3.local/wp-content/uploads/2025/06/header_church-1024x320.jpg" alt="Kelowna Salvation Army Church" class="location-image"/>
-      <h2 class="location-title">Kelowna</h2>
+      <img src="http://tsaoc3.local/wp-content/uploads/2025/06/29798188_web1_220718-BPD-SALVATION-ARMY_1.jpg" alt="Westbank Salvation Army" class="church-image"/>
+      <h2 class="location-title">Westbank</h2>
+      <p class="location-subtitle">Thrift Store & Community Services</p>
+      <a href="tel:+12507681850" class="location-phone">(250) 768-1850</a>
+      <div class="location-address">
+        3531 Old Okanagan Hwy<br>
+        Westbank, BC V4T 3L7
+      </div>
+    </figure>
+  </div>
+  
+  <!-- Middle Column - Kelowna Church -->
+  <div class="location-column">
+    <figure style="margin: 0;">
+      <img src="http://tsaoc3.local/wp-content/uploads/2025/06/header_church-1024x320.jpg" alt="Kelowna Salvation Army Church" class="church-image"/>
+      <h2 class="church-title">Kelowna</h2>
+      <p class="location-subtitle">Central Community Church & Ministries</p>
       <a href="tel:+12508602329" class="location-phone">(250) 860-2329</a>
       <div class="location-address">
         1480 Sutherland Ave<br>
@@ -271,30 +362,16 @@
     </figure>
   </div>
   
-  <!-- Middle Column - Logo & Church Info -->
-  <div class="center-column">
-    <figure style="margin: 0;">
-      <img src="http://tsaoc3.local/wp-content/uploads/2025/06/main_logo-1024x248.png" alt="The Salvation Army Logo" class="main-logo"/>
-    </figure>
-    
-    <div class="welcome-text">
-      The Salvation Army is a Christian church. You are welcome to worship with us!
-    </div>
-    
-    <div class="service-time">
-      Sundays at 10:30 AM
-    </div>
-  </div>
-  
-  <!-- Right Column - Vernon -->
+  <!-- Right Column - Rutland -->
   <div class="location-column">
     <figure style="margin: 0;">
-      <img src="http://tsaoc3.local/wp-content/uploads/2025/06/29798188_web1_220718-BPD-SALVATION-ARMY_1.jpg" alt="Westbank Salvation Army Church" class="location-image"/>
-      <h2 class="location-title">Westbank</h2>
-      <a href="tel:+12507681850" class="location-phone">(250) 768-1850</a>
+      <img src="http://tsaoc3.local/wp-content/uploads/2025/07/rutlandtsa.jpg" alt="Rutland Salvation Army" class="church-image"/>
+      <h2 class="location-title">Rutland</h2>
+      <p class="location-subtitle">Thrift Store & Community Services</p>
+      <a href="tel:+17784787000" class="location-phone">(778) 478-7000</a>
       <div class="location-address">
-        3531 Old Okanagan Hwy<br>
-        Westbank, BC V4T 3L7
+        200 Rutland Road South<br>
+        Kelowna, BC V1X 2Z5
       </div>
     </figure>
   </div>
