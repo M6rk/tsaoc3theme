@@ -15,11 +15,50 @@ Version: 1.0
 /* Calibiri -> paragraph, Palatino - heading */
 
 
-.entry-content {
-    padding-left: 2rem !important;
-    padding-right: 2rem !important;
-    max-width: 100vw !important; /* Add content width constraint */
-    margin: 0 auto !important; /* Center the content */
+.wp-block-cover {
+    max-height: clamp(200px, 25vw, 400px) !important;
+    overflow: hidden !important;
+    margin: 0 !important;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    margin-left: clamp(1rem, 10vw, 150px);
+    margin-right: clamp(1rem, 10vw, 150px);
+}
+    
+p {
+    margin-left: clamp(1rem, 10vw, 150px);
+    margin-right: clamp(1rem, 10vw, 150px);
+}
+
+.wp-block-cover h1,
+.wp-block-cover h2,
+.wp-block-cover h3,
+.wp-block-cover h4,
+.wp-block-cover h5,
+.wp-block-cover h6 {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.wp-block-cover p {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+
+.wp-block-columns {
+    margin-left: clamp(1rem, 10vw, 150px) !important;
+    margin-right: clamp(1rem, 10vw, 150px) !important;
+}
+
+/* Remove the global margin rule for individual columns */
+.wp-block-column {
+    /* Remove the existing margin rules */
+    /* Use padding for inner spacing instead */
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
 }
 
 * {
@@ -27,10 +66,8 @@ Version: 1.0
     box-sizing: border-box;
 }
 
-html,
 body {
-    margin: 0;
-    padding: 0;
+    margin: 10px;
     overflow-x: hidden;
     max-width: 100vw;
 }
@@ -436,6 +473,21 @@ footer {
     margin-top: auto;
 }
 
+footer h1,
+footer h2,
+footer h3,
+footer h4,
+footer h5,
+footer h6 {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+footer p {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
 .footer-container {
     max-width: 1300px;
     margin: 0 auto;
@@ -533,6 +585,24 @@ hr {
     margin: 0;
 }
 
+/* Suggested Text Color Classes */
+.has-primary-red-color { color: #CC0000 !important; }
+.has-light-grey-color { color: #BFBFBF !important; }
+.has-dark-grey-color { color: #7F7F7F !important; }
+.has-white-color { color: #FFFFFF !important; }
+.has-black-color { color: #000000 !important; }
+.has-secondary-yellow-color { color: #FFD912 !important; }
+.has-secondary-blue-color { color: #005AAA !important; }
+
+/* Suggested Background Color Classes */
+.has-primary-red-background-color { background-color: #CC0000 !important; }
+.has-light-grey-background-color { background-color: #BFBFBF !important; }
+.has-dark-grey-background-color { background-color: #7F7F7F !important; }
+.has-white-background-color { background-color: #FFFFFF !important; }
+.has-black-background-color { background-color: #000000 !important; }
+.has-secondary-yellow-background-color { background-color: #FFD912 !important; }
+.has-secondary-blue-background-color { background-color: #005AAA !important; }
+
 /* ========================================
    RESPONSIVE STYLES
 ======================================== */
@@ -619,9 +689,3 @@ body.menu-open {
     margin: 0 auto;
     padding: 2rem;
 }
-
-
-
-/* ========================================
-   WORDPRESS GUTENBERG OVERRIDES
-======================================== */

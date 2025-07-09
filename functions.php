@@ -179,6 +179,50 @@ function get_social_platforms() {
         )
     );
 }
+
+// Suggested color palette (TSA Brand Colors)
+function tsaoc3_setup_theme_colors() {
+    add_theme_support('editor-color-palette', array(
+        array(
+            'name'  => 'Primary Red',
+            'slug'  => 'primary-red',
+            'color' => '#CC0000',
+        ),
+        array(
+            'name'  => 'Light Grey',
+            'slug'  => 'light-grey',
+            'color' => '#BFBFBF',
+        ),
+        array(
+            'name'  => 'Dark Grey',
+            'slug'  => 'dark-grey',
+            'color' => '#7F7F7F',
+        ),
+        array(
+            'name'  => 'White',
+            'slug'  => 'white',
+            'color' => '#FFFFFF',
+        ),
+        array(
+            'name'  => 'Black',
+            'slug'  => 'black',
+            'color' => '#000000',
+        ),
+        array(
+            'name'  => 'Secondary Yellow',
+            'slug'  => 'secondary-yellow',
+            'color' => '#FFD912',
+        ),
+        array(
+            'name'  => 'Secondary Blue',
+            'slug'  => 'secondary-blue',
+            'color' => '#005AAA',
+        ),
+    ));
+    // do not disable custom colors (these are suggested, but brand enforced/recommended colors)
+}
+add_action('after_setup_theme', 'tsaoc3_setup_theme_colors');
+
 //Search Functionality
 function mytheme_search_pages_only($query) {
     if (!is_admin() && $query->is_main_query() && is_search()) {

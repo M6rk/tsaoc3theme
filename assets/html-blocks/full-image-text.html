@@ -1,0 +1,140 @@
+<style>
+.location-container {
+    display: flex;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    min-height: 400px;
+}
+
+.location-text {
+    flex: 1;
+    background-color: #BFBFBF;
+    color: #7F7F7F;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    text-align: center;
+}
+
+.location-text h3 {
+    color: #7F7F7F;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.location-text p {
+    color: #7F7F7F;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.location-text .church-name {
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.location-text .address {
+    margin-bottom: 1.5rem;
+}
+
+.location-text .service-time {
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.map-link {
+    background-color: #CC0000;
+    color: white !important;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+.map-link:hover {
+    background-color: #B10C0C;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.location-image {
+    flex: 1;
+    background-image: url('http://tsaoc3.local/wp-content/uploads/2025/06/header_church-1024x320.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 400px;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+    .location-container {
+        flex-direction: column;
+    }
+    
+    .location-text {
+        padding: 2rem 1.5rem;
+        min-height: 300px;
+    }
+    
+    .location-text h3 {
+        font-size: 1.5rem;
+    }
+    
+    .location-text p {
+        font-size: 1rem;
+    }
+    
+    .location-image {
+        min-height: 300px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .location-text {
+        padding: 1.5rem 1rem;
+        min-height: 250px;
+    }
+    
+    .location-text h3 {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+    
+    .location-text p {
+        font-size: 0.9rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .map-link {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+}
+</style>
+
+<div class="location-container">
+    <div class="location-text">
+        <h3>Location</h3>
+        <p class="church-name">Okanagan Central Community Church is located at:</p>
+        <p class="address">
+            1480 Sutherland Ave<br>
+            Kelowna, BC (corner of Burtch & Sutherland)
+        </p>
+        <p class="service-time">Join us Sundays at 10:30 am.</p>
+        <a href="https://maps.app.goo.gl/ivY6K3StDLLU4Zoi9" class="map-link" target="_blank">CLICK FOR MAP</a>
+    </div>
+    <div class="location-image"></div>
+</div>
