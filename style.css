@@ -9,16 +9,24 @@ Version: 1.0
 ======================================== */
 
 /* Red Debugging Boxes* {
-    outline: 1px solid red !important;
+    outline: 1px solid red;
 } */
 
 /* Calibiri -> paragraph, Palatino - heading */
 
 
 .wp-block-cover {
-    max-height: clamp(200px, 25vw, 400px) !important;
-    overflow: hidden !important;
-    margin: 0 !important;
+    max-height: clamp(200px, 25vw, 400px);
+    overflow: hidden;
+    margin: 0;
+}
+
+/*Cover height to match */
+.header-cover {
+    max-height: 390px !important;
+    min-height: 390px;
+    height: 390px;
+    overflow: hidden;
 }
 
 
@@ -38,27 +46,27 @@ p {
 .wp-block-cover h4,
 .wp-block-cover h5,
 .wp-block-cover h6 {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .wp-block-cover p {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 
 .wp-block-columns {
-    margin-left: clamp(1rem, 10vw, 150px) !important;
-    margin-right: clamp(1rem, 10vw, 150px) !important;
+    margin-left: clamp(1rem, 10vw, 150px);
+    margin-right: clamp(1rem, 10vw, 150px);
 }
 
 /* Remove the global margin rule for individual columns */
 .wp-block-column {
     /* Remove the existing margin rules */
     /* Use padding for inner spacing instead */
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 * {
@@ -84,7 +92,7 @@ h5,
 h6,
 .entry-title,
 .page-title {
-    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif !important;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
 
 /* ========================================
@@ -108,8 +116,8 @@ header {
     justify-content: space-between;
     max-width: 100vw;
     box-sizing: border-box;
-    padding-left: 2rem !important;
-    padding-right: 2rem !important;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 .logo {
@@ -189,8 +197,8 @@ header {
 }
 
 .social-link svg {
-    width: 32px !important;
-    height: 32px !important;
+    width: 32px;
+    height: 32px;
 }
 
 .social-link img {
@@ -213,8 +221,8 @@ header {
     justify-content: flex-end;
     flex: 1;
     
-    padding-left: 2rem !important;
-    padding-right: 2rem !important;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 nav {
@@ -254,7 +262,7 @@ nav ul li a:hover {
 }
 
 nav ul li ul {
-    display: none !important;
+    display: none;
 }
 
 /* ========================================
@@ -439,10 +447,10 @@ nav ul li ul {
 }
 
 .mobile-menu .sub-menu li a {
-    font-size: 1rem !important;
-    font-weight: 500 !important;
-    padding: 0.1rem 0 1.5rem 1.5rem !important;
-    color: #666 !important;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.1rem 0 1.5rem 1.5rem;
+    color: #666;
 }
 
 .donate-button {
@@ -479,13 +487,13 @@ footer h3,
 footer h4,
 footer h5,
 footer h6 {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 footer p {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .footer-container {
@@ -586,22 +594,22 @@ hr {
 }
 
 /* Suggested Text Color Classes */
-.has-primary-red-color { color: #CC0000 !important; }
-.has-light-grey-color { color: #BFBFBF !important; }
-.has-dark-grey-color { color: #7F7F7F !important; }
-.has-white-color { color: #FFFFFF !important; }
-.has-black-color { color: #000000 !important; }
-.has-secondary-yellow-color { color: #FFD912 !important; }
-.has-secondary-blue-color { color: #005AAA !important; }
+.has-primary-red-color { color: #CC0000; }
+.has-light-grey-color { color: #BFBFBF; }
+.has-dark-grey-color { color: #7F7F7F; }
+.has-white-color { color: #FFFFFF; }
+.has-black-color { color: #000000; }
+.has-secondary-yellow-color { color: #FFD912; }
+.has-secondary-blue-color { color: #005AAA; }
 
 /* Suggested Background Color Classes */
-.has-primary-red-background-color { background-color: #CC0000 !important; }
-.has-light-grey-background-color { background-color: #BFBFBF !important; }
-.has-dark-grey-background-color { background-color: #7F7F7F !important; }
-.has-white-background-color { background-color: #FFFFFF !important; }
-.has-black-background-color { background-color: #000000 !important; }
-.has-secondary-yellow-background-color { background-color: #FFD912 !important; }
-.has-secondary-blue-background-color { background-color: #005AAA !important; }
+.has-primary-red-background-color { background-color: #CC0000; }
+.has-light-grey-background-color { background-color: #BFBFBF; }
+.has-dark-grey-background-color { background-color: #7F7F7F; }
+.has-white-background-color { background-color: #FFFFFF; }
+.has-black-background-color { background-color: #000000; }
+.has-secondary-yellow-background-color { background-color: #FFD912; }
+.has-secondary-blue-background-color { background-color: #005AAA; }
 
 /* ========================================
    RESPONSIVE STYLES
@@ -621,57 +629,57 @@ hr {
 
     /* Adjust donate button for mobile */
     .donate-button {
-        font-size: 14px !important;
-        padding: 0.5rem 0.8rem !important;
-        white-space: nowrap !important;
-        margin-left: 0rem !important;
+        font-size: 14px;
+        padding: 0.5rem 0.8rem;
+        white-space: nowrap;
+        margin-left: 0rem;
     }
 
     /* Hide search (move to hamburger menu - for small devices < 768) */
     .search-form {
-        display: none !important;
+        display: none;
     }
 
     .navbar-right {
-        gap: 1.5rem !important;
+        gap: 1.5rem;
     }
 
     .social-link svg {
-        width: 25px !important;
-        height: 25px !important;
+        width: 25px;
+        height: 25px;
     }
 
     .logo {
-        width: 40vw !important;
-        max-width: 45vw !important;
-        min-width: 20vw !important;
+        width: 40vw;
+        max-width: 45vw;
+        min-width: 20vw;
     }
 
     .footer-columns {
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 2rem !important;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
     }
 
     footer {
-        margin-top: 2rem !important;
+        margin-top: 2rem;
     }
 }
 
 @media screen and (max-width: 480px) {
 
     .navbar {
-        flex-direction: column !important;
-        gap: 1rem !important;
-        padding: 1rem !important;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
     }
 
     .navbar-right {
-        gap: 2rem !important;
+        gap: 2rem;
     }
 
     .footer-columns {
-        grid-template-columns: 1fr !important;
-        gap: 2rem !important;
+        grid-template-columns: 1fr;
+        gap: 2rem;
     }
 }
 
