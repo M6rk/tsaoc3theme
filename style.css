@@ -21,6 +21,26 @@ Version: 1.0
     margin: 0;
 }
 
+.wp-block-column h1,
+.wp-block-column h2,
+.wp-block-column h3,
+.wp-block-column h4,
+.wp-block-column h5,
+.wp-block-column h6 {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.wp-block-column p {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.wp-block-column img {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
 /*Cover height to match */
 .header-cover {
     max-height: 390px !important;
@@ -29,15 +49,18 @@ Version: 1.0
     overflow: hidden;
 }
 
-
 h1, h2, h3, h4, h5, h6 {
     margin-left: clamp(1rem, 10vw, 150px);
     margin-right: clamp(1rem, 10vw, 150px);
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
 }
     
 p {
     margin-left: clamp(1rem, 10vw, 150px);
     margin-right: clamp(1rem, 10vw, 150px);
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .wp-block-cover h1,
@@ -460,13 +483,11 @@ nav ul li ul {
     padding: 0.75rem 1.5rem;
     font-weight: 600;
     font-size: clamp(18px, 1.3vw, 24px);
-    /* Same font scaling as nav links */
     transition: all 0.3s ease;
-    margin-right:1.5rem
 }
 
 .donate-button:hover {
-    background-color: #B10C0C;
+    background-color: #CC0000;
     transform: translateY(-2px);
     box-shadow: 0 4px 8px #BFBFBF;
 }
@@ -585,6 +606,71 @@ footer p {
    MISCELLANEOUS STYLES
 ======================================== */
 
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 13px;
+    right: 13px;
+    z-index: 50;
+    background-color: #EE2D3D;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background-color: #CC0000;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.back-to-top svg {
+    width: 24px;
+    height: 24px;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.simple-button {
+    background-color: #CC0000;
+    color: white;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.simple-button:hover {
+    background-color: #B10C0C;
+    color: white;
+    text-decoration: none;
+}
+
+.simple-button:focus {
+    outline: 2px solid #CC0000;
+    outline-offset: 2px;
+}
+
 hr {
     width: 100%;
     height: 0.75px;
@@ -662,6 +748,16 @@ hr {
 
     footer {
         margin-top: 2rem;
+    }
+    .back-to-top {
+        bottom: 14px;
+        right: 14px;
+        padding: 15px;
+    }
+    
+    .back-to-top svg {
+        width: 18px;
+        height: 18px;
     }
 }
 
