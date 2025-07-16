@@ -176,6 +176,7 @@ header {
 .search-bar {
     width: 100%;
     height: 4vw;
+    max-height: 4vw;
     min-height: 4vw;
     border: 1px solid #CC0000;
     color: #666;;

@@ -1,0 +1,244 @@
+<style>
+/* Community Services Page Layout */
+.services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.services-intro {
+    text-align: center;
+    margin-bottom: 3rem;
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+}
+
+.services-intro h1 {
+    color: #CC0000;
+    font-size: 2.5rem;
+    margin-bottom: 1rem !important;
+    font-family: 'Palatino Linotype', Palatino, serif;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+}
+
+.services-intro::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: #CC0000;
+    margin: 1rem auto 0;
+    border-radius: 2px;
+}
+
+/* Section Styling */
+.services-section {
+    background: white;
+    border-radius: 12px;
+    padding: 3rem 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+    color: #CC0000;
+    font-size: 2.2rem;
+    text-align: center;
+    font-family: 'Palatino Linotype', Palatino, serif;
+    margin-bottom: 3rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #CC0000;
+    border-radius: 2px;
+}
+
+/* Cards Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.service-card {
+    background: #FFFFFF;  /* Changed from #005AAA to white */
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid #BFBFBF;  /* Changed to light grey border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.service-card h3 {
+    color: #CC0000;
+    font-size: 1.5rem;
+    margin-bottom: 1rem !important;
+    font-family: 'Palatino Linotype', Palatino, serif;
+    text-align: left;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+}
+
+.service-card p {
+    color: #7F7F7F;  /* Changed from #555 to dark grey */
+    line-height: 1.7;
+    font-size: 1.1rem;
+    flex-grow: 1;
+    margin-bottom: 1.5rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+/* Special styling for help cards */
+.help-cards .service-card {
+    background: #FFFFFF;  /* Removed gradient, using white */
+    border-left: 4px solid #FFD912;  /* Blue left border */
+}
+
+.we-help-cards .service-card {
+    background: #FFFFFF;  /* Removed gradient, using white */
+    border-left: 4px solid #FFD912;  /* Yellow left border */
+}
+
+/* Button Styling */
+.services-button {
+    display: inline-block;
+    background: #CC0000;  /* Red background */
+    color: #FFFFFF;  /* White text */
+    padding: 0.8rem 2rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-top: auto;
+    align-self: flex-start;
+    transition: all 0.3s ease;
+}
+
+.services-button:hover {
+    background: #7F7F7F;  /* Dark grey on hover */
+    transform: translateY(-2px);
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+/* Special styling for help cards */
+.help-cards .service-card {
+    background: #F0F0F0;
+    border-left: 4px solid #EE2D3D;
+}
+
+.we-help-cards .service-card {
+    background: #F0F0F0;
+    border-left: 4px solid #CC0000;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .services-container {
+        padding: 1rem;
+    }
+    
+    .services-intro h1 {
+        font-size: 2rem;
+    }
+    
+    .services-section {
+        padding: 2rem 1rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .service-card {
+        padding: 1.5rem;
+    }
+}
+</style>
+
+<div class="services-container">
+    <!-- Ways You Can Help Section -->
+    <section class="services-section">
+        <h2 class="section-title">Ways You Can Help</h2>
+        <div class="services-grid help-cards">
+            <div class="service-card">
+                <h3>Donate</h3>
+                <p>The Salvation Army is thankful for your financial support and donations to our Thrift Stores, which enable us to run our community support programs.</p>
+                <a href="#" class="services-button">Learn More</a>
+            </div>
+            
+            <div class="service-card">
+                <h3>Volunteer</h3>
+                <p>Each Wednesday, a group of 65+ individuals joins together for fun, food and fellowship. Doors open at 10 am each day.</p>
+                <a href="#" class="services-button">Learn More</a>
+            </div>
+            
+            <div class="service-card">
+                <h3>Join our Team</h3>
+                <p>We are always looking for individuals to join our team – you could be one of them!</p>
+                <a href="#" class="services-button">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ways We Help Section -->
+    <section class="services-section">
+        <h2 class="section-title">Ways We Help</h2>
+        <div class="services-grid we-help-cards">
+            <div class="service-card">
+                <h3>Community Assistance</h3>
+                <p>Our Community Life Centre is a safe haven – a place where you can find hope. When you call for appointment you will meet with a caseworker. Our caseworkers are great listeners – they know it takes time to work through each situation. Each situation is unique and we create an individual plan to meet your needs. We love to walk alongside your journey.</p>
+                <a href="#" class="services-button">Learn More</a>
+            </div>
+            
+            <div class="service-card">
+                <h3>Programs</h3>
+                <p>Our programs are designed to help people with life. We have classes such as budgeting and parenting programs. Practical hands-on skills that everyone needs. Plus weekly opportunities to meet others in our community. A variety of Bible Studies are also offered.</p>
+                <a href="#" class="services-button">Learn More</a>
+            </div>
+            
+            <div class="service-card">
+                <h3>Thrift Store</h3>
+                <p>Our Thrift Store (200 Rutland Rd. South) generates funds for our programs. When you donate gently used items and purchase items from the store you help us to live our motto Giving Help Today.</p>
+                <a href="#" class="services-button">Learn More</a>
+            </div>
+            
+            <div class="service-card">
+                <h3>Emergency Services</h3>
+                <p>Salvation Army Emergency Disaster Services Volunteers work alongside emergency first responders and other agencies to provide relief and comfort to those in crisis. We are often the ones serving a meal to firefighters or providing snacks and water at an Emergency Reception Centre.</p>
+                <a href="#" class="services-button">Learn More</a>
+            </div>
+            
+            <div class="service-card">
+                <h3>Christmas</h3>
+                <p>We love Christmas. It is a time to offer families in our community with a Christmas Blessing. During the month of November families can register for our program. During the Christmas Season there are many ways the community can be involved as well.</p>
+                <a href="#" class="services-button">Learn More</a>
+            </div>
+        </div>
+    </section>
+</div>

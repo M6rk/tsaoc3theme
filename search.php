@@ -1,5 +1,16 @@
 <?php get_header(); ?>
-
+<style>
+.search-results-container h1,
+.search-results-container h2,
+.search-results-container h3,
+.search-results-container h4,
+.search-results-container h5,
+.search-results-container h6,
+.search-results-container p {
+    margin-left: 0;
+    margin-right: 0;
+}
+</style>
 <div class="main-content">
     <div class="search-results-container" style="max-width: 1200px; margin: 0 auto; padding: 2rem 1rem;">
 
@@ -50,21 +61,18 @@
                                 echo ' • ' . __('Under: ', 'tsaoc3theme') . '<a href="' . get_permalink($parent_id) . '" style="color: #CC0000;">' . get_the_title($parent_id) . '</a>';
                             }
                             ?>
-                            <?php if (get_the_modified_date() !== get_the_date()): ?>
-                                <span> • </span>
-                                <span><?php printf(__('Updated: %s', 'tsaoc3theme'), get_the_modified_date()); ?></span>
-                            <?php endif; ?>
                         </div>
 
-                        <div class="search-excerpt" style="line-height: 1.6; color: #333;">
+                        <!-- <div class="search-excerpt" style="line-height: 1.6; color: #333;">
                             <?php
+                            /*
                             // For pages, show a longer excerpt
                             $content = get_the_content();
                             $content = strip_tags($content);
                             $content = strip_shortcodes($content);
                             echo wp_trim_words($content, 50, '...');
-                            ?>
-                        </div>
+                            */?>
+                        </div> -->
 
                         <a href="<?php the_permalink(); ?>" class="read-more"
                             style="color: #CC0000; font-weight: 600; text-decoration: none; display: inline-block; margin-top: 1rem;">

@@ -1,0 +1,193 @@
+<style>
+/* FAQ Page Layout */
+.faq-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.faq-title {
+    color: #CC0000;
+    font-size: 2.5rem;
+    text-align: center;
+    font-family: 'Palatino Linotype', Palatino, serif;
+    margin-bottom: 3rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+}
+
+.faq-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #CC0000;
+    margin: 1rem auto 0;
+    border-radius: 2px;
+}
+
+/* FAQ Item Styling */
+.faq-item {
+    background: white;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e9ecef;
+    overflow: hidden;
+}
+
+.faq-question {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    padding: 1.5rem 2rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s ease;
+    border: none;
+    width: 100%;
+    text-align: left;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0 !important;
+}
+
+.faq-question:hover {
+    background: linear-gradient(135deg, #e9ecef, #dee2e6);
+}
+
+.faq-question.active {
+    background: linear-gradient(135deg, #CC0000, #EE2D3D);
+    color: white;
+}
+
+.faq-icon {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+    font-weight: bold;
+}
+
+.faq-question.active .faq-icon {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    padding: 0 2rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    background: white;
+}
+
+.faq-answer.active {
+    max-height: 500px;
+    padding: 2rem;
+}
+
+.faq-answer p {
+    color: #555;
+    line-height: 1.7;
+    font-size: 1.1rem;
+    margin: 0 !important;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .faq-container {
+        padding: 1rem;
+    }
+    
+    .faq-title {
+        font-size: 2rem;
+        margin-bottom: 2rem !important;
+    }
+    
+    .faq-question {
+        padding: 1rem 1.5rem;
+        font-size: 1.1rem;
+    }
+    
+    .faq-answer.active {
+        padding: 1.5rem;
+    }
+    
+    .faq-answer p {
+        font-size: 1rem;
+    }
+}
+</style>
+
+<div class="faq-container">
+    <h1 class="faq-title">Frequently Asked Questions</h1>
+    
+    <div class="faq-list">
+        <!-- FAQ Item 1 -->
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFAQ(this)">
+                <span>What time are your worship services?</span>
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>Our main worship service is held every Sunday at 10:30 AM. We welcome people of all ages and backgrounds to join us for a time of worship, fellowship, and spiritual growth. The service typically lasts about an hour and includes contemporary music, prayer, and a message from God's Word.</p>
+            </div>
+        </div>
+
+        <!-- FAQ Item 2 -->
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFAQ(this)">
+                <span>Do you have programs for children?</span>
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>Yes! We have Kelsa Kids, a wonderful children's program that runs during our Sunday morning worship service. Children participate in age-appropriate activities, games, songs, and Bible stories that help them learn about God's love in fun and creative ways. All children are welcome, and our trained volunteers ensure a safe and nurturing environment.</p>
+            </div>
+        </div>
+
+        <!-- FAQ Item 3 -->
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFAQ(this)">
+                <span>How can I get involved with The Salvation Army community services?</span>
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>There are many ways to get involved! We offer volunteer opportunities in our community services programs, including food assistance, clothing distribution, and support for families in need. You can also participate in our special events and fundraising activities throughout the year. Contact our church office or speak with one of our pastoral team members to learn more about how you can make a difference in our community.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function toggleFAQ(button) {
+    const answer = button.nextElementSibling;
+    const icon = button.querySelector('.faq-icon');
+    
+    // Close all other FAQs
+    const allQuestions = document.querySelectorAll('.faq-question');
+    const allAnswers = document.querySelectorAll('.faq-answer');
+    
+    allQuestions.forEach(q => {
+        if (q !== button) {
+            q.classList.remove('active');
+            q.querySelector('.faq-icon').textContent = '+';
+        }
+    });
+    
+    allAnswers.forEach(a => {
+        if (a !== answer) {
+            a.classList.remove('active');
+        }
+    });
+    
+    // Toggle current FAQ
+    button.classList.toggle('active');
+    answer.classList.toggle('active');
+    
+    if (button.classList.contains('active')) {
+        icon.textContent = '+';
+    } else {
+        icon.textContent = '+';
+    }
+}
+</script>
