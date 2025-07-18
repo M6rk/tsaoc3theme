@@ -1,0 +1,330 @@
+<style>
+.focus-section {
+    max-width: 1200px;
+    margin: 0 auto 2rem auto;
+    padding: 2rem;
+}
+
+.focus-container {
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 2.5rem;
+}
+
+.cover-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+}
+
+.focus-title {
+    color: #CC0000;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    text-align: center;
+    margin-bottom: 0.5rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0.5rem !important;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.focus-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #CC0000;
+    border-radius: 2px;
+}
+
+.focus-item {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    align-items: start;
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+    border-left: 4px solid #CC0000;
+}
+
+.focus-content h3 {
+    color: #CC0000;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+}
+
+.focus-content p {
+    color: #333;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin: 1rem 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.focus-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 !important;
+}
+
+.focus-content li {
+    color: #333;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 0.8rem 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.focus-content li::before {
+    content: '•';
+    color: #CC0000;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.focus-image-container {
+    text-align: center;
+}
+
+.focus-image {
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 0.5rem;
+}
+
+.focus-caption {
+    color: #CC0000;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    margin: 0 !important;
+    padding: 0.5rem;
+    background: rgba(204, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.highlight-text {
+    background: rgba(204, 0, 0, 0.1);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border-left: 3px solid #CC0000;
+    margin: 1rem 0 !important;
+    font-style: italic;
+    color: #333;
+}
+
+.link-callout {
+    background: #CC0000;
+    color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.link-callout a {
+    color: white;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.link-callout a:hover {
+    color: #f8f9fa;
+}
+
+/* Alternate layout for even items */
+.focus-item:nth-child(even) {
+    grid-template-columns: 1fr 2fr;
+    border-left: none;
+    border-right: 4px solid #CC0000;
+}
+
+.focus-item:nth-child(even) .focus-image-container {
+    order: -1;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .focus-section {
+        padding: 1rem;
+    }
+    
+    .focus-container {
+        padding: 1.5rem;
+        border-radius: 16px;
+    }
+    
+    .cover-image {
+        height: 250px;
+    }
+    
+    .focus-item {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 1.5rem;
+        border-left: 4px solid #CC0000 !important;
+        border-right: none !important;
+    }
+    
+    .focus-item:nth-child(even) .focus-image-container {
+        order: 0;
+    }
+    
+    .focus-image {
+        height: 180px;
+    }
+    
+    .focus-content li {
+        font-size: 1rem;
+    }
+}
+</style>
+
+<div class="focus-section">
+    <div class="focus-container">
+        <!-- Cover Image -->
+        <img src="http://tsaoc3.local/wp-content/uploads/2025/07/focus-areas-cover.jpg" 
+             alt="Areas of Focus Cover" 
+             class="cover-image" />
+
+        <h2 class="focus-title">Areas of Focus</h2>
+
+        <!-- Powerful Gatherings -->
+        <div class="focus-item">
+            <div class="focus-content">
+                <h3>Powerful Gatherings</h3>
+                <p>When we gather as the church we want it to be more than music and muffins! We want to experience a powerful and transformative time together in God's presence.</p>
+                
+                <div class="highlight-text">
+                    We see this happening as we:
+                </div>
+                
+                <ul>
+                    <li>Share stories and experiences of God moving in our lives</li>
+                    <li>Consider what the scriptures can teach us today</li>
+                    <li>Pray and worship together</li>
+                    <li>And yes, we may even eat muffins together!</li>
+                </ul>
+            </div>
+            <div class="focus-image-container">
+                <img src="http://tsaoc3.local/wp-content/uploads/2025/07/powerful-gatherings.jpg" 
+                     alt="Powerful Gatherings" 
+                     class="focus-image" />
+                <p class="focus-caption">WORSHIP</p>
+            </div>
+        </div>
+
+        <!-- Influential Children & Youth Ministry -->
+        <div class="focus-item">
+            <div class="focus-content">
+                <h3>Influential Children & Youth Ministry</h3>
+                <p>We want to provide a safe place for authentic relationships to grow and where young people can come as they are and know they will be accepted. We don't just want to run a good youth program, although we plan on the youth having a ton load of fun!</p>
+                
+                <p>The various youth groups will be based on ages and the experiences, questions and realities of each age group. We will provide opportunities for youth to:</p>
+                
+                <ul>
+                    <li>Grow in their relationship with God</li>
+                    <li>Become social advocates</li>
+                    <li>Have fun with others their age</li>
+                    <li>Develop mentoring relationships with caring and safe adults who have their back!</li>
+                </ul>
+            </div>
+            <div class="focus-image-container">
+                <img src="http://tsaoc3.local/wp-content/uploads/2025/07/youth-ministry.jpg" 
+                     alt="Youth Ministry" 
+                     class="focus-image" />
+                <p class="focus-caption">YOUTH</p>
+            </div>
+        </div>
+
+        <!-- Transformative Community Ministry -->
+        <div class="focus-item">
+            <div class="focus-content">
+                <h3>Transformative Community Ministry</h3>
+                <p>Our community ministries are based on supporting transformation. This means that we don't want to simply engage in a transaction (i.e. give groceries) rather we want to help feed people while ALSO getting at the root issues of why they are experiencing food insecurity.</p>
+                
+                <div class="highlight-text">
+                    We seek to:
+                </div>
+                
+                <ul>
+                    <li>Stand with people as they navigate their way through undesirable situations</li>
+                    <li>Advocate for people as they seek to access necessary resources to support themselves and their family</li>
+                    <li>Be a supportive friend to people so they know that they are seen, heard, valued and cared for</li>
+                </ul>
+            </div>
+            <div class="focus-image-container">
+                <img src="http://tsaoc3.local/wp-content/uploads/2025/07/community-ministry.jpg" 
+                     alt="Community Ministry" 
+                     class="focus-image" />
+                <p class="focus-caption">TRANSFORMATION</p>
+            </div>
+        </div>
+
+        <!-- Intentional Small Groups -->
+        <div class="focus-item">
+            <div class="focus-content">
+                <h3>Intentional Small Groups</h3>
+                <p>Our small groups is where real life happens. These groups, usually of less than 8 people, meet weekly to check-in with and encourage one another.</p>
+                
+                <p>The groups will most often dive into a discussion about how they are experiencing God in their lives, responses they have to what was talked about the previous Sunday at The Gathering, and to help each other live into what they sense is most life-giving and God-honouring.</p>
+            </div>
+            <div class="focus-image-container">
+                <img src="http://tsaoc3.local/wp-content/uploads/2025/07/small-groups.jpg" 
+                     alt="Small Groups" 
+                     class="focus-image" />
+                <p class="focus-caption">COMMUNITY</p>
+            </div>
+        </div>
+
+        <!-- Missional Thrift Store -->
+        <div class="focus-item">
+            <div class="focus-content">
+                <h3>Missional Thrift Store</h3>
+                <p>Lots of people come to our Thrift Store to find a good deal, but they almost always leave with more than that!</p>
+                
+                <div class="highlight-text">
+                    Our store is a place where:
+                </div>
+                
+                <ul>
+                    <li>Community members can also find caring staff who remember their names</li>
+                    <li>Our staff can be found praying with staff and customers</li>
+                    <li>Community members facing a need they cannot provide for can access items for free</li>
+                    <li>Staff and volunteers find meaningful work that is making a difference in the lives of individuals and in our community!</li>
+                </ul>
+            </div>
+            <div class="focus-image-container">
+                <img src="http://tsaoc3.local/wp-content/uploads/2025/07/thrift-store-mission.jpg" 
+                     alt="Missional Thrift Store" 
+                     class="focus-image" />
+                <p class="focus-caption">MISSION</p>
+            </div>
+        </div>
+    </div>
+</div>

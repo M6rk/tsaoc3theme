@@ -1,0 +1,187 @@
+<style>
+.support-section {
+    max-width: 1200px;
+    margin: 0 auto 2rem auto;
+    padding: 2rem;
+}
+
+.support-container {
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 2.5rem;
+}
+
+.support-title {
+    color: #CC0000;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    text-align: center;
+    margin-bottom: 0.5rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0.5rem !important;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.support-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #CC0000;
+    border-radius: 2px;
+}
+
+.bible-verse {
+    background: linear-gradient(135deg, #f8f9fa, #ffffff);
+    padding: 2rem;
+    border-radius: 16px;
+    margin: 2rem 0 !important;
+    text-align: center;
+    border: 1px solid #e9ecef;
+}
+
+.bible-verse p {
+    color: #333;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    font-style: italic;
+    margin: 0.5rem 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.bible-reference {
+    color: #CC0000 !important;
+    font-weight: bold;
+    font-size: 1.1rem !important;
+    margin-top: 1rem !important;
+}
+
+.help-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.help-card {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 16px;
+    text-align: center;
+    border-left: 4px solid #CC0000;
+    transition: transform 0.3s ease;
+}
+
+.help-card h3 {
+    color: #CC0000;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+}
+
+.help-card p {
+    color: #333;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 1rem 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.help-btn {
+    background: #CC0000;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+.help-btn:hover {
+    background: #AA0000;
+    color: white;
+    text-decoration: none;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .support-section {
+        padding: 1rem;
+    }
+    
+    .support-container {
+        padding: 1.5rem;
+        border-radius: 16px;
+    }
+    
+    .bible-verse {
+        padding: 1.5rem;
+    }
+    
+    .help-options {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+    
+    .help-card {
+        padding: 1.5rem;
+    }
+    
+    .bible-verse p {
+        font-size: 1.1rem;
+    }
+}
+</style>
+
+<div class="support-section">
+    <div class="support-container">
+        <h2 class="support-title">Ways You Can Help</h2>
+
+        <!-- Bible Verse Section -->
+        <div class="bible-verse">
+            <p>"So let's not get tired of doing what is good. At just the right time we will reap a harvest of blessing if we don't give up."</p>
+            <p class="bible-reference">– Galatians 6:9 –</p>
+        </div>
+
+        <!-- Help Options Grid -->
+        <div class="help-options">
+            <!-- Donate Card -->
+            <div class="help-card">
+                <h3>Donate</h3>
+                <p>The Salvation Army is thankful for your financial support and donations to our Thrift Stores, which enable us to run our community support programs.</p>
+                <a href="/donate" class="help-btn">Learn more</a>
+            </div>
+
+            <!-- Volunteer Card -->
+            <div class="help-card">
+                <h3>Volunteer</h3>
+                <p>We are always looking for volunteers to help in our Thrift Store, Community Programs, and of course during the Christmas season to help "ring the bells". You can make a real difference.</p>
+                <a href="/volunteer" class="help-btn">Learn more</a>
+            </div>
+
+            <!-- Join Team Card -->
+            <div class="help-card">
+                <h3>Join our Team</h3>
+                <p>We are always looking for individuals to join our team – you could be one of them!</p>
+                <a href="/careers" class="help-btn">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>

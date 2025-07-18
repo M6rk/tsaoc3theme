@@ -1,0 +1,367 @@
+<style>
+    .emergency-section {
+        max-width: 1200px;
+        margin: 0 auto 2rem auto;
+        padding: 2rem;
+    }
+
+    .emergency-container {
+        background: #FFFFFF;
+        border-radius: 20px;
+        padding: 2.5rem;
+    }
+
+    .emergency-title {
+        color: #CC0000;
+        font-size: clamp(2rem, 4vw, 2.8rem);
+        font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+        text-align: center;
+        margin-bottom: 0.5rem !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-top: 0.5rem !important;
+        font-weight: 600;
+        position: relative;
+        padding-bottom: 1rem;
+    }
+
+    .emergency-title::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 3px;
+        background-color: #CC0000;
+        border-radius: 2px;
+    }
+
+    .intro-section {
+        background: #f8f9fa;
+        padding: 2rem;
+        border-radius: 16px;
+        margin-bottom: 2rem;
+        border-left: 4px solid #CC0000;
+    }
+
+    .intro-section p {
+        color: #333;
+        font-size: 1.2rem;
+        line-height: 1.7;
+        margin: 1rem 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .intro-section p:first-child {
+        font-size: 1.3rem;
+        color: #CC0000;
+        font-weight: 600;
+    }
+
+    .examples-section {
+        margin: 3rem 0 !important;
+    }
+
+    .examples-title {
+        color: #CC0000;
+        font-size: 2rem;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 2rem !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-top: 0 !important;
+        font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    }
+
+    .response-category {
+        background: #ffffff;
+        border: 1px solid #e9ecef;
+        border-radius: 16px;
+        margin-bottom: 2rem;
+        overflow: hidden;
+    }
+
+    .category-header {
+        background: linear-gradient(135deg, #CC0000, #AA0000);
+        color: white;
+        padding: 1.5rem 2rem;
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin: 0 !important;
+        font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    }
+
+    .category-content {
+        padding: 2rem;
+    }
+
+    .response-item {
+        background: #f8f9fa;
+        padding: 1.5rem;
+        border-radius: 12px;
+        margin-bottom: 1.5rem;
+        border-left: 3px solid #CC0000;
+    }
+
+    .response-item h4 {
+        color: #CC0000;
+        font-size: 1.3rem;
+        font-weight: bold;
+        margin-bottom: 0.8rem !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-top: 0 !important;
+    }
+
+    .response-item p {
+        color: #333;
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin: 0.8rem 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .mission-statement {
+        background: linear-gradient(135deg, #f8f9fa, #ffffff);
+        padding: 2rem;
+        border-radius: 16px;
+        margin: 2rem 0 !important;
+        border: 2px solid #CC0000;
+        text-align: center;
+    }
+
+    .mission-statement p {
+        color: #333;
+        font-size: 1.2rem;
+        line-height: 1.7;
+        margin: 1rem 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        font-style: italic;
+    }
+
+    .mission-statement .highlight {
+        color: #CC0000;
+        font-weight: bold;
+        font-size: 1.3rem;
+    }
+
+    .contact-section {
+        background: #CC0000;
+        color: white;
+        padding: 2rem;
+        border-radius: 16px;
+        text-align: center;
+        margin-top: 3rem;
+    }
+
+    .contact-section h3 {
+        color: white !important;
+        font-size: 1.8rem;
+        margin-bottom: 1rem !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-top: 0 !important;
+        font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    }
+
+    .contact-section p {
+        color: white;
+        font-size: 1.2rem;
+        margin: 0.8rem 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .contact-section a {
+        color: white;
+        text-decoration: underline;
+        font-weight: bold;
+    }
+
+    .contact-section a:hover {
+        color: #f8f9fa;
+    }
+
+    .stats-highlight {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+        margin: 2rem 0 !important;
+    }
+
+    .stat-item {
+        background: rgba(204, 0, 0, 0.1);
+        padding: 1.5rem;
+        border-radius: 12px;
+        text-align: center;
+        border: 1px solid rgba(204, 0, 0, 0.2);
+    }
+
+    .stat-number {
+        color: #CC0000;
+        font-size: 2rem;
+        font-weight: bold;
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+        color: #333;
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    /* Mobile Responsiveness */
+    @media screen and (max-width: 768px) {
+        .emergency-section {
+            padding: 1rem;
+        }
+
+        .emergency-container {
+            padding: 1.5rem;
+            border-radius: 16px;
+        }
+
+        .intro-section {
+            padding: 1.5rem;
+        }
+
+        .category-content {
+            padding: 1.5rem;
+        }
+
+        .response-item {
+            padding: 1.2rem;
+        }
+
+        .mission-statement {
+            padding: 1.5rem;
+        }
+
+        .contact-section {
+            padding: 1.5rem;
+        }
+
+        .stats-highlight {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+<div class="emergency-section">
+    <div class="emergency-container">
+        <h2 class="emergency-title">Emergency Services</h2>
+
+        <!-- Introduction -->
+        <div class="intro-section">
+            <p>The unpredictability of disaster leaves us all vulnerable.</p>
+            <p>There are many within our community who have experienced the sudden loss that accompanies disaster. At
+                those times it is an army of volunteers that rises to come alongside the survivors and to help diminish
+                the feelings of helplessness and hopelessness.</p>
+            <p>In Kelowna, we are privileged to work alongside emergency first responders and other agencies to provide
+                relief and comfort. Whether it is the feeding of first responders on the scene or giving care and
+                comfort in the reception centre, Salvation Army Emergency Disaster Services Volunteers are prepared to
+                help in whatever way possible.</p>
+            <p>Our highly-trained volunteers work in teams to provide a well-disciplined and well-rounded approach to
+                helping with a disaster. Out of our Community Life Centre in Kelowna, these teams respond from their
+                hearts and give hope even when it seems that all is lost.</p>
+        </div>
+
+        <!-- Examples Section -->
+        <div class="examples-section">
+            <h3 class="examples-title">Examples of Our Emergency Relief Work</h3>
+            <!-- Local Responses -->
+            <div class="response-category">
+                <h3 class="category-header">Locally</h3>
+                <div class="category-content">
+                    <div class="response-item">
+                        <h4>Recent Emergency Responses</h4>
+                        <p>In the past couple of years we have responded to over a dozen calls in Kelowna and West
+                            Kelowna to provide meals for first responders and gave care and comfort on site and in the
+                            reception centre in conjunction with Emergency Support Services (ESS) personnel. We have
+                            helped distribute donations for those who have lost their homes due to disaster, and
+                            provided a safe place to decompress in the immediate aftermath of the tragedy.</p>
+                    </div>
+
+                    <div class="response-item">
+                        <h4>2017 Kelowna Flooding</h4>
+                        <p>In May of 2017 Kelowna experienced flooding and our Emergency Disaster Service Teams were in
+                            the community helping. First, they responded by helping families leave their homes.
+                            Secondly, we assisted with Emergency Social Services at the Reception Centre. Third they
+                            came alongside community members and helped fill sandbags. Together our team helped to keep
+                            the flood waters back and homes safe.</p>
+                    </div>
+
+                    <div class="response-item">
+                        <h4>2017 BC Fire Season</h4>
+                        <p>Fire season came early to BC in the summer of 2017. Our Sutherland Avenue Church Building was
+                            used by Emergency Social Services as a Reception Centre. Over 1600 people came through the
+                            centre from 100 Mile House, Clinton, Williams Lake and Cache Creek. Our Emergency Disaster
+                            Service Team was deployed to Williams Lake. They were able to serve food to front line
+                            workers.</p>
+                    </div>
+
+                    <div class="response-item">
+                        <h4>2016 Fort McMurray Fire Support</h4>
+                        <p>In 2016 for families that live in Kelowna who were affected by the Fort McMurray Fire, we
+                            were able to provide vouchers for clothing & food supplies as well as emotional and
+                            spiritual care. We sent an Emergency Disaster Services team onsite to support the First
+                            Responders.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- National Responses -->
+            <div class="response-category">
+                <h3 class="category-header">Nationally</h3>
+                <div class="category-content">
+                    <div class="response-item">
+                        <h4>2013 Alberta Flooding</h4>
+                        <p>In 2013 we sent two Emergency Disaster Services teams and our Community Crisis Unit to aid
+                            and give assistance to the first responders and the residents after the devastating flooding
+                            in Calgary and High River Alberta.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- International Responses -->
+            <div class="response-category">
+                <h3 class="category-header">Internationally</h3>
+                <div class="category-content">
+                    <div class="response-item">
+                        <h4>Global Emergency Response</h4>
+                        <p>As an international organization, the Salvation Army responds to emergencies around the
+                            world, we share locally in this mission here in Kelowna. The Salvation Army was first to
+                            arrive and last to leave when tragedy struck the World Trade Center in New York; we have
+                            counseled and comforted grieving relatives of those lost in air disasters at Paris (France),
+                            Gander (Newfoundland), Locherbie (Scotland), and at Peggy's Cove, Nova Scotia; we worked
+                            tirelessly during Manitoba's devastating flood and Eastern Canada's ice storm, and we
+                            assisted with emergency relief operations overseas in Rwanda, Albania, Kosovo, and Iraq.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mission Statement -->
+        <div class="mission-statement">
+            <p>The Army's unique, international, quasi-military structure enables it to move quickly into action. Like
+                no other civilian body, it can mobilize officer-personnel, resources, volunteers and financial support
+                from the public at large, and bring them to bear where the need is greatest.</p>
+            <p class="highlight">And what motivates its humanitarian services? Love for God, allied with a practical
+                concern for the needs of humanity.</p>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="contact-section">
+            <h3>Get Involved</h3>
+            <p>If you would like to know more about this program and how you can help, please contact:</p>
+            <p><strong>Angela (Volunteer Coordinator)</strong></p>
+            <p><a href="tel:+12508602329">(250) 860-2329</a></p>
+        </div>
+    </div>
+</div>

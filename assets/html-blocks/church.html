@@ -1,59 +1,29 @@
 <style>
-/* Church Page Layout */
-.church-container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.church-intro {
-    text-align: center;
-    margin-bottom: 1.5rem;  
-    background: white;
-    border-radius: 8px;
-    
-}
-
-.church-intro h1 {
-    color: #CC0000;
-    font-size: 2.3rem;
-    margin-bottom: 0.8rem;
-    font-family: 'Palatino Linotype', Palatino, serif;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 0;     
-}
-.church-intro p {
-    font-size: 1.1rem;
-}
-.church-intro p,
-.section-content p,
-.ministry-card p {
-    margin-left: 0;
-    margin-right: 0;
-}
-
-.church-section {
+/* Location Section */
+.location-section {
     padding: 3rem 2rem;
     background: white;
     border-radius: 12px;
     position: relative;
     overflow: hidden;
     margin-bottom: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.section-title {
+.location-title {
     color: #CC0000;
     font-size: 2rem;
     text-align: center;
     font-family: 'Palatino Linotype', Palatino, serif;
     position: relative;
-    margin: 1rem 0 1.5rem 0;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 0;     
+    margin: 1rem 0 1.5rem 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
 }
 
-.section-title::after {
+.location-title::after {
     content: '';
     position: absolute;
     bottom: -8px;
@@ -65,136 +35,12 @@
     border-radius: 2px;
 }
 
-.section-content {
+.location-content {
     line-height: 1.8;
     color: #444;
     font-size: 1.1rem;
 }
 
-.section-content p {
-    margin: 0 0 1rem 0;
-}
-
-.section-content p:last-child {
-    margin-bottom: 0;
-}
-
-/* Location Section */
-
-.location-map {
-    background: #e9ecef;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 250px;  
-    position: relative;
-    overflow: hidden;
-}
-
-.location-map iframe {
-    width: 100%;
-    height: 100%;
-    min-height: 250px;  
-    border: 0;
-    border-radius: 0 15px 15px 0;  
-}
-
-.location-info {
-    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
-    padding: 2rem;
-    border-radius: 15px;
-    border-left: 4px solid #CC0000;
-    text-align: center;
-    margin: 2rem 0;
-}
-
-.location-info h3 {
-    color: #CC0000;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    font-family: 'Palatino Linotype', Palatino, serif;
-}
-
-.location-info .address {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 1rem;
-}
-
-.location-info .service-time {
-    font-size: 1.3rem;
-    font-weight: bold;
-    color: #CC0000;
-    margin-bottom: 1rem;
-}
-
-/* Button Styling */
-.church-button {
-    display: inline-block;
-    background: #EE2D3D;
-    color: white;
-    padding: 0.8rem 2rem;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1.1rem;
-    margin: 0.5rem 0.5rem;
-    transition: all 0.3s ease;
-}
-
-.church-button:hover {
-    background: #CC0000;
-    transform: translateY(-2px);
-    color: white;
-    text-decoration: none;
-}
-
-/* Ministry Cards */
-.ministry-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.ministry-card {
-    background: linear-gradient(135deg, #fff, #f8f9fa);
-    padding: 2rem;
-    border-radius: 15px;
-    border: 1px solid #e9ecef;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.ministry-card h3 {
-    color: #CC0000;
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
-    font-family: 'Palatino Linotype', Palatino, serif;
-    text-align: left;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 0;
-}
-
-.ministry-card p {
-    color: #555;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-    flex-grow: 1;
-}
-
-.ministry-card .church-button {
-    align-self: flex-start;  
-    margin-top: 1.5rem;      
-    margin-left: 0;        
-}
-
-/* Updated Location Section */
 .location-info {
     background: linear-gradient(135deg, #f8f9fa, #e9ecef);
     border-radius: 15px;
@@ -217,26 +63,30 @@
 .location-details h3 {
     color: #CC0000;
     font-size: 1.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1rem !important;
     font-family: 'Palatino Linotype', Palatino, serif;
-    margin-left: 0;    
-    margin-right: 0;
-    margin-top: 0;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
 }
 
 .location-details .address {
     font-size: 1.1rem;
     font-weight: 600;
     color: #333;
-    margin-bottom: 1rem;
+    margin-bottom: 1rem !important;
     line-height: 1.5;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
 }
 
 .location-details .service-time {
     font-size: 1.2rem;
     font-weight: bold;
     color: #CC0000;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
 }
 
 .location-map {
@@ -248,56 +98,43 @@
     position: relative;
 }
 
-.location-map .map-placeholder {
-    color: #666;
-    font-size: 1rem;
-    text-align: center;
-    padding: 2rem;
-}
-
-/* Mission Image */
-.mission-image {
-    margin-top: 2rem;
-    text-align: center;
-    height: 30vw;  /* Container is 30vw */
-    overflow: hidden;  
-}
-
-.mission-image img {
+.location-map iframe {
     width: 100%;
-    height: 30vw;  
-    object-fit: cover;  
-    object-position: center 60%;  
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    min-height: 250px;
+    border: 0;
+    border-radius: 0 15px 15px 0;
+}
+
+.location-button {
+    display: inline-block;
+    background: #EE2D3D;
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin: 0.5rem 0.5rem;
+    transition: all 0.3s ease;
+    text-align:center;
+}
+
+.location-button:hover {
+    background: #CC0000;
+    transform: translateY(-2px);
+    color: white;
+    text-decoration: none;
 }
 
 /* Mobile Responsiveness */
 @media screen and (max-width: 768px) {
-    .church-intro {
-        padding: 1.5rem;
-        margin-bottom: 2rem;
-    }
-    
-    .church-intro h1 {
-        font-size: 2rem;
-    }
-    
-    .church-intro p {
-        font-size: 1.1rem;
-    }
-    
-    .church-section {
+    .location-section {
         padding: 2rem 1rem;
     }
     
-    .section-title {
+    .location-title {
         font-size: 1.8rem;
-    }
-    
-    .ministry-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
     }
     
     .location-info {
@@ -320,28 +157,9 @@
 }
 </style>
 
-<div class="church-container">
-    <!-- Hero Section -->
-    <div class="church-intro">
-        <h1>Okanagan Central Community Church</h1>
-        <p>A place to explore faith in Jesus Christ. Celebrate with us!</p>
-    </div>
-
- <!-- Mission Section -->
-<section class="church-section">
-    <h2 class="section-title">Our Mission</h2>
-    <div class="section-content">
-        <p>The Salvation Army and Okanagan Central Community Church exist to share the love of Jesus Christ, meet human needs and be a transforming influence in the communities of our world.</p>
-        <div class="mission-image">
-            <img src="http://tsaoc3.local/wp-content/uploads/2025/07/church.jpg" alt="Our Mission" />
-        </div>
-    </div>
-</section>
-
-<!-- Location Section -->
-<section class="church-section">
-    <h2 class="section-title">Location</h2>
-    <div class="section-content">
+<section class="location-section">
+    <h2 class="location-title">Location</h2>
+    <div class="location-content">
         <div class="location-info">
             <div class="location-details">
                 <h3>Visit Us</h3>
@@ -351,7 +169,7 @@
                     (corner of Burtch & Sutherland)
                 </div>
                 <div class="service-time">Join us Sundays at 10:30 am</div>
-                <a href="#" class="church-button">Get Directions</a>
+                <a href="#" class="location-button">Get Directions</a>
             </div>
             <div class="location-map">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7271.577045980841!2d-119.48155821688515!3d49.88207875886523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x537d8cada65dcd5f%3A0xd9fd5520a69da867!2sThe%20Salvation%20Army%20Okanagan%20Central%20Community%20Church!5e0!3m2!1sen!2sca!4v1752688144837!5m2!1sen!2sca" 
@@ -362,30 +180,6 @@
                         loading="lazy" 
                         referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Ministries Section -->
-<section class="church-section">
-    <h2 class="section-title">Ministries</h2>
-    <div class="section-content">
-        <div class="ministry-grid">
-            <div class="ministry-card">
-                <div>
-                    <h3>Kids</h3>
-                    <p>Children are always welcome at Okanagan Central Community Church. We offer Kelsa Kids during our Sunday morning worship services, allowing kids to worship and learn in creative, fun ways.</p>
-                </div>
-                <a href="#" class="church-button">Learn More</a>
-            </div>
-            
-            <div class="ministry-card">
-                <div>
-                    <h3>Seniors</h3>
-                    <p>New Vista Ministries exists to provide a specific ministry to the whole person (body, mind and spirit) for adults 50+ within our church and community.</p>
-                </div>
-                <a href="#" class="church-button">Learn More</a>
             </div>
         </div>
     </div>

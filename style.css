@@ -14,11 +14,21 @@ Version: 1.0
 
 /* Calibiri -> paragraph, Palatino - heading */
 
+/*Official is aprox. 1480x360*/
 
 .wp-block-cover {
-    max-height: clamp(200px, 25vw, 400px);
+    max-height: 492px;
+    height: 200%;
+    min-height: 425px;
     overflow: hidden;
     margin: 0;
+}
+
+.header-cover {
+    max-height: 492px !important;
+    height: 200%;
+    min-height: 425px;
+    overflow: hidden;
 }
 
 .wp-block-column h1,
@@ -50,15 +60,15 @@ Version: 1.0
 }
 
 h1, h2, h3, h4, h5, h6 {
-    margin-left: clamp(1rem, 10vw, 150px);
-    margin-right: clamp(1rem, 10vw, 150px);
+    margin-left: clamp(3rem, 30vw, 400px);
+    margin-right: clamp(3rem, 30vw, 400px);
     margin-top: 1rem;
     margin-bottom: 0.5rem;
 }
     
 p {
-    margin-left: clamp(1rem, 10vw, 150px);
-    margin-right: clamp(1rem, 10vw, 150px);
+    margin-left: clamp(3rem, 30vw, 400px);
+    margin-right: clamp(3rem, 30vw, 400px);
     margin-top: 1rem;
     margin-bottom: 0.5rem;
 }
@@ -244,7 +254,6 @@ header {
     display: flex;
     justify-content: flex-end;
     flex: 1;
-    
     padding-left: 2rem;
     padding-right: 2rem;
 }
@@ -271,22 +280,113 @@ nav ul li {
     position: relative;
 }
 
+nav ul li::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;        /* Extends hover area down */
+    left: 0;
+    right: 0;
+    height: 0.5rem;
+    background: transparent;
+    pointer-events: auto;
+}
+
 nav ul li a {
     text-decoration: none;
     color: #333333;
     font-weight: 900;
     font-size: clamp(18px, 1.3vw, 24px);
-    /* min, preferred, max */
     padding: clamp(0.25rem, 0.5vw, 0.75rem) clamp(0.5rem, 1vw, 1.5rem);
-    /* vertical horizontal */
+    display: block;
 }
 
 nav ul li a:hover {
     color: #CC0000;
 }
 
+/* Dropdown Menu Styles */
 nav ul li ul {
     display: none;
+    position: absolute;
+    top: 100%;               /* Change this to move dropdown down */
+    left: 0;
+    background-color: #ffffff;
+    min-width: 220px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 6px;
+    z-index: 1000;
+    border: 1px solid #e5e5e5;
+    padding: 0.75rem 0;
+    margin-top: 0.25rem;     /* Change this for additional spacing */
+}
+
+nav ul li ul::before {
+    content: '';
+    position: absolute;
+    top: -0.5rem;           /* Matches the margin-top */
+    left: 0;
+    right: 0;
+    height: 0.5rem;         /* Fills the gap */
+    background: transparent;
+}
+
+nav ul li ul li {
+    width: 100%;
+    display: block;
+}
+
+nav ul li ul li a {
+    color: #4a4a4a;
+    font-weight: 600;
+    font-size: clamp(16px, 1.1vw, 22px);
+    padding: 0.75rem 1.25rem;
+    white-space: nowrap;
+    border-bottom: 1px solid #f5f5f5;
+    margin: 0;
+}
+
+nav ul li ul li:last-child a {
+    border-bottom: none;
+}
+
+nav ul li ul li a:hover {
+    color: #CC0000;
+    background-color: #f8f9fa;
+}
+
+/* Show dropdown on hover */
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li.menu-item-has-children:hover > a::after {
+    transform: rotate(180deg);
+    color: #CC0000;
+}
+
+/* Third level dropdown (if needed) */
+nav ul li ul li ul {
+    left: 100%;
+    top: 0;
+    margin-top: 0;
+    margin-left: 1px;
+}
+
+nav ul li ul li:hover ul {
+    display: block;
+}
+
+/* Ensure smooth transitions */
+nav ul li ul {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+}
+
+nav ul li:hover ul {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
 }
 
 /* ========================================
@@ -460,7 +560,13 @@ nav ul li ul {
     text-decoration: none;
     font-size: 1.1rem;
     font-weight: 600;
-    transition: color 0.3s ease;
+}
+
+.mobile-menu ul li a:hover {
+    color:#CC0000
+}
+.mobile-menu ul li a.active {
+    color: #CC0000;
 }
 
 .mobile-menu ul li.menu-item-has-children ul {
@@ -475,6 +581,10 @@ nav ul li ul {
     font-weight: 500;
     padding: 0.1rem 0 1.5rem 1.5rem;
     color: #666;
+}
+
+.mobile-menu .sub-menu li a:hover {
+    color: #CC0000;
 }
 
 .donate-button {
@@ -567,7 +677,6 @@ footer p {
     color: #666;
     text-decoration: none;
     font-size: 18px;
-    transition: color 0.3s ease;
 }
 
 .footer-column ul li a:hover {

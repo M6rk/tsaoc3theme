@@ -1,0 +1,265 @@
+<style>
+.principles-section {
+    max-width: 1200px;
+    margin: 0 auto 2rem auto;
+    padding: 2rem;
+}
+
+.principles-container {
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 2.5rem;
+}
+
+.cover-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+}
+
+.principles-title {
+    color: #CC0000;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    text-align: center;
+    margin-bottom: 0.5rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0.5rem !important;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.principles-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #CC0000;
+    border-radius: 2px;
+}
+
+.principle-item {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    align-items: start;
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+    border-left: 4px solid #CC0000;
+}
+
+.principle-content h3 {
+    color: #CC0000;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+}
+
+.principle-subtitle {
+    color: #666;
+    font-size: 0.9rem;
+    font-style: italic;
+    margin-bottom: 1rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+}
+
+.principle-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.principle-content li {
+    color: #333;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 0.8rem 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.principle-content li::before {
+    content: '–';
+    color: #CC0000;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.principle-image-container {
+    text-align: center;
+}
+
+.principle-image {
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 0.5rem;
+}
+
+.principle-caption {
+    color: #CC0000;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    margin: 0 !important;
+    padding: 0.5rem;
+    background: rgba(204, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Alternate layout for even items */
+.principle-item:nth-child(even) {
+    grid-template-columns: 1fr 2fr;
+    border-left: none;
+    border-right: 4px solid #CC0000;
+}
+
+.principle-item:nth-child(even) .principle-image-container {
+    order: -1;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .principles-section {
+        padding: 1rem;
+    }
+    
+    .principles-container {
+        padding: 1.5rem;
+        border-radius: 16px;
+    }
+    
+    .cover-image {
+        height: 250px;
+    }
+    
+    .principle-item {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 1.5rem;
+        border-left: 4px solid #CC0000 !important;
+        border-right: none !important;
+    }
+    
+    .principle-item:nth-child(even) .principle-image-container {
+        order: 0;
+    }
+    
+    .principle-image {
+        height: 180px;
+    }
+    
+    .principle-content li {
+        font-size: 1rem;
+    }
+}
+</style>
+
+<div class="principles-section">
+    <div class="principles-container">
+        <!-- Cover Image -->
+        <img src="http://tsaoc3.local/wp-content/uploads/2025/07/james-coleman-olN6qebJ3Q0-unsplash.jpg" 
+             alt="Guiding Principles Cover" 
+             class="cover-image" />
+
+        <h2 class="principles-title">4 Guiding Principles</h2>
+
+        <!-- Transformation First -->
+        <div class="principle-item">
+            <div class="principle-content">
+                <h3>Transformation First</h3>
+                <p class="principle-subtitle">(Matt 28:18-20; Rom 12:2; 2Cor 3:18; 2Cor 5:17; Ez 36:26; Phil 1:6)</p>
+                <ul>
+                    <li>We will prioritize transformation as the foundation of all ministry</li>
+                    <li>Discipleship is the pathway to transformation and we will make it primary in our lives</li>
+                    <li>We will tell stories of transformation, not numbers, to communicate results</li>
+                </ul>
+            </div>
+            <div class="principle-image-container">
+                <img src="http://tsaoc3.local/wp-content/uploads/2025/07/transformation-image.jpg" 
+                     alt="Transformation" 
+                     class="principle-image" />
+                <p class="principle-caption">PRIORITY</p>
+            </div>
+        </div>
+
+        <!-- Better Together -->
+        <div class="principle-item">
+            <div class="principle-content">
+                <h3>Better Together</h3>
+                <p class="principle-subtitle">(Matthew 6:33; 2Cor 9:6-8; Matt 25:13-40; 1Cor 3:5-9)</p>
+                <ul>
+                    <li>We will steward resources for the sake of others to the glory of God</li>
+                    <li>We will choose to embrace generosity by living open handed instead of tight fisted</li>
+                    <li>We will join local initiatives and seek partnerships where Jesus is at work</li>
+                </ul>
+            </div>
+            <div class="principle-image-container">
+                <img src="http://tsaoc3.local/wp-content/uploads/2025/07/better-together-image.jpg" 
+                     alt="Better Together" 
+                     class="principle-image" />
+                <p class="principle-caption">STEWARDSHIP</p>
+            </div>
+        </div>
+
+        <!-- Mutuality -->
+        <div class="principle-item">
+            <div class="principle-content">
+                <h3>Mutuality</h3>
+                <p class="principle-subtitle">(Ecc 4:7-12; 2 Cor 5:11-21; Phil 2:1-11; 1Cor 13:1-7; Eph 4:1-16; Gal 3:26-29; Gal 4:6-7; 1Pet 3:8-12)</p>
+                <ul>
+                    <li>We will regard one another as family because of what God has done</li>
+                    <li>We will live as people of reconciliation choosing to love and forgive</li>
+                    <li>We will pursue humility, unity, and servant-heartedness in relationships with each other</li>
+                </ul>
+            </div>
+            <div class="principle-image-container">
+                <img src="http://tsaoc3.local/wp-content/uploads/2025/07/mutuality-image.jpg" 
+                     alt="Mutuality" 
+                     class="principle-image" />
+                <p class="principle-caption">POSTURE</p>
+            </div>
+        </div>
+
+        <!-- Spirit Empowered Living -->
+        <div class="principle-item">
+            <div class="principle-content">
+                <h3>Spirit Empowered Living</h3>
+                <p class="principle-subtitle">(Gal 5:16-26, John 10:10, Acts 1:8, Romans 8, 1 Cor 12:1-11; John 14:12-17; Eph 3:20-21)</p>
+                <ul>
+                    <li>We will depend on the Holy Spirit's empowerment to live the abundant life Jesus came to give</li>
+                    <li>We will use our Spirit-given gifts to serve one another and build each other up</li>
+                    <li>We will rely on the Holy Spirit to accomplish more than anyone could ask for or imagine</li>
+                </ul>
+            </div>
+            <div class="principle-image-container">
+                <img src="http://tsaoc3.local/wp-content/uploads/2025/07/spirit-empowered-image.jpg" 
+                     alt="Spirit Empowered Living" 
+                     class="principle-image" />
+                <p class="principle-caption">CONDUIT</p>
+            </div>
+        </div>
+    </div>
+</div>

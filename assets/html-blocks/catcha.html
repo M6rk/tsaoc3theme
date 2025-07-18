@@ -1,0 +1,395 @@
+<style>
+.game-container {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background: linear-gradient(135deg, #87CEEB, #E0F6FF);
+    border: 3px solid #CC0000;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 2rem auto;
+    font-family: 'Arial', sans-serif;
+}
+
+.game-header {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px 20px;
+    border-radius: 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.score, .lives {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #CC0000;
+}
+
+.target-hitbox {
+    position: absolute;
+    cursor: pointer;
+    width: 80px;
+    height: 80px;
+    background: transparent;
+    border: 2px dashed rgba(255, 0, 0, 0.2);
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.target-hitbox:hover {
+    border-color: rgba(255, 0, 0, 0.5);
+    transform: scale(1.05);
+}
+
+.target-image {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+    pointer-events: none;
+    top: 10px;
+    left: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.explosion {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, #FFD700, #FF6347);
+    border-radius: 50%;
+    animation: explode 0.4s ease-out forwards;
+    pointer-events: none;
+    z-index: 50;
+}
+
+@keyframes explode {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(2.5);
+        opacity: 0;
+    }
+}
+
+.game-over {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(204, 0, 0, 0.95);
+    color: white;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    z-index: 200;
+    display: none;
+}
+
+.game-over h2 {
+    margin: 0 0 1rem 0 !important;
+    font-size: 2rem;
+}
+
+.game-over p {
+    margin: 0.5rem 0 !important;
+}
+
+.game-over button {
+    background: white;
+    color: #CC0000;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.game-over button:hover {
+    background: #f0f0f0;
+    transform: translateY(-2px);
+}
+
+.start-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #CC0000;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 200;
+    transition: all 0.3s ease;
+}
+
+.start-button:hover {
+    background: #AA0000;
+    transform: translate(-50%, -50%) translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .game-container {
+        height: 500px;
+    }
+    
+    .target-hitbox {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .target-image {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .explosion {
+        width: 80px;
+        height: 80px;
+    }
+}
+</style>
+
+<div class="game-container" id="gameContainer">
+    <div class="game-header">
+        <div class="score">Score: <span id="scoreValue">0</span></div>
+        <div class="lives">Lives: <span id="livesValue">3</span></div>
+    </div>
+    
+    <button class="start-button" id="startButton">Start Game</button>
+    
+    <div class="game-over" id="gameOver">
+        <h2>Game Over!</h2>
+        <p>Final Score: <span id="finalScore">0</span></p>
+        <button onclick="restartGame()">Play Again</button>
+    </div>
+</div>
+
+<script>
+let gameState = {
+    score: 0,
+    lives: 3,
+    isPlaying: false,
+    gameSpeed: 1200,
+    fallSpeed: 1.5
+};
+
+let gameInterval;
+let fallingItems = [];
+
+const gameContainer = document.getElementById('gameContainer');
+const startButton = document.getElementById('startButton');
+const scoreElement = document.getElementById('scoreValue');
+const livesElement = document.getElementById('livesValue');
+const gameOverElement = document.getElementById('gameOver');
+const finalScoreElement = document.getElementById('finalScore');
+
+startButton.addEventListener('click', startGame);
+
+function startGame() {
+    gameState.isPlaying = true;
+    gameState.score = 0;
+    gameState.lives = 3;
+    gameState.gameSpeed = 1200;
+    gameState.fallSpeed = 1.5;
+    updateUI();
+    
+    startButton.style.display = 'none';
+    gameOverElement.style.display = 'none';
+    
+    // Clear any existing items
+    fallingItems.forEach(item => {
+        if (item.element.parentNode) {
+            item.element.parentNode.removeChild(item.element);
+        }
+    });
+    fallingItems = [];
+    
+    // Start spawning items
+    gameInterval = setInterval(spawnItem, gameState.gameSpeed);
+    
+    // Start game loop
+    gameLoop();
+}
+
+function spawnItem() {
+    if (!gameState.isPlaying) return;
+    
+    // Create hitbox container
+    const hitbox = document.createElement('div');
+    hitbox.className = 'target-hitbox';
+    
+    const hitboxSize = 80;
+    hitbox.style.left = Math.random() * (gameContainer.offsetWidth - hitboxSize) + 'px';
+    hitbox.style.top = '-' + hitboxSize + 'px';
+    
+    // Create image inside hitbox
+    const img = document.createElement('img');
+    img.src = 'http://tsaoc3.local/wp-content/uploads/2025/07/download-4.png';
+    img.className = 'target-image';
+    
+    // Handle image load error (fallback)
+    img.onerror = function() {
+        console.log('Image failed to load, using fallback');
+        this.style.display = 'none';
+        hitbox.style.background = 'radial-gradient(circle, #CC0000, #880000)';
+        hitbox.style.border = '3px solid #660000';
+        hitbox.style.borderRadius = '50%';
+    };
+    
+    img.onload = function() {
+        console.log('Target image loaded successfully');
+    };
+    
+    hitbox.appendChild(img);
+    
+    // Add click event to hitbox
+    hitbox.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        clickItem(this);
+    });
+    
+    gameContainer.appendChild(hitbox);
+    
+    fallingItems.push({
+        element: hitbox,
+        x: parseInt(hitbox.style.left),
+        y: -hitboxSize,
+        size: hitboxSize
+    });
+}
+
+function clickItem(element) {
+    if (!gameState.isPlaying) return;
+    
+    // Create explosion effect at center of target
+    const explosion = document.createElement('div');
+    explosion.className = 'explosion';
+    
+    const rect = element.getBoundingClientRect();
+    const containerRect = gameContainer.getBoundingClientRect();
+    
+    explosion.style.left = (rect.left - containerRect.left + rect.width/2 - 50) + 'px';
+    explosion.style.top = (rect.top - containerRect.top + rect.height/2 - 50) + 'px';
+    
+    gameContainer.appendChild(explosion);
+    
+    // Remove explosion after animation
+    setTimeout(() => {
+        if (explosion.parentNode) {
+            explosion.parentNode.removeChild(explosion);
+        }
+    }, 400);
+    
+    // Remove item from array and DOM
+    const index = fallingItems.findIndex(item => item.element === element);
+    if (index > -1) {
+        fallingItems.splice(index, 1);
+    }
+    
+    if (element.parentNode) {
+        element.parentNode.removeChild(element);
+    }
+    
+    // Increase score
+    gameState.score++;
+    updateUI();
+    
+    // Increase difficulty every 5 points
+    if (gameState.score % 5 === 0) {
+        gameState.gameSpeed = Math.max(400, gameState.gameSpeed - 150);
+        gameState.fallSpeed += 0.3;
+        
+        clearInterval(gameInterval);
+        gameInterval = setInterval(spawnItem, gameState.gameSpeed);
+    }
+}
+
+function gameLoop() {
+    if (!gameState.isPlaying) return;
+    
+    // Move all falling items
+    fallingItems.forEach((item, index) => {
+        item.y += gameState.fallSpeed;
+        item.element.style.top = item.y + 'px';
+        
+        // Check if item reached bottom (completely off screen)
+        if (item.y > gameContainer.offsetHeight + 20) {
+            // Remove from DOM and array
+            if (item.element.parentNode) {
+                item.element.parentNode.removeChild(item.element);
+            }
+            fallingItems.splice(index, 1);
+            
+            // Lose a life
+            gameState.lives--;
+            updateUI();
+            
+            if (gameState.lives <= 0) {
+                endGame();
+                return;
+            }
+        }
+    });
+    
+    if (gameState.isPlaying) {
+        requestAnimationFrame(gameLoop);
+    }
+}
+
+function updateUI() {
+    scoreElement.textContent = gameState.score;
+    livesElement.textContent = gameState.lives;
+}
+
+function endGame() {
+    gameState.isPlaying = false;
+    clearInterval(gameInterval);
+    
+    finalScoreElement.textContent = gameState.score;
+    gameOverElement.style.display = 'block';
+    
+    // Clear remaining items
+    fallingItems.forEach(item => {
+        if (item.element.parentNode) {
+            item.element.parentNode.removeChild(item.element);
+        }
+    });
+    fallingItems = [];
+}
+
+function restartGame() {
+    gameState = {
+        score: 0,
+        lives: 3,
+        isPlaying: false,
+        gameSpeed: 1200,
+        fallSpeed: 1.5
+    };
+    
+    startButton.style.display = 'block';
+    gameOverElement.style.display = 'none';
+    updateUI();
+}
+</script>

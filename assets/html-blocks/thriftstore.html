@@ -1,0 +1,344 @@
+<style>
+.thrift-store-section {
+    max-width: 1200px;
+    margin: 0 auto 2rem auto;
+    padding: 2rem;
+}
+
+.thrift-store-container {
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 2.5rem;
+}
+
+.thrift-store-title {
+    color: #CC0000;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    text-align: center;
+    margin-bottom: 0.5rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0.5rem !important;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.thrift-store-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #CC0000;
+    border-radius: 2px;
+}
+
+/* Introduction Section */
+.intro-section {
+    background: #FFFFFF;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 2rem;
+    align-items: center;
+}
+
+.intro-content {
+    text-align: left;
+}
+
+.intro-content p {
+    color: #333;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin: 1rem 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.intro-content p:last-child {
+    color: #CC0000;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-top: 1.5rem !important;
+}
+
+.intro-image {
+    text-align: center;
+}
+
+.intro-image img {
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.intro-image-placeholder {
+    width: 100%;
+    height: 200px;
+    background: #f0f0f0;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-style: italic;
+}
+
+/* Action Buttons Section */
+.action-section {
+    background: #CC0000;
+    padding: 2rem;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.action-btn {
+    background: white;
+    color: #CC0000;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    min-width: 150px;
+    display: inline-block;
+}
+
+.action-btn:hover {
+    background: #f8f9fa;
+    transform: translateY(-2px);
+    color: #CC0000;
+    text-decoration: none;
+}
+
+/* Store Locations Section */
+.locations-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+}
+
+.store-card {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 16px;
+    border-left: 4px solid #CC0000;
+}
+
+.store-card.westbank {
+    border-left: none;
+    border-right: 4px solid #CC0000;
+}
+
+.store-name {
+    color: #CC0000;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+}
+
+.store-address {
+    color: #333;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+}
+
+.store-contact {
+    margin: 1rem 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.store-contact p {
+    margin: 0.3rem 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.store-contact a {
+    color: #CC0000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.store-contact a:hover {
+    color: #005AAA;
+    text-decoration: underline;
+}
+
+.hours-section {
+    margin-top: 1.5rem;
+}
+
+.hours-title {
+    color: #CC0000;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 1rem !important;
+}
+
+.hours-info {
+    color: #555;
+    font-size: 1rem;
+    margin: 0.3rem 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .thrift-store-section {
+        padding: 1rem;
+    }
+
+    .thrift-store-container {
+        padding: 1.5rem;
+        border-radius: 16px;
+    }
+
+    .intro-section {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 1.5rem;
+        text-align: center;
+    }
+
+    .intro-content {
+        text-align: center;
+    }
+
+    .action-section {
+        padding: 1.5rem;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .action-btn {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .locations-section {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .store-card {
+        padding: 1.5rem;
+    }
+}
+</style>
+
+<div class="thrift-store-section">
+    <div class="thrift-store-container">
+        <h2 class="thrift-store-title">Thrift Store</h2>
+
+        <!-- Introduction Section -->
+        <div class="intro-section">
+            <div class="intro-content">
+                <p>The Salvation Army Thrift Store generates funds to support Salvation Army programs serving the
+                    Central Okanagan by efficiently and ethically recycling and selling donated clothing and other
+                    goods. We exceed our customers' expectations while providing an environment that is beneficial to
+                    the development and well-being of both our employees and volunteers.</p>
+
+                <p>Our Thrift Store is blessed with a dedicated and faithful team of staff and volunteers.</p>
+
+                <p>We look forward to seeing you soon!</p>
+            </div>
+
+            <div class="intro-image">
+                <!-- Replace with actual image -->
+                <img src="http://tsaoc3.local/wp-content/uploads/2025/07/header_thrift_store-1024x396.jpg"
+                    alt="Thrift Store Interior" />
+                <!-- Fallback placeholder if no image -->
+                <!-- <div class="intro-image-placeholder">Thrift Store Image</div> -->
+            </div>
+        </div>
+
+        <!-- Action Buttons Section -->
+        <div class="action-section">
+            <div class="action-buttons">
+                <a href="#donations" class="action-btn">
+                    Donations
+                </a>
+                <a href="#volunteer" class="action-btn">
+                    Volunteer
+                </a>
+                <a href="https://facebook.com/salvationarmykelowna" target="_blank" class="action-btn">
+                    Facebook
+                </a>
+            </div>
+        </div>
+
+        <!-- Store Locations Section -->
+        <div class="locations-section">
+            <!-- Rutland Store -->
+            <div class="store-card">
+                <h3 class="store-name">Rutland Thrift Store</h3>
+                <p class="store-address">200 Rutland Rd South</p>
+
+                <div class="store-contact">
+                    <p>Phone: <a href="tel:+17784787000">(778) 478-7000</a></p>
+                </div>
+
+                <div class="hours-section">
+                    <p class="hours-title">Shopping Hours:</p>
+                    <p class="hours-info">Monday – Saturday, 10 am – 5 pm</p>
+
+                    <p class="hours-title">Donation Hours:</p>
+                    <p class="hours-info">Tuesday to Saturday, 10 am – 2 pm</p>
+                </div>
+            </div>
+
+            <!-- Westbank Store -->
+            <div class="store-card westbank">
+                <h3 class="store-name">Westbank Thrift Store</h3>
+                <p class="store-address">101-3531 Old Okanagan Highway</p>
+
+                <div class="store-contact">
+                    <p>Phone: <a href="tel:+17784849791">(778) 484-9791</a></p>
+                </div>
+
+                <div class="hours-section">
+                    <p class="hours-title">Shopping Hours:</p>
+                    <p class="hours-info">Monday – Saturday, 10 am – 5 pm</p>
+
+                    <p class="hours-title">Donation Hours:</p>
+                    <p class="hours-info">Tuesday to Saturday, 10 am – 2 pm</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

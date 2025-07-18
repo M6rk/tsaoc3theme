@@ -67,7 +67,6 @@
   <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
 
   <!-- Mobile Menu -->
-  <!-- Mobile Menu -->
   <div class="mobile-menu" id="mobile-menu">
     <button class="mobile-menu-close" id="mobile-menu-close">&times;</button>
     

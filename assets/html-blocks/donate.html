@@ -1,0 +1,305 @@
+<style>
+.donate-section {
+    max-width: 1200px;
+    margin: 0 auto 2rem auto;
+    padding: 2rem;
+}
+
+.donate-container {
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 2.5rem;
+}
+
+.donate-title {
+    color: #CC0000;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    text-align: center;
+    margin-bottom: 0.5rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0.5rem !important;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.donate-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #CC0000;
+    border-radius: 2px;
+}
+
+.content-section {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+    border-left: 4px solid #CC0000;
+}
+
+.content-section h3 {
+    color: #CC0000;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+}
+
+.content-section p {
+    color: #333;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin: 1rem 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.donate-online-section {
+    background: linear-gradient(135deg, #CC0000, #AA0000);
+    color: white;
+    padding: 3rem 2rem;
+    border-radius: 16px;
+    text-align: center;
+    margin: 2rem 0 !important;
+}
+
+.donate-online-section h3 {
+    color: white !important;
+    font-size: 2.2rem;
+    margin-bottom: 1rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+}
+
+.donate-online-section p {
+    color: white;
+    font-size: 1.2rem;
+    margin: 1rem 0 1.5rem 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.donate-btn {
+    background: white;
+    color: #CC0000;
+    border: none;
+    padding: 1.2rem 3rem;
+    border-radius: 30px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin: 0.5rem;
+}
+
+.donate-btn:hover {
+    background: #f8f9fa;
+    transform: translateY(-3px);
+    color: #CC0000;
+    text-decoration: none;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.other-ways-section {
+    margin-top: 3rem;
+}
+
+.other-ways-title {
+    color: #CC0000;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+}
+
+.donation-info {
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin: 1.5rem 0 !important;
+    border: 1px solid #e9ecef;
+    text-align: center;
+}
+
+.donation-info p {
+    color: #333;
+    font-size: 1.1rem;
+    margin: 0.5rem 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.donation-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.donation-card {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 16px;
+    text-align: center;
+    border-left: 4px solid #CC0000;
+    transition: transform 0.3s ease;
+}
+
+.donation-card h4 {
+    color: #CC0000;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 1rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+}
+
+.donation-card p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0.5rem 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.learn-more-btn {
+    background: #CC0000;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+.learn-more-btn:hover {
+    background: #AA0000;
+    color: white;
+    text-decoration: none;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .donate-section {
+        padding: 1rem;
+    }
+    
+    .donate-container {
+        padding: 1.5rem;
+        border-radius: 16px;
+    }
+    
+    .content-section {
+        padding: 1.5rem;
+    }
+    
+    .donate-online-section {
+        padding: 2rem 1.5rem;
+    }
+    
+    .donate-btn {
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+    }
+    
+    .donation-options {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .donation-card {
+        padding: 1.5rem;
+    }
+}
+</style>
+
+<div class="donate-section">
+    <div class="donate-container">
+        <h2 class="donate-title">Donate</h2>
+
+        <!-- Our Story Section -->
+        <div class="content-section">
+            <h3>Our Story</h3>
+            <p>As the largest non-governmental direct provider of social service in Canada, your support enables us to put dignity within reach for the three million Canadians living in poverty each year.</p>
+        </div>
+
+        <!-- Why Give Section -->
+        <div class="content-section">
+            <h3>Why Give?</h3>
+            <p>Your partnership through donation meets real needs in our community.</p>
+            <p>We value your support and want you to be assured that your financial contributions to The Salvation Army will go directly to the point of the most urgent need. Make a donation to help restore hope and dignity to people who might otherwise remain invisible in society.</p>
+        </div>
+
+        <!-- Donate Online Section -->
+        <div class="donate-online-section">
+            <h3>DONATE ONLINE</h3>
+            <p>Make a secure donation today and help us continue our mission in the Central Okanagan.</p>
+            <a href="#donate-online" class="donate-btn">Donate Now</a>
+        </div>
+
+        <!-- Other Ways to Give Section -->
+        <div class="other-ways-section">
+            <h3 class="other-ways-title">Other Ways to Give</h3>
+            
+            <div class="donation-info">
+                <p>The Salvation Army is also thankful for donations of gently used clothing and household items for our Thrift Store.</p>
+                <p><strong>Donations can be dropped off Monday through Saturday 10am – 2pm.</strong></p>
+                <p>Click on a button below to learn more.</p>
+            </div>
+
+            <div class="donation-options">
+                <!-- Clothing & Goods Card -->
+                <div class="donation-card">
+                    <h4>Clothing & Goods</h4>
+                    <p>Donate gently used clothing, furniture, and household items to our Thrift Store. Your donations help fund our community programs.</p>
+                    <a href="#clothing-goods" class="learn-more-btn">Learn More</a>
+                </div>
+
+                <!-- Corporate Donations Card -->
+                <div class="donation-card">
+                    <h4>Corporate Donations</h4>
+                    <p>Partner with us through corporate giving programs, employee fundraising, or in-kind donations to make a larger community impact.</p>
+                    <a href="#corporate" class="learn-more-btn">Learn More</a>
+                </div>
+
+                <!-- Christmas Donations Card -->
+                <div class="donation-card">
+                    <h4>Christmas Donations</h4>
+                    <p>Support our Christmas programs including the Kettle Campaign, Gift of Hope, and Christmas hampers for families in need.</p>
+                    <a href="#christmas" class="learn-more-btn">Learn More</a>
+                </div>
+
+                <!-- Bequests Card -->
+                <div class="donation-card">
+                    <h4>Bequests (Wills)</h4>
+                    <p>Leave a lasting legacy by including The Salvation Army in your will. Help us continue our mission for generations to come.</p>
+                    <a href="#bequests" class="learn-more-btn">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
