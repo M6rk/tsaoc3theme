@@ -8,7 +8,7 @@
 .donate-container {
     background: #FFFFFF;
     border-radius: 20px;
-    padding: 2.5rem;
+    padding: 0 2.5rem 2.5rem 2.5rem; 
 }
 
 .donate-title {
@@ -16,10 +16,10 @@
     font-size: clamp(2rem, 4vw, 2.8rem);
     font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
     text-align: center;
-    margin-bottom: 0.5rem !important;
+    margin-bottom: 2rem !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
-    margin-top: 0.5rem !important;
+    margin-top: 0 !important; /* Changed from 0.5rem to 0 */
     font-weight: 600;
     position: relative;
     padding-bottom: 1rem;
@@ -35,6 +35,56 @@
     height: 3px;
     background-color: #CC0000;
     border-radius: 2px;
+}
+
+/* Image Section Styling */
+.image-section {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.image-container {
+    background: #f8f9fa;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #e9ecef;
+}
+
+.image-container img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.image-caption {
+    padding: 1rem;
+    background: white;
+}
+
+.image-caption h4 {
+    color: #CC0000;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+}
+
+.image-caption p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0 !important;
 }
 
 .content-section {
@@ -213,6 +263,15 @@
         border-radius: 16px;
     }
     
+    .image-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .image-container img {
+        height: 200px;
+    }
+    
     .content-section {
         padding: 1.5rem;
     }
@@ -245,6 +304,26 @@
         <div class="content-section">
             <h3>Our Story</h3>
             <p>As the largest non-governmental direct provider of social service in Canada, your support enables us to put dignity within reach for the three million Canadians living in poverty each year.</p>
+        </div>
+
+                <!-- Image Section -->
+        <div class="image-section">
+            <div class="image-grid">
+                <div class="image-container">
+                    <img src="http://tsaoc3.local/wp-content/uploads/2025/07/fb2.jpg" alt="Helping hands in our community">
+                    <div class="image-caption">
+                        <h4>Making a Difference</h4>
+                        <p>Your donations directly support families and individuals in need throughout the Central Okanagan.</p>
+                    </div>
+                </div>
+                <div class="image-container">
+                    <img src="http://tsaoc3.local/wp-content/uploads/2025/07/fb1-1024x768.jpg" alt="Community support programs">
+                    <div class="image-caption">
+                        <h4>Community Impact</h4>
+                        <p>Every contribution helps us provide essential services, food assistance, and hope to those who need it most.</p>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- Why Give Section -->

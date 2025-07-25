@@ -1,0 +1,227 @@
+<style>
+.youth-page-container {
+    max-width: 1200px;
+    margin: 0 auto 2rem auto;
+    padding: 2rem;
+}
+
+.youth-title {
+    color: #CC0000;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    text-align: center;
+    margin-bottom: 2rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0.5rem !important;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.youth-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #CC0000;
+    border-radius: 2px;
+}
+
+.youth-hero-section {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.youth-image {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.youth-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+.quote-section {
+    background: linear-gradient(135deg, #CC0000, #AA0000);
+    color: white;
+    padding: 2.5rem;
+    border-radius: 16px;
+    text-align: center;
+    margin: 2rem 0;
+    position: relative;
+}
+
+.quote-text {
+    font-size: 1.4rem;
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 1rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+    color: white !important;
+}
+
+.quote-attribution {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: white !important;
+    margin: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.quote-attribution::before {
+    content: '— ';
+}
+
+.content-section {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 16px;
+    border-left: 4px solid #CC0000;
+    margin-bottom: 2rem;
+}
+
+.content-section p {
+    color: #333;
+    font-size: 1.2rem;
+    line-height: 1.7;
+    margin: 1.5rem 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    text-align: center;
+}
+
+.contact-section {
+    background: #ffffff;
+    border: 1px solid #e9ecef;
+    padding: 2rem;
+    border-radius: 16px;
+    text-align: center;
+}
+
+.contact-section h3 {
+    color: #CC0000;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+}
+
+.contact-section p {
+    color: #333;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 1rem 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.contact-info {
+    background: rgba(204, 0, 0, 0.05);
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-top: 1.5rem;
+}
+
+.contact-info p {
+    margin: 0.8rem 0 !important;
+    color: #333;
+}
+
+.contact-info strong {
+    color: #CC0000;
+}
+
+.contact-info a {
+    color: #CC0000;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .youth-page-container {
+        padding: 1rem;
+    }
+    
+    .youth-hero-section,
+    .quote-section,
+    .content-section,
+    .contact-section {
+        padding: 1.5rem;
+        border-radius: 12px;
+    }
+    
+    .youth-hero-section {
+        padding: 0.75rem 1.5rem;
+    }
+    
+    .youth-image {
+        max-width: 300px;
+    }
+    
+    .youth-title {
+        font-size: 2rem !important;
+    }
+    
+    .quote-text {
+        font-size: 1.2rem;
+    }
+    
+    .content-section p {
+        font-size: 1.1rem;
+    }
+    
+    .contact-info {
+        padding: 1rem;
+    }
+}
+</style>
+
+<div class="youth-page-container">
+    <h1 class="youth-title">Youth</h1>
+
+    <div class="youth-hero-section">
+        <div class="youth-image">
+            <img src="path-to-your-youth-image.jpg" alt="Youth at Okanagan Central Community Church">
+        </div>
+    </div>
+
+    <div class="content-section">
+        <p>Okanagan Central Community Church seeks to provide a place where youth can discover and develop a deep, meaningful relationship with Jesus Christ. We also want them to seek to find joy in service to the Church and the community.</p>
+    </div>
+
+    <div class="quote-section">
+        <p class="quote-text">"…this is what he [the LORD] requires of you: to do what is right, to love mercy, and to walk humbly with your God."</p>
+        <p class="quote-attribution">Micah 6:8b (NLT)</p>
+    </div>
+
+    <div class="contact-section">
+        <h3>Youth Ministry Contact</h3>
+        <p>For more information on our youth programs, please reach out to our Youth Ministries Coordinator:</p>
+        
+        <div class="contact-info">
+            <p><strong>Nathan Bennett</strong><br>Youth Ministries Coordinator</p>
+            <p><strong>Email:</strong> <a href="mailto:Nathan.Bennett2@salvationarmy.ca">Nathan.Bennett2@salvationarmy.ca</a></p>
+            <p><strong>Tel:</strong> <a href="tel:+17785831047">(778) 583-1047</a></p>
+        </div>
+    </div>
+</div>

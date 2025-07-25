@@ -1,0 +1,263 @@
+<style>
+.seniors-page-container {
+    max-width: 1200px;
+    margin: 0 auto 2rem auto;
+    padding: 2rem;
+}
+
+.seniors-title {
+    color: #CC0000;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    text-align: center;
+    margin-bottom: 2rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0.5rem !important;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.seniors-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #CC0000;
+    border-radius: 2px;
+}
+
+.mission-section {
+    background: linear-gradient(135deg, #CC0000, #AA0000);
+    color: white;
+    padding: 2.5rem;
+    border-radius: 16px;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.mission-text {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    margin: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    color: white !important;
+    font-style: italic;
+}
+
+.program-section {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 16px;
+    border-left: 4px solid #CC0000;
+    margin-bottom: 2rem;
+}
+
+.program-title {
+    color: #CC0000;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+}
+
+.program-section p {
+    color: #333;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin: 1rem 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.highlight-box {
+    background: rgba(204, 0, 0, 0.1);
+    border: 1px solid rgba(204, 0, 0, 0.2);
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin: 1.5rem 0;
+}
+
+.highlight-box p {
+    color: #CC0000;
+    font-weight: bold;
+    margin: 0.5rem 0 !important;
+    font-size: 1.1rem;
+}
+
+.schedule-info {
+    background: #ffffff;
+    border: 1px solid #e9ecef;
+    padding: 1.8rem;
+    border-radius: 12px;
+    margin: 1.5rem 0;
+    text-align: left;
+}
+
+.schedule-info h4 {
+    color: #CC0000;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 1rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+}
+
+.schedule-info p {
+    color: #333;
+    margin: 0.6rem 0 !important;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.schedule-info strong {
+    color: #CC0000;
+    font-weight: bold;
+}
+
+.bible-study-section {
+    background: #ffffff;
+    border: 1px solid #e9ecef;
+    padding: 2rem;
+    border-radius: 16px;
+    border-left: 4px solid #CC0000;
+}
+
+.bible-study-section h3 {
+    color: #CC0000;
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 1rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    text-align: center;
+}
+
+.bible-study-section p {
+    color: #333;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin: 1rem 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    text-align: center;
+}
+
+.bible-schedule-info {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin: 1.5rem 0;
+    text-align: center;
+}
+
+.bible-schedule-info h4 {
+    color: #CC0000;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.8rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+}
+
+.bible-schedule-info p {
+    color: #333;
+    margin: 0.5rem 0 !important;
+    font-size: 1rem;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .seniors-page-container {
+        padding: 1rem;
+    }
+    
+    .mission-section,
+    .program-section,
+    .bible-study-section {
+        padding: 1.5rem;
+        border-radius: 12px;
+    }
+    
+    .seniors-title {
+        font-size: 2rem !important;
+    }
+    
+    .mission-text {
+        font-size: 1.1rem;
+    }
+    
+    .program-title {
+        font-size: 1.5rem;
+    }
+    
+    .highlight-box,
+    .schedule-info,
+    .bible-schedule-info {
+        padding: 1rem;
+    }
+    
+    .schedule-info h4 {
+        font-size: 1.2rem;
+    }
+    
+    .schedule-info p {
+        font-size: 1.1rem;
+    }
+}
+</style>
+
+<div class="seniors-page-container">
+    <h1 class="seniors-title">New Vista Ministries</h1>
+
+    <div class="mission-section">
+        <p class="mission-text">New Vista Ministries exists to provide a specific ministry to the whole person (body, mind and spirit) for adults 55+ within our church and community.</p>
+    </div>
+
+    <div class="program-section">
+        <h2 class="program-title">Seniors' Drop-In</h2>
+        
+        <div class="schedule-info">
+            <h4>When & Where</h4>
+            <p><strong>Wednesdays:</strong> 10:00 a.m. to 1:00 p.m.</p>
+            <p><strong>Season:</strong> September to June</p>
+            <p><strong>Location:</strong> Church Gym</p>
+            <p><strong>Cost:</strong> $4.00</p>
+        </div>
+
+        <p>The Seniors' Drop-In runs on Wednesdays (10:00 a.m. to 1:00 p.m.) from September to June in the church gym. Come early to build friendships and play some board games. Our amazing team of kitchen volunteers prepares a healthy soup and sandwich lunch each week.</p>
+
+        <div class="highlight-box">
+            <p>Musical Entertainment & Educational Workshops</p>
+            <p>Program runs from 11:45 a.m. to 1:00 p.m.</p>
+            <p>Special programs at Thanksgiving, Christmas, Valentine's & Easter</p>
+        </div>
+
+        <p>Each week, a unique program is offered. A variety of musical groups and soloists from across the Central Okanagan area, many of whom are also senior adults, offer their talents to benefit those attending the Drop-In. You're guaranteed to have a foot-tapping good time! You may even find yourself getting up and dancing. Some weeks, educational or information workshops of interest to senior adults are offered.</p>
+
+        <p>We make every effort to keep connected with and care for Drop-In attendees who become sick or shut in through telephone calls, e-mails or personal visits to homes and hospitals. We also regularly visit past members who can no longer attend due to ill health.</p>
+    </div>
+
+    <div class="bible-study-section">
+        <h3>Bible Study</h3>
+        <p>We also offer a Bible Study on Wednesday mornings from 10:00—11:30 a.m. to nurture your spiritual life.</p>
+        
+        <div class="bible-schedule-info">
+            <h4>Bible Study Schedule</h4>
+            <p><strong>Wednesday Mornings:</strong> 10:00 - 11:30 a.m.</p>
+        </div>
+    </div>
+</div>

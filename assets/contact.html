@@ -1,0 +1,81 @@
+<style>
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
+    .title {
+        color: #CC0000;
+        font-size: clamp(2rem, 4vw, 2.8rem);
+        font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+        text-align: center;
+        margin-bottom: 2rem !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-top: 0 !important;
+        font-weight: 600;
+        position: relative;
+        padding-bottom: 1rem;
+    }
+
+    .title::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 3px;
+        background-color: #CC0000;
+        border-radius: 2px;
+    }
+
+    .button-container {
+        display: flex;
+        justify-content: center;
+        gap: 3rem;
+        margin-bottom: 0rem;
+    }
+
+    .contact-button {
+        background: #CC0000;
+        color: white;
+        border: none;
+        padding: 1rem 2rem;
+        border-radius: 25px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+        display: inline-block;
+    }
+
+    .contact-button:hover {
+        background: #AA0000;
+        color: white;
+        text-decoration: none;
+    }
+
+    @media screen and (max-width: 768px) {
+        .button-container {
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        
+        .contact-button {
+            width: 200px;
+            text-align: center;
+        }
+    }
+</style>
+
+<div class="container">
+    <h1 class="title">Contact Us</h1>
+    
+    <div class="button-container">
+        <a href="#staff-directory" class="contact-button">Staff Directory</a>
+        <a href="#location-hours" class="contact-button">Location & Hours</a>
+    </div>
+</div>

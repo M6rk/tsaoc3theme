@@ -1,7 +1,32 @@
 <style>
+/* Main Page Title */
+.church-main-title {
+    color: #CC0000;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    text-align: center;
+    margin: 0.5rem auto 2rem auto !important;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 1rem;
+    max-width: 1200px;
+}
+
+.church-main-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #CC0000;
+    border-radius: 2px;
+}
+
 /* Location Section */
 .location-section {
-    padding: 3rem 2rem;
+    padding: 1rem 2rem;
     background: white;
     border-radius: 12px;
     position: relative;
@@ -129,6 +154,10 @@
 
 /* Mobile Responsiveness */
 @media screen and (max-width: 768px) {
+    .church-main-title {
+        font-size: 2rem !important;
+    }
+    
     .location-section {
         padding: 2rem 1rem;
     }
@@ -156,6 +185,9 @@
     }
 }
 </style>
+
+<!-- Main Page Title -->
+<h1 class="church-main-title">Okanagan Central Community Church</h1>
 
 <section class="location-section">
     <h2 class="location-title">Location</h2>

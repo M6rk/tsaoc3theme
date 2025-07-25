@@ -1,0 +1,380 @@
+<style>
+    .christmas-section {
+        max-width: 1200px;
+        margin: 0 auto 2rem auto;
+        padding: 2rem;
+    }
+
+    .christmas-container {
+        background: #FFFFFF;
+        border-radius: 20px;
+        padding: 1.5rem 2.5rem 2.5rem 2.5rem;
+    }
+
+    .christmas-title {
+        color: #CC0000;
+        font-size: clamp(2rem, 4vw, 2.8rem);
+        font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+        text-align: center;
+        margin-bottom: 1.5rem !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-top: 0 !important;
+        font-weight: 600;
+        position: relative;
+        padding-bottom: 1rem;
+    }
+
+    .christmas-title::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 3px;
+        background-color: #CC0000;
+        border-radius: 2px;
+    }
+
+    .program-section {
+        background: #f8f9fa;
+        padding: 2rem;
+        border-radius: 16px;
+        margin-bottom: 2rem;
+        border-left: 4px solid #CC0000;
+    }
+
+    .section-title {
+        color: #CC0000;
+        font-size: 1.8rem;
+        font-weight: bold;
+        margin-bottom: 1.5rem !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-top: 0 !important;
+        font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    }
+
+    .section-content {
+        color: #333;
+        font-size: 1.1rem;
+        line-height: 1.7;
+        margin: 0 !important;
+    }
+
+    .catalogue-section {
+        background: #f8f9fa;
+        border: 2px solid #ddd;
+        border-radius: 16px;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    .catalogue-section .section-title {
+        color: #CC0000;
+    }
+
+    .catalogue-highlight {
+        background: white;
+        padding: 1.5rem;
+        border-radius: 12px;
+        margin: 1.5rem 0;
+        border-left: 4px solid #CC0000;
+    }
+
+    .catalogue-highlight h4 {
+        color: #CC0000;
+        font-size: 1.3rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-top: 0 !important;
+        font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    }
+
+    .catalogue-highlight p {
+        color: #666;
+        font-size: 1rem;
+        font-style: italic;
+        margin: 0 !important;
+    }
+
+    .photo-gallery-title {
+        color: #CC0000;
+        font-size: 1.6rem;
+        font-weight: bold;
+        margin-bottom: 1.5rem !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-top: 0 !important;
+        font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+        text-align: center;
+    }
+
+    .photo-gallery {
+        margin: 2rem 0;
+    }
+
+    .photo-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        margin: 1.5rem 0;
+    }
+
+    .photo-item {
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border: 1px solid #e9ecef;
+    }
+
+.photo-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    object-position: center 40%;
+}
+
+    .photo-caption {
+        padding: 1rem;
+        background: white;
+    }
+
+    .photo-caption h5 {
+        color: #CC0000;
+        font-size: 1.1rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-top: 0 !important;
+        font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    }
+
+    .photo-caption p {
+        color: #666;
+        font-size: 0.9rem;
+        line-height: 1.4;
+        margin: 0 !important;
+    }
+
+    .timing-section {
+        background: #f8f9fa;
+        border: 2px solid #ddd;
+        border-radius: 16px;
+        padding: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .timing-section .section-title {
+        color: #CC0000;
+    }
+
+    .deadline-highlight {
+        background: white;
+        border: 3px solid #CC0000;
+        border-radius: 12px;
+        padding: 1.5rem;
+        margin: 1.5rem 0;
+        text-align: center;
+    }
+
+    .deadline-highlight h4 {
+        color: #CC0000;
+        font-size: 1.4rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-top: 0 !important;
+        font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    }
+
+    .deadline-highlight p {
+        color: #333;
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin: 0 !important;
+    }
+
+    .toy-list {
+        background: white;
+        padding: 1.5rem;
+        border-radius: 12px;
+        margin: 1.5rem 0;
+        border-left: 4px solid #CC0000;
+    }
+
+    .toy-list p {
+        color: #333;
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin: 0 !important;
+    }
+
+    .toy-list strong {
+        color: #CC0000;
+    }
+
+    .contact-section {
+        background: #f8f9fa;
+        border: 2px solid #ddd;
+        border-radius: 16px;
+        padding: 2rem;
+        text-align: center;
+    }
+
+    .contact-section h3 {
+        color: #CC0000;
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 1rem !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-top: 0 !important;
+        font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    }
+
+    .contact-section p {
+        color: #333;
+        font-size: 1.1rem;
+        margin: 0 !important;
+    }
+
+    .contact-button {
+        background: #CC0000;
+        color: white;
+        border: none;
+        padding: 1rem 2rem;
+        border-radius: 25px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+        display: inline-block;
+        margin-top: 1rem;
+    }
+
+    .contact-button:hover {
+        background: #AA0000;
+        color: white;
+        text-decoration: none;
+    }
+
+    /* Mobile Responsiveness */
+    @media screen and (max-width: 768px) {
+        .christmas-section {
+            padding: 1rem;
+        }
+
+        .christmas-container {
+            padding: 1.5rem;
+            border-radius: 16px;
+        }
+
+        .program-section {
+            padding: 1.5rem;
+        }
+
+        .catalogue-section {
+            padding: 1.5rem;
+        }
+
+        .timing-section {
+            padding: 1.5rem;
+        }
+
+        .contact-section {
+            padding: 1.5rem;
+        }
+
+        .photo-grid {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .photo-item img {
+            height: 200px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+        }
+    }
+</style>
+
+<div class="christmas-section">
+    <div class="christmas-container">
+        <h1 class="christmas-title">Christmas Donations</h1>
+
+        <!-- Gifts of Hope Section -->
+        <div class="program-section">
+            <h2 class="section-title">Gifts Of Hope</h2>
+            <p class="section-content">Families walk through our Toy Depot and choose the gifts that best suit their
+                children's needs and wants—no surprises or disappointments. Our families love making their own decisions
+                and finding the perfect gift.</p>
+        </div>
+
+        <!-- Photo Gallery Section -->
+        <div class="photo-gallery">
+            <div class="photo-grid">
+                <div class="photo-item">
+                    <img src="http://tsaoc3.local/wp-content/uploads/2025/07/thumbnail_IMG_1493.jpg"
+                        alt="Christmas Toy Depot">
+                </div>
+
+                <div class="photo-item">
+                    <img src="http://tsaoc3.local/wp-content/uploads/2025/07/thumbnail_Resized_20221210_103841.jpg"
+                        alt="Christmas">
+                </div>
+            </div>
+        </div>
+
+        <!-- Christmas Catalogue Section -->
+        <div class="catalogue-section">
+            <h2 class="section-title">Christmas Catalogue</h2>
+            <p class="section-content">Looking for a way to change a family's life at Christmas? We have created the
+                perfect Christmas Catalogue—a guide to what your donation will buy for our families. The catalogue
+                focuses on toys and stuff kids would love, as well as activities for the family, such as board games and
+                puzzles. We will use your donations to ensure our families have a very special Christmas.</p>
+
+            <div class="catalogue-highlight">
+                <h4>Gifts Of Hope Toy Program Gifts Catalogue 2024</h4>
+                <p>Download our comprehensive gift guide to see how your donation makes a difference</p>
+            </div>
+        </div>
+
+        <!-- Donation Timing Section -->
+        <div class="timing-section">
+            <h2 class="section-title">Donation Timing</h2>
+            <p class="section-content">Christmas is just around the corner, and our Toy Depot is being set up. We love
+                it when we receive donations of presents for our families. In December our store will be open for our
+                families to shop.</p>
+
+            <div class="toy-list">
+                <p><strong>Our Toy Depot will be filled with:</strong> games, toys, pyjamas, books and even bicycles.
+                    Want to make Christmas spectacular for our families?</p>
+            </div>
+
+            <div class="deadline-highlight">
+                <h4>Important Deadline</h4>
+                <p>Please bring your donations before December 15th</p>
+            </div>
+
+            <p class="section-content">We do not want anyone to be disappointed by the toy store being empty. Your
+                generosity changes lives in our community.</p>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="contact-section">
+            <h3>Need More Information?</h3>
+            <p>For more information, don't hesitate to get in touch with us.</p>
+            <a href="#contact" class="contact-button">Contact Us</a>
+        </div>
+    </div>
+</div>

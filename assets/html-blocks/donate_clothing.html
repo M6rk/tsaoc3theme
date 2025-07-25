@@ -1,0 +1,403 @@
+<style>
+.donations-section {
+    max-width: 1200px;
+    margin: 0 auto 2rem auto;
+    padding: 2rem;
+}
+
+.donations-container {
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 1.5rem 2.5rem 2.5rem 2.5rem;
+}
+
+.donations-title {
+    color: #CC0000;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    text-align: center;
+    margin-bottom: 1.5rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.donations-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #CC0000;
+    border-radius: 2px;
+}
+
+.intro-section {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+    border-left: 4px solid #CC0000;
+    text-align: center;
+}
+
+.intro-section p {
+    color: #333;
+    font-size: 1.2rem;
+    line-height: 1.7;
+    margin: 0 !important;
+    font-weight: 500;
+}
+
+.content-section {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+    border: 1px solid #e9ecef;
+}
+
+.section-title {
+    color: #CC0000;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+}
+
+.quality-text {
+    color: #333;
+    font-size: 1.1rem;
+    margin-bottom: 1rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    font-style: italic;
+    text-align: center;
+    max-width: 100%;
+    padding: 0;
+}
+
+.quality-text span {
+    font-size: 0.95rem;
+}
+
+.items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.item-category {
+    background: #f8f9fa;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    color: #333;
+    font-size: 1rem;
+    text-align: center;
+    border: 3px solid #e4e4e4;
+}
+
+.note-text {
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 1rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    font-style: italic;
+    max-width: 100%;
+    padding: 0;
+}
+
+.tips-section {
+    background: #f8f9fa;
+    border: 2px solid #ddd;
+    border-radius: 16px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.tips-section .section-title {
+    color: #CC0000;
+}
+
+.tips-list {
+    display: grid;
+    gap: 0.8rem;
+    margin-top: 1rem;
+}
+
+.tip-item {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 3px solid #ddd;
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.tip-item.do {
+    border-left-color: #28a745;
+}
+
+.tip-item.dont {
+    border-left-color: #dc3545;
+}
+
+.tip-item strong {
+    color: #CC0000;
+}
+
+.health-canada-note {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+    border-left: 3px solid #CC0000;
+}
+
+.health-canada-note p {
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0 !important;
+}
+
+.locations-section {
+    background: #f8f9fa;
+    border: 2px solid #ddd;
+    border-radius: 16px;
+    padding: 2rem;
+}
+
+.locations-section .section-title {
+    color: #CC0000;
+}
+
+.locations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.location-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border-left: 4px solid #CC0000;
+}
+
+.location-card h4 {
+    color: #CC0000;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 0.8rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+}
+
+.address {
+    color: #333;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    line-height: 1.4;
+}
+
+.hours-info {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.hours-info h5 {
+    color: #CC0000;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+}
+
+.hours-info p {
+    color: #333;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0 !important;
+}
+
+.warning-note {
+    background: #ffffff;
+    border: 2px solid #ff6b6b;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.warning-note p {
+    color: #000000;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0 !important;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .donations-section {
+        padding: 1rem;
+    }
+    
+    .donations-container {
+        padding: 1.5rem;
+        border-radius: 16px;
+    }
+    
+    .content-section {
+        padding: 1.5rem;
+    }
+    
+    .items-grid {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+    }
+    
+    .locations-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .tips-section {
+        padding: 1.5rem;
+    }
+    
+    .locations-section {
+        padding: 1.5rem;
+    }
+}
+</style>
+
+<div class="donations-section">
+    <div class="donations-container">
+        <h1 class="donations-title">Donations of Clothing & Household Goods</h1>
+
+        <!-- Introduction -->
+        <div class="intro-section">
+            <p>You can help give hope to those in need by looking in your closets, your homes, and your hearts and donating today, help us make a difference in someone else's life tomorrow!</p>
+        </div>
+
+        <!-- What to Donate Section -->
+        <div class="content-section">
+            <h2 class="section-title">What to Donate</h2>
+            <p class="quality-text">Quality Clean & Gently Used Clothing and Household Goods – Items you would give to a friend or want to receive!<br>
+            <span>(undamaged items, no rips, no tears, no stains or chipped dishes/glassware please)</span></p>
+            
+            <div class="items-grid">
+                <div class="item-category">Clothing and accessories</div>
+                <div class="item-category">Shoes, Purses, Bags and Belts</div>
+                <div class="item-category">Vintage Collectibles</div>
+                <div class="item-category">Jewelry</div>
+                <div class="item-category">Books</div>
+                <div class="item-category">Small Household appliances</div>
+                <div class="item-category">Housewares & Kitchen goods</div>
+                <div class="item-category">Decorative items</div>
+                <div class="item-category">Paintings & Artwork</div>
+                <div class="item-category">Working Electronics</div>
+                <div class="item-category">Luggage</div>
+                <div class="item-category">Wedding gowns & Formal wear</div>
+                <div class="item-category">Sporting equipment</div>
+                <div class="item-category">Small Musical Instruments</div>
+                <div class="item-category">CD's, DVD's, VHS and records</div>
+                <div class="item-category">Linens, Bedding & Curtains</div>
+                <div class="item-category">Seasonal decorations</div>
+            </div>
+            
+            <p class="note-text">NOTE: we are not able to accept large exercise machines</p>
+        </div>
+
+        <!-- Donation Tips Section -->
+        <div class="tips-section">
+            <h2 class="section-title">Donation Tips</h2>
+            <div class="tips-list">
+                <div class="tip-item do">
+                    <strong>DO</strong> test all electrical and battery-operated equipment to make sure it is still working prior to donation.
+                </div>
+                <div class="tip-item do">
+                    <strong>DO</strong> include all manuals, if available.
+                </div>
+                <div class="tip-item do">
+                    <strong>DO</strong> include all pieces and/or parts / remotes etc.
+                </div>
+                <div class="tip-item do">
+                    <strong>DO</strong> wash or dry-clean any clothing prior to donation.
+                </div>
+                <div class="tip-item dont">
+                    <strong>DO NOT</strong> donate broken or soiled items.
+                </div>
+                <div class="tip-item dont">
+                    <strong>DO NOT</strong> leave items outside after hours.
+                </div>
+                <div class="tip-item dont">
+                    <strong>DO NOT</strong> donate items that have been recalled, banned or which otherwise do not meet current safety standards.
+                </div>
+            </div>
+            
+            <div class="health-canada-note">
+                <p>Due to Health Canada's Health & Safety guidelines, resale-ability, and store storage space, we cannot always take everything offered to us. We are unable to accept <strong>large appliances, mattresses, bathroom fixtures, doors & windows, furniture, car parts, paint, chemicals or hazardous materials, bike helmets, safety jackets, car seats, cribs, baby furniture over 5 years old or missing CSA stickers.</strong></p>
+            </div>
+        </div>
+
+        <!-- Where to Donate Section -->
+        <div class="locations-section">
+            <h2 class="section-title">Where to Donate</h2>
+            <div class="locations-grid">
+                <!-- Kelowna Location -->
+                <div class="location-card">
+                    <h4>Rutland Thrift Store</h4>
+                    <div class="address">
+                        200 Rutland Rd S<br>
+                        Kelowna, BC, V1X 2Z5
+                    </div>
+                    <div class="hours-info">
+                        <h5>Donation Hours:</h5>
+                        <p>Tuesday – Saturday<br>10 AM – 2 PM</p>
+                    </div>
+                </div>
+
+                <!-- Westbank Location -->
+                <div class="location-card">
+                    <h4>Westbank Thrift Store</h4>
+                    <div class="address">
+                        101-3531 Old Okanagan Highway<br>
+                        Westbank, BC, V4T 3L9
+                    </div>
+                    <div class="hours-info">
+                        <h5>Donation Hours:</h5>
+                        <p>Tuesday – Saturday<br>10 AM – 2 PM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Important Note -->
+        <div class="warning-note">
+            <p>Please be sure the goods you donate are quality, something you would want to receive or give to a friend. It costs The Salvation Army to remove trash that has been dumped outside our Thrift Stores. This diverts vital funds away from those who most need our support. Your understanding is appreciated.</p>
+        </div>
+    </div>
+</div>

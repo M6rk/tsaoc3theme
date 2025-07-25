@@ -1,0 +1,280 @@
+<style>
+.will-section {
+    max-width: 1200px;
+    margin: 0 auto 2rem auto;
+    padding: 2rem;
+}
+
+.will-container {
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 1.5rem 2.5rem 2.5rem 2.5rem;
+}
+
+.will-title {
+    color: #CC0000;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    text-align: center;
+    margin-bottom: 1.5rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.will-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #CC0000;
+    border-radius: 2px;
+}
+
+.intro-section {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.intro-section p {
+    color: #333;
+    font-size: 1.2rem;
+    line-height: 1.7;
+    margin: 0 !important;
+    font-weight: 500;
+}
+
+.gift-planner-section {
+    background: white;
+    border: 2px solid #ddd;
+    border-radius: 16px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.section-title {
+    color: #CC0000;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+}
+
+.planner-info {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid #CC0000;
+}
+
+.planner-info p {
+    color: #333;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin: 0 !important;
+}
+
+.opportunities-section {
+    background: #ffffff;
+    border: 2px solid #ddd;
+    border-radius: 16px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.opportunities-section h3 {
+    color: #CC0000;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+}
+
+.opportunities-section p {
+    color: #333;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.opportunities-button {
+    background: #EE2D3D;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+}
+
+.opportunities-button:hover {
+    background: #CC0000;
+    color: white;
+    text-decoration: none;
+}
+
+.contact-section {
+    background: #f8f9fa;
+    border: 2px solid #ddd;
+    border-radius: 16px;
+    padding: 2rem;
+}
+
+.contact-section h3 {
+    color: #CC0000;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    text-align: center;
+}
+
+.contact-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.contact-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.contact-card h4 {
+    color: #CC0000;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 1rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+}
+
+.contact-details {
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.phone-number {
+    background: #f8f9fa;
+    padding: 0.8rem 1.2rem;
+    border-radius: 8px;
+    color: #CC0000;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border: 2px solid #e9ecef;
+    display: inline-block;
+    margin: 0.5rem 0;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .will-section {
+        padding: 1rem;
+    }
+    
+    .will-container {
+        padding: 1.5rem;
+        border-radius: 16px;
+    }
+    
+    .gift-planner-section {
+        padding: 1.5rem;
+    }
+    
+    .opportunities-section {
+        padding: 1.5rem;
+    }
+    
+    .contact-section {
+        padding: 1.5rem;
+    }
+    
+    .contact-cards {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+}
+</style>
+
+<div class="will-section">
+    <div class="will-container">
+        <h1 class="will-title">Make a Gift in Your Will</h1>
+
+        <!-- Introduction -->
+        <div class="intro-section">
+            <p>Leave a lasting legacy that will continue to help those in need for generations to come. Your gift in your will can make a profound difference in the lives of countless individuals and families.</p>
+        </div>
+
+        <!-- Gift Planner Section -->
+        <div class="gift-planner-section">
+            <h2 class="section-title">Professional Gift Planning Support</h2>
+            <div class="planner-info">
+                <p>Our Divisional Headquarters has a team of qualified gift planners to assist you. Sandra Smith is our Regional contact and she would be happy to provide you with more information about opportunities that you can share with your financial advisor or lawyer.</p>
+            </div>
+        </div>
+
+        <!-- Available Opportunities Section -->
+        <div class="opportunities-section">
+            <h3>Explore Your Options</h3>
+            <p>Discover the various ways you can include The Salvation Army in your estate planning and the impact your legacy gift can have.</p>
+            <a href="https://salvationarmy.ca/how-you-can-help/financial-support/make-a-gift-in-your-will/" class="opportunities-button">See Available Opportunities</a>
+        </div>
+
+        <!-- Contact Information Section -->
+        <div class="contact-section">
+            <h3>Contact Our Gift Planning Team</h3>
+            <div class="contact-cards">
+                <!-- Regional Contact -->
+                <div class="contact-card">
+                    <h4>Sandra Smith</h4>
+                    <div class="contact-details">Regional Gift Planning Contact</div>
+                    <div class="phone-number">250-260-0653</div>
+                </div>
+
+                <!-- DHQ Contact -->
+                <div class="contact-card">
+                    <h4>Divisional Headquarters</h4>
+                    <div class="contact-details">General Gift Planning Inquiries</div>
+                    <div class="phone-number">604-296-3814</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

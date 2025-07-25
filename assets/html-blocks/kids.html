@@ -1,0 +1,154 @@
+<style>
+.kids-page-container {
+    max-width: 1200px;
+    margin: 0 auto 2rem auto;
+    padding: 2rem;
+}
+
+.kids-title {
+    color: #CC0000;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    text-align: center;
+    margin-bottom: 2rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0.5rem !important;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.kids-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #CC0000;
+    border-radius: 2px;
+}
+
+.kids-hero-section {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.kids-image {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.kids-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+.quote-section {
+    background: linear-gradient(135deg, #CC0000, #AA0000);
+    color: white;
+    padding: 2.5rem;
+    border-radius: 16px;
+    text-align: center;
+    margin: 2rem 0;
+    position: relative;
+}
+
+.quote-text {
+    font-size: 1.4rem;
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 1rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+    color: white !important;
+}
+
+.quote-attribution {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: white !important;
+    margin: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.quote-attribution::before {
+    content: '— ';
+}
+
+.content-section {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 16px;
+    border-left: 4px solid #CC0000;
+}
+
+.content-section p {
+    color: #333;
+    font-size: 1.2rem;
+    line-height: 1.7;
+    margin: 1.5rem 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    text-align: center;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .kids-page-container {
+        padding: 1rem;
+    }
+    
+    .kids-hero-section,
+    .quote-section,
+    .content-section {
+        padding: 1.5rem;
+        border-radius: 12px;
+    }
+    
+    .kids-hero-section {
+        padding: 0.75rem 1.5rem;
+    }
+    
+    .kids-image {
+        max-width: 300px;
+    }
+    
+    .kids-title {
+        font-size: 2rem !important;
+    }
+    
+    .quote-text {
+        font-size: 1.2rem;
+    }
+    
+    .content-section p {
+        font-size: 1.1rem;
+    }
+}
+</style>
+
+<div class="kids-page-container">
+    <h1 class="kids-title">Kids</h1>
+
+    <div class="kids-hero-section">
+        <div class="kids-image">
+            <img src="http://tsaoc3.local/wp-content/uploads/2025/07/event_kids.jpg" alt="Children at Okanagan Central Community Church">
+        </div>
+    </div>
+    <div class="content-section">
+        <p>Okanagan Central Community Church loves children. During the Sunday Gathering, children ages 2 to 12 are invited to attend children's church during the adult sermon.</p>
+    </div>
+    <div class="quote-section">
+        <p class="quote-text">"Let the children come to me. Don't stop them! For the Kingdom of Heaven belongs to those who are like these children."</p>
+        <p class="quote-attribution">Jesus</p>
+    </div>
+</div>

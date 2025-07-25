@@ -1,0 +1,206 @@
+<style>
+.community-assistance-container {
+    max-width: 1200px;
+    margin: 0 auto 2rem auto;
+    padding: 2rem;
+}
+
+.community-title {
+    color: #CC0000;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    text-align: center;
+    margin-bottom: 2rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.community-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #CC0000;
+    border-radius: 2px;
+}
+
+.content-section {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+    border-left: 4px solid #CC0000;
+}
+
+.content-section p {
+    color: #333;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin: 1rem 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.hours-title {
+    color: #CC0000;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    text-align: center;
+}
+
+.hours-image {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto 1.5rem auto;
+}
+
+.hours-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.hours-list p {
+    color: #333;
+    font-size: 1.1rem;
+    margin: 0.8rem 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 0.8rem 1rem;
+    border-left: 3px solid #CC0000;
+    background: #f8f9fa;
+    border-radius: 6px;
+    text-align: left;
+}
+
+.hours-list p strong {
+    color: #CC0000;
+}
+
+.contact-info {
+    background: #CC0000;
+    color: white;
+    border-radius: 12px;
+    padding: 1rem;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.contact-info .phone {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 0.2rem 0 !important;
+    color: white;
+}
+
+.contact-info .address {
+    font-size: 1rem;
+    font-style: italic;
+    margin: 0.2rem 0 !important;
+    color: white;
+}
+
+.hours-locations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.location-hours-card {
+    background: #ffffff;
+    border: 1px solid #e9ecef;
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .community-assistance-container {
+        padding: 1rem;
+    }
+    
+    .content-section,
+    .location-hours-card {
+        padding: 1.5rem;
+        border-radius: 12px;
+    }
+    
+    .hours-locations-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .community-title {
+        font-size: 2rem !important;
+    }
+}
+</style>
+
+<div class="community-assistance-container">
+    <h1 class="community-title">Community Assistance</h1>
+
+    <div class="content-section">
+        <p>Our Community Services are a safe haven—a place where you can find hope. When you call for an appointment, you will meet with a caseworker. Our caseworkers are great listeners. They know it takes time to work through each situation. Each situation is unique, and we create an individual plan to meet your needs. We love to walk alongside you on your journey.</p>
+        
+        <p>We provide assistance with basic needs such as food, clothing, and household items, referrals to community supports, system navigation, goal setting and follow-through, and Christmas gifts for children and youth.</p>
+    </div>
+
+    <div class="hours-locations-grid">
+        <!-- Rutland Hours -->
+        <div class="location-hours-card">
+            <h3 class="hours-title">Rutland Community Services</h3>
+            
+            <div class="hours-image">
+                <img src="http://tsaoc3.local/wp-content/uploads/2025/07/clc_building_280x280.jpg" alt="Rutland Community Services">
+            </div>
+            
+            <div class="contact-info">
+                <p class="phone">250-765-3450</p>
+                <p class="address">200 Rutland Road South<br>Kelowna, BC</p>
+            </div>
+            
+            <div class="hours-list">
+                <p><strong>Monday to Wednesday:</strong><br>10 AM to 4 PM (Closed 12-1 PM)</p>
+                <p><strong>Thursday:</strong> 1 PM to 4 PM</p>
+                <p><strong>Friday:</strong> 10 AM to 3 PM</p>
+                <p><strong>Saturday & Sunday:</strong> Closed</p>
+            </div>
+        </div>
+
+        <!-- West Kelowna Hours -->
+        <div class="location-hours-card">
+            <h3 class="hours-title">West Kelowna Community Services</h3>
+            
+            <div class="hours-image">
+                <img src="http://tsaoc3.local/wp-content/uploads/2025/07/515497709_1027751586180326_5394881315466964434_n-1.jpg" alt="West Kelowna Community Services">
+            </div>
+            
+            <div class="contact-info">
+                <p class="phone">778-484-9790</p>
+                <p class="address">3531 Old Okanagan Hwy #100<br>Westbank, BC</p>
+            </div>
+            
+            <div class="hours-list">
+                <p><strong>Monday to Friday:</strong><br>9 AM to 12 PM</p>
+                <p><strong>Tuesday:</strong> 12:30 PM to 3 PM</p>
+                <p><strong>Thursday:</strong> 12:30 PM to 3 PM</p>
+                <p><strong>Saturday & Sunday:</strong> Closed</p>
+            </div>
+        </div>
+    </div>
+</div>
