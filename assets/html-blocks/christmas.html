@@ -1,0 +1,278 @@
+<style>
+.christmas-section {
+    max-width: 1200px;
+    margin: 0 auto 2rem auto;
+    padding: 2rem;
+}
+
+.christmas-container {
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 0 2.5rem 2.5rem 2.5rem;
+}
+
+.christmas-title {
+    color: #CC0000;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    text-align: center;
+    margin-bottom: 0.5rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.christmas-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #CC0000;
+    border-radius: 2px;
+}
+
+.christmas-content {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 3rem;
+    align-items: start;
+    margin-top: 2rem;
+}
+
+.content-section {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+    border-left: 4px solid #CC0000;
+}
+
+.content-section h3 {
+    color: #CC0000;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+}
+
+.content-section p {
+    color: #333;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 0.8rem 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.contact-info {
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin: 1rem 0 !important;
+    border: 1px solid #e9ecef;
+}
+
+.contact-info p {
+    margin: 0.5rem 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    font-size: 1rem;
+}
+
+.contact-info a {
+    color: #CC0000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #005AAA;
+    text-decoration: underline;
+}
+
+.poster-section {
+    text-align: center;
+    position: sticky;
+    top: 2rem;
+}
+
+.poster-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.volunteer-cta {
+    background: #CC0000;
+    color: white;
+    padding: 2rem;
+    border-radius: 16px;
+    text-align: center;
+    margin: 2rem 0 !important;
+}
+
+.volunteer-cta h3 {
+    color: white !important;
+    margin-bottom: 1rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+}
+
+.volunteer-cta p {
+    color: white;
+    margin: 1rem 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.volunteer-btn {
+    background: white;
+    color: #CC0000;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+.volunteer-btn:hover {
+    background: #f8f9fa;
+    transform: translateY(-2px);
+    color: #CC0000;
+    text-decoration: none;
+}
+
+.stats-highlight {
+    background: linear-gradient(135deg, #CC0000, #AA0000);
+    color: white;
+    padding: 2rem;
+    border-radius: 16px;
+    text-align: center;
+    margin: 2rem 0 !important;
+}
+
+.stats-highlight h3 {
+    color: white !important;
+    font-size: 2rem;
+    margin-bottom: 0.5rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+}
+
+.stats-highlight p {
+    color: white;
+    font-size: 1.1rem;
+    margin: 0.5rem 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .christmas-section {
+        padding: 1rem;
+    }
+    
+    .christmas-container {
+        padding: 1.5rem;
+        border-radius: 16px;
+    }
+    
+    .christmas-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .poster-section {
+        position: static;
+        order: -1;
+    }
+    
+    .content-section {
+        padding: 1.5rem;
+    }
+    
+    .volunteer-cta {
+        padding: 1.5rem;
+    }
+    
+    .stats-highlight {
+        padding: 1.5rem;
+    }
+}
+</style>
+
+<div class="christmas-section">
+    <div class="christmas-container">
+        <h2 class="christmas-title">Christmas Services</h2>
+
+        <div class="christmas-content">
+            <div class="content-left">
+                <!-- Registration Section -->
+                <div class="content-section">
+                    <h3>To Register:</h3>
+                    <div class="contact-info">
+                        <p><strong>Westside:</strong> <a href="tel:+12502582990">(250) 258-2990</a></p>
+                        <p><strong>Kelowna/Lake Country:</strong> <a href="tel:+17784849772">(778) 484-9772</a></p>
+                        <p><strong>Email:</strong> <a href="mailto:okanagancentral.giftsofhope@salvationarmy.ca">okanagancentral.giftsofhope@salvationarmy.ca</a></p>
+                    </div>
+                </div>
+
+                <!-- Food Support Section -->
+                <div class="content-section">
+                    <h3>For Food Support:</h3>
+                    <div class="contact-info">
+                        <p><strong>Peachland Foodbank:</strong> <a href="mailto:peachlandfoodbank@gmail.com">peachlandfoodbank@gmail.com</a></p>
+                        <p><strong>Central Okanagan Food Bank West Kelowna:</strong> <a href="tel:+12507681559">(250) 768-1559</a></p>
+                        <p><strong>Central Okanagan Food Bank Kelowna:</strong> <a href="tel:+12507637161">(250) 763-7161</a></p>
+                        <p><strong>Lake Country Food Bank:</strong> <a href="tel:+12507660125">(250) 766-0125</a></p>
+                    </div>
+                </div>
+
+                <!-- Volunteer CTA Section -->
+                <div class="volunteer-cta">
+                    <h3>HOW YOU CAN HELP!</h3>
+                    <p>We are in need of Bell-Ringers for the Christmas Kettle Campaign. If you'd like to be involved this season, contact us at <a href="tel:+17784849777" style="color: white; text-decoration: underline;">(778) 484-9777</a></p>
+                    <a href="#volunteer" class="volunteer-btn">Volunteer Today</a>
+                </div>
+
+                <!-- Statistics Section -->
+                <div class="stats-highlight">
+                    <h3>678 Families</h3>
+                    <p>In 2022, we assisted 678 local families through the Christmas Blessing Food & Toy Program – including hundreds of children receiving new toys – all because of the generosity of our community.</p>
+                    <p><strong>We could not do what we do without you!</strong></p>
+                </div>
+
+                <!-- Gifts of Hope Section -->
+                <div class="content-section">
+                    <h3>Gifts of Hope Program</h3>
+                    <p>If you'd like to donate to our Gifts Of Hope Program, <a href="#gifts-of-hope">learn more here</a>.</p>
+                </div>
+            </div>
+
+            <!-- Poster Section -->
+            <div class="poster-section">
+                <img src="http://tsaoc3.local/wp-content/uploads/2025/07/Gifts-of-Hope-registration-1200x1697-1-724x1024.png" 
+                     alt="Gifts of Hope Registration Poster" 
+                     class="poster-image" />
+            </div>
+        </div>
+    </div>
+</div>

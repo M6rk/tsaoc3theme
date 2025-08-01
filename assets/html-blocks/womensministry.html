@@ -1,0 +1,202 @@
+<style>
+.womens-ministry-container {
+    max-width: 1200px;
+    margin: 0 auto 2rem auto;
+    padding: 2rem;
+}
+
+.womens-title {
+    color: #CC0000;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    text-align: center;
+    margin-bottom: 2rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.womens-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #CC0000;
+    border-radius: 2px;
+}
+
+.content-section {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+    border-left: 4px solid #CC0000;
+}
+
+.content-section p {
+    color: #333;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin: 1rem 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.images-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.womens-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.highlight-section {
+    background: #ffffff;
+    border: 2px solid #CC0000;
+    padding: 2rem;
+    border-radius: 16px;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.highlight-section h3 {
+    color: #CC0000;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+}
+
+.highlight-section p {
+    color: #333;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 0.8rem 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.fb-link {
+    background: #4267B2;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.fb-link:hover {
+    background: #365899;
+    color: white;
+    text-decoration: none;
+}
+
+.fb-link svg {
+    width: 20px;
+    height: 20px;
+    fill: white;
+}
+
+.welcome-section {
+    background: linear-gradient(135deg, #CC0000, #AA0000);
+    color: white;
+    padding: 2.5rem;
+    border-radius: 16px;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.welcome-section p {
+    font-size: 1.3rem;
+    font-style: italic;
+    line-height: 1.6;
+    margin: 0 !important;
+    color: white !important;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .womens-ministry-container {
+        padding: 1rem;
+    }
+    
+    .content-section,
+    .highlight-section,
+    .welcome-section {
+        padding: 1.5rem;
+        border-radius: 12px;
+    }
+    
+    .images-section {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .womens-image {
+        height: 250px;
+    }
+    
+    .womens-title {
+        font-size: 2rem !important;
+    }
+    
+    .welcome-section p {
+        font-size: 1.1rem;
+    }
+}
+</style>
+
+<div class="womens-ministry-container">
+    <h1 class="womens-title">Women's Ministry</h1>
+
+    <div class="content-section">
+        <p>We believe every woman is made in the image of God, and that God has called women to be transforming influences in our communities.</p>
+        
+        <p>The Salvation Army Renew Church Women's Ministries aims to equip, empower, encourage and enrich women leaders in Kingdom building.</p>
+    </div>
+
+    <div class="images-section">
+        <img src="http://tsaoc3.local/wp-content/uploads/2025/07/thumbnail_IMG_5100-768x1024.jpg" alt="Women's Ministry" class="womens-image">
+        <img src="http://tsaoc3.local/wp-content/uploads/2025/07/thumbnail_IMG_6753.jpg" alt="Women's Ministry" class="womens-image">
+    </div>
+
+    <div class="highlight-section">
+        <h3>Join Our Community</h3>
+        <p>We invite you to engage with us online and to seek us out locally to join our community.</p>
+        
+        <p style="text-align: center; margin-top: 2rem;">
+            <a href="#" class="fb-link">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+                Salvationist Women
+            </a>
+        </p>
+    </div>
+
+    <div class="welcome-section">
+        <p>We trust you will feel welcomed here.</p>
+    </div>
+</div>

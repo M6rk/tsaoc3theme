@@ -62,15 +62,19 @@
 
 .hours-image {
     width: 100%;
-    max-width: 300px;
+    max-width: 400px;
+    height: 250px;
     margin: 0 auto 1.5rem auto;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .hours-image img {
     width: 100%;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 .hours-list p {
@@ -145,6 +149,11 @@
         gap: 1.5rem;
     }
     
+    .hours-image {
+        max-width: 350px;
+        height: 220px;
+    }
+    
     .community-title {
         font-size: 2rem !important;
     }
@@ -184,7 +193,7 @@
 
         <!-- West Kelowna Hours -->
         <div class="location-hours-card">
-            <h3 class="hours-title">West Kelowna Community Services</h3>
+            <h3 class="hours-title">Westbank Community Services</h3>
             
             <div class="hours-image">
                 <img src="http://tsaoc3.local/wp-content/uploads/2025/07/515497709_1027751586180326_5394881315466964434_n-1.jpg" alt="West Kelowna Community Services">

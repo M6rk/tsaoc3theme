@@ -1,41 +1,46 @@
 <?php
-function mytheme_setup() {
-  add_theme_support('title-tag');
-  add_theme_support('post-thumbnails');
-  add_theme_support('menus');
-  add_theme_support('editor-styles');
-  add_theme_support('wp-block-styles');
-  add_theme_support('responsive-embeds');
-  
-// Register navigation menu
-  register_nav_menus(array(
-    'primary' => 'Primary Menu',
-  ));
+function mytheme_setup()
+{
+    add_theme_support('title-tag');
+    add_theme_support('post-thumbnails');
+    add_theme_support('menus');
+    add_theme_support('editor-styles');
+    add_theme_support('wp-block-styles');
+    add_theme_support('responsive-embeds');
+
+    // Register navigation menu
+    register_nav_menus(array(
+        'primary' => 'Primary Menu',
+    ));
 }
 add_action('after_setup_theme', 'mytheme_setup');
 
-function mytheme_enqueue_styles() {
-  wp_enqueue_style('mytheme-style', get_stylesheet_uri());
+function mytheme_enqueue_styles()
+{
+    wp_enqueue_style('mytheme-style', get_stylesheet_uri());
 }
 add_action('wp_enqueue_scripts', 'mytheme_enqueue_styles');
 
 // Remove admin bar margin
-function remove_admin_bar_margin() {
+function remove_admin_bar_margin()
+{
     remove_action('wp_head', '_admin_bar_bump_cb');
 }
 add_action('get_header', 'remove_admin_bar_margin');
 
 // Enqueue custom JavaScript
-function mytheme_enqueue_scripts() {
+function mytheme_enqueue_scripts()
+{
     wp_enqueue_script('mytheme-scripts', get_template_directory_uri() . '/js/theme.js', array(), '1.0.0', true);
 }
 add_action('wp_enqueue_scripts', 'mytheme_enqueue_scripts');
 
 // Footer Columns Customizer
-function mytheme_footer_customizer($wp_customize) {
+function mytheme_footer_customizer($wp_customize)
+{
     // Add Footer Columns section
     $wp_customize->add_section('footer_columns', array(
-        'title'    => 'Footer Columns',
+        'title' => 'Footer Columns',
         'priority' => 120,
     ));
 
@@ -48,9 +53,9 @@ function mytheme_footer_customizer($wp_customize) {
             'sanitize_callback' => 'sanitize_text_field',
         ));
         $wp_customize->add_control("footer_col_{$i}_heading", array(
-            'label'    => "Column {$i} Heading",
-            'section'  => 'footer_columns',
-            'type'     => 'text',
+            'label' => "Column {$i} Heading",
+            'section' => 'footer_columns',
+            'type' => 'text',
         ));
 
         // 5 Links (max) per Column (remove limit?)
@@ -61,9 +66,9 @@ function mytheme_footer_customizer($wp_customize) {
                 'sanitize_callback' => 'sanitize_text_field',
             ));
             $wp_customize->add_control("footer_col_{$i}_link_{$j}_text", array(
-                'label'    => "Column {$i} - Link {$j} Text",
-                'section'  => 'footer_columns',
-                'type'     => 'text',
+                'label' => "Column {$i} - Link {$j} Text",
+                'section' => 'footer_columns',
+                'type' => 'text',
             ));
 
             $wp_customize->add_setting("footer_col_{$i}_link_{$j}_url", array(
@@ -72,9 +77,9 @@ function mytheme_footer_customizer($wp_customize) {
                 'sanitize_callback' => 'esc_url_raw',
             ));
             $wp_customize->add_control("footer_col_{$i}_link_{$j}_url", array(
-                'label'    => "Column {$i} - Link {$j} URL",
-                'section'  => 'footer_columns',
-                'type'     => 'url',
+                'label' => "Column {$i} - Link {$j} URL",
+                'section' => 'footer_columns',
+                'type' => 'url',
             ));
         }
     }
@@ -86,9 +91,9 @@ function mytheme_footer_customizer($wp_customize) {
         'sanitize_callback' => 'sanitize_text_field',
     ));
     $wp_customize->add_control('footer_contact_business_name', array(
-        'label'    => 'Business Name',
-        'section'  => 'footer_columns',
-        'type'     => 'text',
+        'label' => 'Business Name',
+        'section' => 'footer_columns',
+        'type' => 'text',
     ));
 
     $wp_customize->add_setting('footer_contact_city', array(
@@ -97,9 +102,9 @@ function mytheme_footer_customizer($wp_customize) {
         'sanitize_callback' => 'sanitize_text_field',
     ));
     $wp_customize->add_control('footer_contact_city', array(
-        'label'    => 'City',
-        'section'  => 'footer_columns',
-        'type'     => 'text',
+        'label' => 'City',
+        'section' => 'footer_columns',
+        'type' => 'text',
     ));
 
     $wp_customize->add_setting('footer_contact_address', array(
@@ -108,9 +113,9 @@ function mytheme_footer_customizer($wp_customize) {
         'sanitize_callback' => 'sanitize_textarea_field',
     ));
     $wp_customize->add_control('footer_contact_address', array(
-        'label'    => 'Address (use line breaks for multiple lines)',
-        'section'  => 'footer_columns',
-        'type'     => 'textarea',
+        'label' => 'Address (use line breaks for multiple lines)',
+        'section' => 'footer_columns',
+        'type' => 'textarea',
     ));
 
     $wp_customize->add_setting('footer_contact_phone', array(
@@ -119,29 +124,30 @@ function mytheme_footer_customizer($wp_customize) {
         'sanitize_callback' => 'sanitize_text_field',
     ));
     $wp_customize->add_control('footer_contact_phone', array(
-        'label'    => 'Phone Number',
-        'section'  => 'footer_columns',
-        'type'     => 'text',
+        'label' => 'Phone Number',
+        'section' => 'footer_columns',
+        'type' => 'text',
     ));
 }
 add_action('customize_register', 'mytheme_footer_customizer');
 
 // Social Links Customizer
-function mytheme_social_customizer($wp_customize) {
+function mytheme_social_customizer($wp_customize)
+{
     // Add Social Links section
     $wp_customize->add_section('social_links', array(
-        'title'    => 'Social Links',
+        'title' => 'Social Links',
         'priority' => 121,
     ));
 
     // Social media platforms
     $social_platforms = array(
         'facebook' => 'Facebook',
-        'instagram' => 'Instagram', 
+        'instagram' => 'Instagram',
         'twitter' => 'X (Twitter)',
         'youtube' => 'YouTube'
     );
-    
+
     foreach ($social_platforms as $platform => $label) {
         $wp_customize->add_setting("social_{$platform}_url", array(
             'default' => '',
@@ -149,9 +155,9 @@ function mytheme_social_customizer($wp_customize) {
             'sanitize_callback' => 'esc_url_raw',
         ));
         $wp_customize->add_control("social_{$platform}_url", array(
-            'label'    => $label . ' URL',
-            'section'  => 'social_links',
-            'type'     => 'url',
+            'label' => $label . ' URL',
+            'section' => 'social_links',
+            'type' => 'url',
             'description' => 'Leave blank to hide this social icon',
         ));
     }
@@ -159,7 +165,8 @@ function mytheme_social_customizer($wp_customize) {
 add_action('customize_register', 'mytheme_social_customizer');
 
 // Helper function to get social platforms data
-function get_social_platforms() {
+function get_social_platforms()
+{
     return array(
         'facebook' => array(
             'label' => 'Facebook',
@@ -181,41 +188,42 @@ function get_social_platforms() {
 }
 
 // Suggested color palette (TSA Brand Colors)
-function tsaoc3_setup_theme_colors() {
+function tsaoc3_setup_theme_colors()
+{
     add_theme_support('editor-color-palette', array(
         array(
-            'name'  => 'Primary Red',
-            'slug'  => 'primary-red',
+            'name' => 'Primary Red',
+            'slug' => 'primary-red',
             'color' => '#CC0000',
         ),
         array(
-            'name'  => 'Light Grey',
-            'slug'  => 'light-grey',
+            'name' => 'Light Grey',
+            'slug' => 'light-grey',
             'color' => '#BFBFBF',
         ),
         array(
-            'name'  => 'Dark Grey',
-            'slug'  => 'dark-grey',
+            'name' => 'Dark Grey',
+            'slug' => 'dark-grey',
             'color' => '#7F7F7F',
         ),
         array(
-            'name'  => 'White',
-            'slug'  => 'white',
+            'name' => 'White',
+            'slug' => 'white',
             'color' => '#FFFFFF',
         ),
         array(
-            'name'  => 'Black',
-            'slug'  => 'black',
+            'name' => 'Black',
+            'slug' => 'black',
             'color' => '#000000',
         ),
         array(
-            'name'  => 'Secondary Yellow',
-            'slug'  => 'secondary-yellow',
+            'name' => 'Secondary Yellow',
+            'slug' => 'secondary-yellow',
             'color' => '#FFD912',
         ),
         array(
-            'name'  => 'Secondary Blue',
-            'slug'  => 'secondary-blue',
+            'name' => 'Secondary Blue',
+            'slug' => 'secondary-blue',
             'color' => '#005AAA',
         ),
     ));
@@ -224,7 +232,8 @@ function tsaoc3_setup_theme_colors() {
 add_action('after_setup_theme', 'tsaoc3_setup_theme_colors');
 
 //Search Functionality
-function mytheme_search_pages_only($query) {
+function mytheme_search_pages_only($query)
+{
     if (!is_admin() && $query->is_main_query() && is_search()) {
         $query->set('post_type', array('page'));
         $query->set('post_status', 'publish');
@@ -233,7 +242,8 @@ function mytheme_search_pages_only($query) {
 add_action('pre_get_posts', 'mytheme_search_pages_only');
 
 // Highlight search terms in results
-function mytheme_highlight_search_terms($text) {
+function mytheme_highlight_search_terms($text)
+{
     if (is_search() && !is_admin()) {
         $search_terms = get_search_query();
         if (!empty($search_terms)) {
@@ -251,7 +261,8 @@ add_filter('the_excerpt', 'mytheme_highlight_search_terms');
 add_filter('the_content', 'mytheme_highlight_search_terms');
 
 // Custom search excerpt length for pages
-function mytheme_search_excerpt_length($length) {
+function mytheme_search_excerpt_length($length)
+{
     if (is_search()) {
         return 40;
     }

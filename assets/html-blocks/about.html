@@ -52,18 +52,19 @@
 .section-nav {
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
     margin-bottom: 3rem;
-    flex-wrap: wrap;
-    padding: 1rem;
-    border-radius: 16px;
+    border: 2px solid #CC0000;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
 }
 
 .nav-button {
-    background: #EE2D3D;
-    color: white;
+    background: #ffffff;
+    color: #CC0000;
     text-decoration: none;
-    padding: 1.2rem 2rem;
+    padding: 1.5rem 2.5rem;
     border: none;
     cursor: pointer;
     display: inline-flex;
@@ -71,28 +72,29 @@
     justify-content: center;
     gap: 0.8rem;
     transition: all 0.3s ease;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
     font-weight: 600;
-    border-radius: 25px;
-    min-width: 180px;
+    border-radius: 0;
+    min-width: 200px;
     text-align: center;
+    border-right: 2px solid #CC0000;
+    position: relative;
+}
+
+.nav-button:last-child {
+    border-right: none;
 }
 
 .nav-button:hover {
     background: #CC0000;
+    color: white;
     text-decoration: none;
 }
 
 .nav-button.active {
-    background: #EE2D3D;
-}
-
-.nav-button svg {
-    width: 22px;
-    height: 22px;
-    flex-shrink: 0;
-    vertical-align: middle;
+    background: #CC0000;
+    color: white;
 }
 
 /* Photo Areas */
@@ -230,23 +232,24 @@
         margin: 0 auto 2rem auto !important;
     }
 
-    .section-nav {
+     .section-nav {
         flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-        padding: 1.5rem 1rem;
+        width: 100%;
+        max-width: 320px;
+        border: 2px solid #CC0000;
     }
 
     .nav-button {
         width: 100%;
-        max-width: 280px;
+        min-width: auto;
         font-size: 1.1rem;
-        padding: 1rem 1.5rem;
+        padding: 1.2rem 1.5rem;
+        border-right: none;
+        border-bottom: 2px solid #CC0000;
     }
 
-    .nav-button svg {
-        width: 20px;
-        height: 20px;
+    .nav-button:last-child {
+        border-bottom: none;
     }
 
     .about-section {
@@ -283,45 +286,12 @@
     <div class="section-nav">
         <a href="#global" class="nav-button">
             Global
-            <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <mask id="mask0_67_10" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20"
-                    height="19">
-                    <rect x="0.5" width="19" height="19" fill="#D9D9D9" />
-                </mask>
-                <g mask="url(#mask0_67_10)">
-                    <path
-                        d="M16.0902 17.0208L13.9097 14.7284V16.4574H12.4314V12.0668H16.6076V13.621H14.9445L17.125 15.9135L16.0902 17.0208ZM9.4748 16.7294C8.45231 16.7294 7.49141 16.5254 6.59212 16.1175C5.69282 15.7095 4.91056 15.1558 4.24532 14.4564C3.58009 13.757 3.05345 12.9346 2.66539 11.9891C2.27734 11.0437 2.08331 10.0334 2.08331 8.95846C2.08331 7.88348 2.27734 6.87325 2.66539 5.92779C3.05345 4.98232 3.58009 4.15989 4.24532 3.46051C4.91056 2.76112 5.69282 2.20744 6.59212 1.79946C7.49141 1.39149 8.45231 1.1875 9.4748 1.1875C10.4973 1.1875 11.4582 1.39149 12.3575 1.79946C13.2568 2.20744 14.039 2.76112 14.7043 3.46051C15.3695 4.15989 15.8961 4.98232 16.2842 5.92779C16.6723 6.87325 16.8663 7.88348 16.8663 8.95846C16.8663 9.21749 16.854 9.47652 16.8293 9.73556C16.8047 9.99459 16.7677 10.2536 16.7184 10.5127H15.2032C15.2648 10.2536 15.311 9.99459 15.3418 9.73556C15.3726 9.47652 15.388 9.21749 15.388 8.95846C15.388 8.69943 15.3726 8.4404 15.3418 8.18136C15.311 7.92233 15.2648 7.6633 15.2032 7.40427H12.6901C12.727 7.6633 12.7548 7.92233 12.7732 8.18136C12.7917 8.4404 12.801 8.69943 12.801 8.95846C12.801 9.21749 12.7917 9.47652 12.7732 9.73556C12.7548 9.99459 12.727 10.2536 12.6901 10.5127H11.2118C11.2488 10.2536 11.2765 9.99459 11.2949 9.73556C11.3134 9.47652 11.3227 9.21749 11.3227 8.95846C11.3227 8.69943 11.3134 8.4404 11.2949 8.18136C11.2765 7.92233 11.2488 7.6633 11.2118 7.40427H7.7378C7.70084 7.6633 7.67312 7.92233 7.65464 8.18136C7.63616 8.4404 7.62692 8.69943 7.62692 8.95846C7.62692 9.21749 7.63616 9.47652 7.65464 9.73556C7.67312 9.99459 7.70084 10.2536 7.7378 10.5127H10.2139V12.0668H8.07041C8.21824 12.6238 8.40919 13.158 8.64325 13.6696C8.87732 14.1812 9.1545 14.6701 9.4748 15.1364C9.72118 15.1364 9.96756 15.1202 10.2139 15.0878C10.4603 15.0554 10.7067 15.0263 10.9531 15.0004V16.5934C10.7067 16.6193 10.4603 16.6485 10.2139 16.6809C9.96756 16.7132 9.72118 16.7294 9.4748 16.7294ZM3.7464 10.5127H6.2595C6.22254 10.2536 6.19483 9.99459 6.17635 9.73556C6.15787 9.47652 6.14863 9.21749 6.14863 8.95846C6.14863 8.69943 6.15787 8.4404 6.17635 8.18136C6.19483 7.92233 6.22254 7.6633 6.2595 7.40427H3.7464C3.6848 7.6633 3.6386 7.92233 3.60781 8.18136C3.57701 8.4404 3.56161 8.69943 3.56161 8.95846C3.56161 9.21749 3.57701 9.47652 3.60781 9.73556C3.6386 9.99459 3.6848 10.2536 3.7464 10.5127ZM4.37467 5.85008H6.55516C6.66603 5.37087 6.80462 4.90137 6.97093 4.44159C7.13724 3.98181 7.33127 3.53174 7.55301 3.09139C6.87546 3.32451 6.26566 3.67745 5.72362 4.15018C5.18158 4.62291 4.73193 5.18954 4.37467 5.85008ZM7.55301 14.8255C7.33127 14.3852 7.13724 13.9351 6.97093 13.4753C6.80462 13.0156 6.66603 12.5461 6.55516 12.0668H4.37467C4.73193 12.7274 5.18158 13.294 5.72362 13.7667C6.26566 14.2395 6.87546 14.5924 7.55301 14.8255ZM8.07041 5.85008H10.8792C10.7313 5.29316 10.5404 4.7589 10.3063 4.24732C10.0723 3.73573 9.79509 3.2468 9.4748 2.78055C9.1545 3.2468 8.87732 3.73573 8.64325 4.24732C8.40919 4.7589 8.21824 5.29316 8.07041 5.85008ZM12.3944 5.85008H14.5749C14.2177 5.18954 13.768 4.62291 13.226 4.15018C12.6839 3.67745 12.0741 3.32451 11.3966 3.09139C11.6183 3.53174 11.8124 3.98181 11.9787 4.44159C12.145 4.90137 12.2836 5.37087 12.3944 5.85008Z"
-                        fill="white" />
-                </g>
-            </svg>
         </a>
         <a href="#canada" class="nav-button">
             Canada
-            <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <mask id="mask0_67_46" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20"
-                    height="19">
-                    <rect x="0.5" width="19" height="19" fill="white" />
-                </mask>
-                <g mask="url(#mask0_67_46)">
-                    <path
-                        d="M4.45831 16.625V3.16669H11.5833L11.9 4.75002H16.3333V12.6667H10.7916L10.475 11.0834H6.04165V16.625H4.45831ZM12.0979 11.0834H14.75V6.33335H10.5937L10.2771 4.75002H6.04165V9.50002H11.7812L12.0979 11.0834Z"
-                        fill="white" />
-                </g>
-            </svg>
         </a>
         <a href="#central-okanagan" class="nav-button">
             Central Okanagan
-            <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <mask id="mask0_67_34" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20"
-                    height="19">
-                    <rect x="0.5" width="19" height="19" fill="#D9D9D9" />
-                </mask>
-                <g mask="url(#mask0_67_34)">
-                    <path
-                        d="M2.87498 3.95833V2.375H5.24998V3.95833H2.87498ZM5.34894 8.17396L4.22081 7.06563L5.9031 5.38333L7.03123 6.49167L5.34894 8.17396ZM9.99998 6.33333C8.90484 6.33333 7.97133 5.9474 7.19946 5.17552C6.42758 4.40365 6.04165 3.47014 6.04165 2.375H7.62498C7.62498 3.03472 7.85588 3.59549 8.31769 4.05729C8.77949 4.5191 9.34026 4.75 9.99998 4.75C10.6597 4.75 11.2205 4.5191 11.6823 4.05729C12.1441 3.59549 12.375 3.03472 12.375 2.375H13.9583C13.9583 3.47014 13.5724 4.40365 12.8005 5.17552C12.0286 5.9474 11.0951 6.33333 9.99998 6.33333ZM9.20831 9.5V7.125H10.7916V9.5H9.20831ZM14.651 8.17396L12.9885 6.49167L14.0969 5.38333L15.7791 7.04583L14.651 8.17396ZM14.75 3.95833V2.375H17.125V3.95833H14.75ZM2.08331 16.625V15.0417C2.5847 15.0417 2.95744 14.9097 3.20154 14.6458C3.44564 14.3819 3.95692 14.25 4.7354 14.25C5.51387 14.25 6.02515 14.3819 6.26925 14.6458C6.51335 14.9097 6.8729 15.0417 7.3479 15.0417C7.84929 15.0417 8.22203 14.9097 8.46613 14.6458C8.71022 14.3819 9.22151 14.25 9.99998 14.25C10.7521 14.25 11.2633 14.3819 11.5338 14.6458C11.8043 14.9097 12.1771 15.0417 12.6521 15.0417C13.1535 15.0417 13.5196 14.9097 13.7505 14.6458C13.9814 14.3819 14.4861 14.25 15.2646 14.25C16.043 14.25 16.5543 14.3819 16.7984 14.6458C17.0425 14.9097 17.4153 15.0417 17.9166 15.0417V16.625C17.1646 16.625 16.6533 16.4931 16.3828 16.2292C16.1123 15.9653 15.7396 15.8333 15.2646 15.8333C14.7896 15.8333 14.43 15.9653 14.1859 16.2292C13.9418 16.4931 13.4305 16.625 12.6521 16.625C11.9 16.625 11.3887 16.4931 11.1182 16.2292C10.8477 15.9653 10.475 15.8333 9.99998 15.8333C9.49859 15.8333 9.12585 15.9653 8.88175 16.2292C8.63765 16.4931 8.12637 16.625 7.3479 16.625C6.56942 16.625 6.06474 16.4931 5.83383 16.2292C5.60293 15.9653 5.23679 15.8333 4.7354 15.8333C4.23401 15.8333 3.86126 15.9653 3.61717 16.2292C3.37307 16.4931 2.86179 16.625 2.08331 16.625ZM2.08331 13.4583V11.875C2.5847 11.875 2.95744 11.7431 3.20154 11.4792C3.44564 11.2153 3.95692 11.0833 4.7354 11.0833C5.48748 11.0833 5.99217 11.2153 6.24946 11.4792C6.50675 11.7431 6.8729 11.875 7.3479 11.875C7.84929 11.875 8.22203 11.7431 8.46613 11.4792C8.71022 11.2153 9.22151 11.0833 9.99998 11.0833C10.7521 11.0833 11.26 11.2153 11.5239 11.4792C11.7878 11.7431 12.1507 11.875 12.6125 11.875C13.1139 11.875 13.4866 11.7431 13.7307 11.4792C13.9748 11.2153 14.4861 11.0833 15.2646 11.0833C16.0166 11.0833 16.5279 11.2153 16.7984 11.4792C17.0689 11.7431 17.4416 11.875 17.9166 11.875V13.4583C17.1382 13.4583 16.6203 13.3264 16.363 13.0625C16.1057 12.7986 15.7396 12.6667 15.2646 12.6667C14.7896 12.6667 14.43 12.7986 14.1859 13.0625C13.9418 13.3264 13.4305 13.4583 12.6521 13.4583C11.9 13.4583 11.3887 13.3264 11.1182 13.0625C10.8477 12.7986 10.475 12.6667 9.99998 12.6667C9.49859 12.6667 9.13244 12.7986 8.90154 13.0625C8.67064 13.3264 8.16595 13.4583 7.38748 13.4583C6.60901 13.4583 6.09113 13.3264 5.83383 13.0625C5.57654 12.7986 5.2104 12.6667 4.7354 12.6667C4.2604 12.6667 3.88765 12.7986 3.61717 13.0625C3.34668 13.3264 2.8354 13.4583 2.08331 13.4583Z"
-                        fill="white" />
-                </g>
-            </svg>
         </a>
     </div>
 
@@ -386,7 +356,7 @@
         <h2 class="section-title">Canada</h2>
 
         <div class="photo-section">
-            <img src="http://tsaoc3.local/wp-content/uploads/2025/07/https___d2ksr9467jthww.cloudfront.net_20241209161232_61944c95c2d009bf815e8a95eb6fe98a7fc7b99fa55cdb88be85784cb582bc15.jpg" alt="The Salvation Army in Canada Historical Photo">
+            <img src="http://tsaoc3.local/wp-content/uploads/2025/07/ss_thq.jpg" alt="The Salvation Army in Canada Historical Photo">
         </div>
 
         <h3 class="section-subtitle">History of the Salvation Army in Canada</h3>
@@ -450,39 +420,18 @@
                 invite you to explore and discover who we are. Below, you will find a snapshot of some of the ways we
                 achieve our mission.</p>
 
-            <div class="central-grid">
-                <div class="ministry-card">
-                    <h4>Spiritual</h4>
-                    <ul>
-                        <li><strong>Worship Services:</strong> Sundays at 10:30 am</li>
-                        <li><strong>Spiritual Care:</strong> Meet with a Pastor</li>
-                        <li><strong>Bible Study:</strong> Offering a variety of studies throughout the year</li>
-                    </ul>
-                </div>
+            <p><strong>Spiritual</strong></p>
+            <p>Worship Services: Sundays at 10:30 am</p>
+            <p>Spiritual Care: Meet with a Pastor</p>
+            <p>Bible Study: Offering a variety of studies throughout the year</p>
 
-                <div class="ministry-card">
-                    <h4>Physical & Emotional</h4>
-                    <ul>
-                        <li><strong>Seniors' Drop-In:</strong> Program for those 50+ at the church on Wednesdays from 10
-                            a.m. to 1 p.m. A place for food, friends, fun & fellowship.</li>
-                        <li><strong>Community Life Centre:</strong> In Rutland offers a variety of supports and
-                            resources for community members. Including a food bank, access to practical needs onsite,
-                            Caseworkers to assist you in finding the supports you need.</li>
-                        <li><strong>Emergency Disaster Services:</strong> Offer practical supports to residents and
-                            emergency response personnel during times of crisis.</li>
-                    </ul>
-                </div>
+            <p><strong>Physical & Emotional</strong></p>
+            <p>Seniors' Drop-In: Program for those 50+ at the church on Wednesdays from 10 a.m. to 1 p.m during the months of September to May. A place for food, friends, fun & fellowship.</p>
+            <p>Community Life Centres: In Rutland and Westbank offer a variety of supports and resources for community members. Caseworkers assist members of the community in finding the supports and resources they need.</p>
+            <p>Emergency Disaster Services: Offer practical supports to residents and emergency response personnel during times of crisis.</p>
 
-                <div class="ministry-card">
-                    <h4>Environmental</h4>
-                    <ul>
-                        <li><strong>Thrift Store:</strong> (200 Rutland Rd. South & 3531 Old Okanagan Hwy. #101) assists
-                            the community by recycling quality used goods, keeping them out of the landfill, and getting
-                            them into the hands of people who will use them. The monies from the store go back into the
-                            community.</li>
-                    </ul>
-                </div>
-            </div>
+            <p><strong>Environmental</strong></p>
+            <p>Thrift Store: (200 Rutland Rd. South & 3531 Old Okanagan Hwy. #101) assists the community by recycling quality used goods, keeping them out of the landfill, and getting them into the hands of people who will use them. The revenue from the thrift-store goes back into the community.</p>
         </div>
     </section>
 </div>
@@ -492,12 +441,6 @@
     document.querySelectorAll('.nav-button').forEach(button => {
         button.addEventListener('click', function (e) {
             e.preventDefault();
-
-            // Remove active class from all buttons
-            document.querySelectorAll('.nav-button').forEach(btn => btn.classList.remove('active'));
-
-            // Add active class to clicked button
-            this.classList.add('active');
 
             // Smooth scroll to section
             const targetId = this.getAttribute('href').substring(1);

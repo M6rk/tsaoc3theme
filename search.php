@@ -1,15 +1,15 @@
 <?php get_header(); ?>
 <style>
-.search-results-container h1,
-.search-results-container h2,
-.search-results-container h3,
-.search-results-container h4,
-.search-results-container h5,
-.search-results-container h6,
-.search-results-container p {
-    margin-left: 0;
-    margin-right: 0;
-}
+    .search-results-container h1,
+    .search-results-container h2,
+    .search-results-container h3,
+    .search-results-container h4,
+    .search-results-container h5,
+    .search-results-container h6,
+    .search-results-container p {
+        margin-left: 0;
+        margin-right: 0;
+    }
 </style>
 <div class="main-content">
     <div class="search-results-container" style="max-width: 1200px; margin: 0 auto; padding: 2rem 1rem;">
@@ -71,7 +71,7 @@
                             $content = strip_tags($content);
                             $content = strip_shortcodes($content);
                             echo wp_trim_words($content, 50, '...');
-                            */?>
+                            */ ?>
                         </div> -->
 
                         <a href="<?php the_permalink(); ?>" class="read-more"
@@ -90,19 +90,21 @@
                         ?>
                     </div>
                 <?php endif; ?>
-                        <?php else: ?>
-                  <div class="no-results" style="text-align: left; padding: 3rem 0;">
+            <?php else: ?>
+                <div class="no-results" style="text-align: left; padding: 3rem 0;">
                     <!-- Back Button -->
                     <div style="margin-bottom: 2rem;">
-                        <a href="javascript:history.back()" style="display: inline-flex; align-items: center; gap: 0.5rem; color: #CC0000; text-decoration: none; font-weight: 600; padding: 0.75rem 1rem; border: 2px solid #CC0000; border-radius: 8px; transition: all 0.3s ease;">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="m12 19-7-7 7-7"/>
-                                <path d="M19 12H5"/>
+                        <a href="javascript:history.back()"
+                            style="display: inline-flex; align-items: center; gap: 0.5rem; color: #CC0000; text-decoration: none; font-weight: 600; padding: 0.75rem 1rem; border: 2px solid #CC0000; border-radius: 8px; transition: all 0.3s ease;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="m12 19-7-7 7-7" />
+                                <path d="M19 12H5" />
                             </svg>
                             <?php _e('Go Back', 'tsaoc3theme'); ?>
                         </a>
                     </div>
-                    
+
                     <p style="font-size: 1.2rem; color: #666;">
                         <?php _e('No pages were found matching your search.', 'tsaoc3theme'); ?>
                     </p>
