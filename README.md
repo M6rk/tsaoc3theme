@@ -1,11 +1,11 @@
 # TSA OC3 WordPress Theme & General Site
 TODO/TOASK
-- [ ] Finish Header
-- [ ] Make footer WP dynamic
+- [x] Finish Header
+- [x] Make footer WP dynamic
 - [ ] Event plugin? 
 - [ ] Google Maps plugin for better address/location visualizaiton
 - [ ] Take photos of the westbank/kelowna sites?
-- [ ] Test configuration of Polylang, Yoast SEO, OneTap Accessibility Widget, Jetpack, and Gravity Forms
+- [x] Test configuration of Polylang, Yoast SEO, OneTap Accessibility Widget, Jetpack, and Gravity Forms
 
 ## Stylistic Guidelines
 #### Typography
