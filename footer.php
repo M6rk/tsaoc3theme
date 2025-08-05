@@ -65,8 +65,11 @@
         </div>
     </div>
 
-    <div class="footer-bottom">
-        <p>&copy; <?php echo date('Y'); ?> The Salvation Army - Okanagan Central. All rights reserved.</p>
+        <div class="footer-bottom">
+        <div class="footer-bottom-content">
+            <p class="copyright">&copy; <?php echo date('Y'); ?> The Salvation Army - Okanagan Central. All rights reserved.</p>
+            <p class="charitable-registration">Charitable Registration Number: 10795 1618 RR0001</p>
+        </div>
     </div>
 </footer>
 <button id="backToTop" class="back-to-top" aria-label="Back to top">

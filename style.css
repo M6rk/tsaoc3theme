@@ -75,7 +75,10 @@ p {
     margin-left: clamp(3rem, 30vw, 400px);
     margin-right: clamp(3rem, 30vw, 400px);
     margin-top: 1rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1.5rem; /* Changed from 0.5rem to match about page */
+    font-size: 1.1rem !important; /* Added to match about page */
+    line-height: 1.8 !important; /* Added to match about page */
+    color: #444 !important; /* Added to match about page */
 }
 
 .wp-block-cover h1,
@@ -131,6 +134,62 @@ h6,
 .entry-title,
 .page-title {
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+/* ========================================
+   GLOBAL STYLES (Mainly for WP Gutenberg Blocks)
+======================================== */
+
+/* Heading styling */
+h1.entry-title,
+h1.page-title,
+.wp-block-post-title,
+h1 {
+    color: #CC0000 !important;
+    font-size: clamp(2rem, 4vw, 2.8rem) !important;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif !important;
+    text-align: center !important;
+    margin-bottom: 2rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+    font-weight: 600 !important;
+    position: relative;
+    padding-bottom: 1rem !important;
+}
+
+/* Underline to headings */
+h1.entry-title::after,
+h1.page-title::after,
+.wp-block-post-title::after,
+h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #CC0000;
+    border-radius: 2px;
+}
+
+/* Mobile responsive adjustments */
+@media screen and (max-width: 768px) {
+    h1.entry-title,
+    h1.page-title,
+    .wp-block-post-title,
+    h1 {
+        font-size: 2rem !important;
+        padding-bottom: 0.8rem !important;
+    }
+    
+    .wp-block-post-content p,
+    .entry-content p,
+    .page-content p {
+        font-size: 1rem !important;
+        margin-left: clamp(1rem, 5vw, 2rem) !important;
+        margin-right: clamp(1rem, 5vw, 2rem) !important;
+    }
 }
 
 /* ========================================
@@ -736,6 +795,24 @@ footer p {
     margin: 0;
 }
 
+.footer-bottom-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.copyright,
+.charitable-registration {
+    margin: 0;
+}
+
+.charitable-registration {
+    font-size: 0.9rem;
+    color: #666;
+}
+
 /* ========================================
    MISCELLANEOUS STYLES
 ======================================== */
@@ -876,6 +953,12 @@ hr {
 ======================================== */
 
 @media screen and (max-width: 768px) {
+
+    .footer-bottom-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
 
     /* Hide desktop nav menu */
     .nav-menu-container {
