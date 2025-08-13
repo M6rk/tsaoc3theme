@@ -13,7 +13,7 @@
     <div class="navbar">
       <div class="logo">
         <a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name')); ?>">
-          <img class="logo" src="<?php echo get_template_directory_uri(); ?>/assets/images/main_logo.png" alt="<?php echo esc_attr(get_bloginfo('name')); ?> Logo">
+          <img class="logo" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo2.png" alt="<?php echo esc_attr(get_bloginfo('name')); ?> Logo">
         </a>
       </div>
       <form class="search-form" method="get" action="<?php echo esc_url(home_url('/')); ?>">
