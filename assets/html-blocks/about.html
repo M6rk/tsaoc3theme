@@ -3,7 +3,7 @@
 .about-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 1.5rem;
 }
 
 .about-title {
@@ -11,13 +11,10 @@
     font-size: clamp(2rem, 4vw, 2.8rem);
     font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
     text-align: center;
-    margin-bottom: 2rem !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    margin-top: 0 !important;
+    margin: 0 0 1rem 0 !important;
     font-weight: 600;
     position: relative;
-    padding-bottom: 1rem;
+    padding-bottom: 1.5rem;
 }
 
 .about-title::after {
@@ -39,20 +36,19 @@
     color: #333 !important;
     text-align: center;
     max-width: 800px;
-    margin: 0 auto 3rem auto !important;
-    padding: 2rem;
+    margin: 0 auto 2.5rem auto !important;
+    padding: 1.5rem;
     background: linear-gradient(135deg, #f8f9fa, #ffffff);
     border-radius: 16px;
     border-left: 4px solid #CC0000;
     font-style: italic;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 /* Navigation Buttons - Refreshed Design */
 .section-nav {
     display: flex;
     justify-content: center;
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
     border: 2px solid #CC0000;
     width: fit-content;
     margin-left: auto;
@@ -100,9 +96,9 @@
 /* Photo Areas */
 .photo-section {
     text-align: center;
-    margin: 2rem 0;
-    padding: 1.5rem;
-    background: #ffffff;
+    margin: 1.5rem 0;
+    padding: 0;
+    background: transparent;
     border-radius: 12px;
     transition: border-color 0.3s ease;
 }
@@ -110,7 +106,7 @@
 .photo-section img {
     width: 100%;
     max-width: 600px;
-    height: 300px;
+    height: 350px;
     object-fit: cover;
     object-position: center;
     border-radius: 12px;
@@ -127,22 +123,12 @@
 
 /* Section Styling */
 .about-section {
-    padding: 3rem 2rem;
+    padding: 0;
     background: white;
     border-radius: 16px;
     position: relative;
     overflow: hidden;
-    margin-bottom: 2rem;
-}
-
-.about-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(90deg, #CC0000, #EE2D3D);
+    margin-bottom: 3rem;
 }
 
 .section-title {
@@ -151,32 +137,38 @@
     text-align: center;
     font-family: 'Palatino Linotype', Palatino, serif;
     position: relative;
-    margin: 0 0 2rem 0 !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+    margin: 0 0 1.5rem 0 !important;
+    padding: 2rem 2rem 0 2rem;
+    background: transparent;
 }
 
 .section-subtitle {
     color: #333;
     font-size: 1.6rem;
-    margin: 2rem 0 1.5rem 0 !important;
+    margin: 2rem 0 1rem 0 !important;
     font-family: 'Palatino Linotype', Palatino, serif;
     border-left: 4px solid #CC0000;
-    padding-left: 1rem;
     background: #f8f9fa;
     padding: 1rem 1rem 1rem 1.5rem;
     border-radius: 8px;
+    margin-left: 2rem !important;
+    margin-right: 2rem !important;
 }
 
 .section-content {
     line-height: 1.8;
     color: #444;
     font-size: 1.1rem;
+    padding: 0 2rem 2rem 2rem;
 }
 
 .section-content p {
-    margin: 0 0 1.5rem 0 !important;
+    margin: 0 0 1.2rem 0 !important;
     font-size: 1.1rem;
+}
+
+.section-content p:last-child {
+    margin-bottom: 0 !important;
 }
 
 /* Special styling for Central Okanagan section */
@@ -184,7 +176,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2rem;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
 }
 
 .ministry-card {
@@ -230,15 +222,16 @@
     
     .intro-paragraph {
         font-size: 1.1rem !important;
-        padding: 1.5rem;
+        padding: 1.2rem;
         margin: 0 auto 2rem auto !important;
     }
 
-     .section-nav {
+    .section-nav {
         flex-direction: column;
         width: 100%;
         max-width: 320px;
         border: 2px solid #CC0000;
+        margin-bottom: 2rem;
     }
 
     .nav-button {
@@ -255,15 +248,22 @@
     }
 
     .about-section {
-        padding: 2rem 1rem;
+        margin-bottom: 2rem;
     }
 
     .section-title {
         font-size: 1.8rem;
+        padding: 1.5rem 1.5rem 0 1.5rem;
     }
 
     .section-subtitle {
         font-size: 1.3rem;
+        margin-left: 1.5rem !important;
+        margin-right: 1.5rem !important;
+    }
+
+    .section-content {
+        padding: 0 1.5rem 1.5rem 1.5rem;
     }
 
     .central-grid {
@@ -277,32 +277,35 @@
 
     .about-title {
         font-size: 2rem !important;
+        padding-bottom: 1rem;
+    }
+
+    .photo-section img {
+        height: 250px;
     }
 } 
 </style>
 
 <div class="about-container">
     <h1 class="about-title">About Us</h1>
-       <!-- Global Section -->
-    <section id="global" class="about-section">
-        <h2 class="section-title">Global</h2>
+        <!-- Central Okanagan Section -->
+    <section id="central-okanagan" class="about-section">
+        <h2 class="section-title">Central Okanagan</h2>
 
         <div class="photo-section">
-            <img src="http://tsaoc3.local/wp-content/uploads/2025/07/International-Headquarters-1024x576.jpg" alt="The Salvation Army Global Headquarters">
+            <img src="http://tsaoc3.local/wp-content/uploads/2025/07/header_who_we_are-1024x320.jpg" alt="Salvation Army Okanagan Central Community Church">
         </div>
-        <h3 class="section-subtitle">A Brief History of The Salvation Army</h3>
+
+        <h3 class="section-subtitle">About the Salvation Army – Okanagan Central</h3>
         <div class="section-content">
-            <p>The Salvation Army is an integral part of the Christian Church, although distinctive in government and practice. Founded in 1865 by William Booth in London, England, the movement has spread to many parts of the world.</p>
+            <p>On July 1st 2024, the Salvation Army Okanagan Central was formed through the amalgamation of the former Kelowna and Westside Corps, bringing together two communities with a shared commitment to serving the Central Okanagan region. This union has strengthened our ability to provide comprehensive spiritual and social services throughout the area, while improving our organizations efficiency.</p>
 
-            <p>The Army adopted a quasi-military command structure in 1878, using soldierly features such as uniforms, flags, and ranks to identify, inspire and regulate its endeavours. Today, The Salvation Army operates in over 130 countries worldwide, providing both spiritual and social services.</p>
+            <p>Today, we operate from multiple locations including our main church facility and community service centres in both Rutland and Westbank. Our mission encompasses spiritual care through worship services and pastoral support, community assistance through emergency services, programs for seniors and families, and environmental stewardship through our thrift store operations.</p>
 
-            <p>The Salvation Army is currently led by General Lyndon Buckingham, who serves as the international leader of the organization.</p>
-
-            <p>For more detailed information about The Salvation Army's global history and mission, visit: <a href="https://www.salvationarmy.org/history" target="_blank">www.salvationarmy.org/history</a></p>
+            <p>We strive to meet physical, emotional, spiritual, and environmental needs in our community, offering hope and practical support to individuals and families throughout the Central Okanagan. Whether through emergency disaster response, ongoing community support programs, or regular worship and fellowship opportunities, we are committed to walking alongside our neighbors on their journeys.</p>
         </div>
     </section>
-
-    <!-- Canada Section -->
+        <!-- Canada Section -->
     <section id="canada" class="about-section">
         <h2 class="section-title">Canada</h2>
 
@@ -321,22 +324,23 @@
             <p>To learn more about The Salvation Army in Canada, visit: <a href="https://salvationarmy.ca/about-us/our-organization/" target="_blank">salvationarmy.ca/about-us/our-organization/</a></p>
         </div>
     </section>
-
-    <!-- Central Okanagan Section -->
-    <section id="central-okanagan" class="about-section">
-        <h2 class="section-title">Central Okanagan</h2>
+    <!-- Global Section -->
+    <section id="global" class="about-section">
+        <h2 class="section-title">Global</h2>
 
         <div class="photo-section">
-            <img src="http://tsaoc3.local/wp-content/uploads/2025/07/header_who_we_are-1024x320.jpg" alt="Salvation Army Okanagan Central Community Church">
+            <img src="http://tsaoc3.local/wp-content/uploads/2025/07/International-Headquarters-1024x576.jpg" alt="The Salvation Army Global Headquarters">
         </div>
-
-        <h3 class="section-subtitle">About the Salvation Army – Okanagan Central</h3>
+        
+        <h3 class="section-subtitle">A Brief History of The Salvation Army</h3>
         <div class="section-content">
-            <p>The Salvation Army Okanagan Central was formed through the amalgamation of the former Kelowna and West Kelowna Corps, bringing together two communities with a shared commitment to serving the Central Okanagan region. This union has strengthened our ability to provide comprehensive spiritual and social services throughout the area.</p>
+            <p>The Salvation Army is an integral part of the Christian Church, although distinctive in government and practice. Founded in 1865 by William Booth in London, England, the movement has spread to many parts of the world.</p>
 
-            <p>Today, we operate from multiple locations including our main church facility and community service centres in both Rutland and Westbank. Our mission encompasses spiritual care through worship services and pastoral support, community assistance through emergency services, programs for seniors and families, and environmental stewardship through our thrift store operations.</p>
+            <p>The Army adopted a quasi-military command structure in 1878, using soldierly features such as uniforms, flags, and ranks to identify, inspire and regulate its endeavours. Today, The Salvation Army operates in over 130 countries worldwide, providing both spiritual and social services.</p>
 
-            <p>We strive to meet physical, emotional, spiritual, and environmental needs in our community, offering hope and practical support to individuals and families throughout the Central Okanagan. Whether through emergency disaster response, ongoing community support programs, or regular worship and fellowship opportunities, we are committed to walking alongside our neighbors on their journeys.</p>
+            <p>The Salvation Army is currently led by General Lyndon Buckingham, who serves as the international leader of the organization.</p>
+
+            <p>For more detailed information about The Salvation Army's global history and mission, visit: <a href="https://www.salvationarmy.org/history" target="_blank">www.salvationarmy.org/history</a></p>
         </div>
     </section>
 </div>

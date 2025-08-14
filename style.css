@@ -75,10 +75,9 @@ p {
     margin-left: clamp(3rem, 30vw, 400px);
     margin-right: clamp(3rem, 30vw, 400px);
     margin-top: 1rem;
-    margin-bottom: 1.5rem; /* Changed from 0.5rem to match about page */
-    font-size: 1.1rem !important; /* Added to match about page */
-    line-height: 1.8 !important; /* Added to match about page */
-    color: #444 !important; /* Added to match about page */
+    margin-bottom: 1.5rem; 
+    font-size: 1.1rem !important;
+    line-height: 1.8 !important; 
 }
 
 .wp-block-cover h1,
@@ -102,10 +101,7 @@ p {
     margin-right: clamp(1rem, 10vw, 150px);
 }
 
-/* Remove the global margin rule for individual columns */
 .wp-block-column {
-    /* Remove the existing margin rules */
-    /* Use padding for inner spacing instead */
     padding-left: 1rem;
     padding-right: 1rem;
 }
@@ -785,7 +781,7 @@ footer p {
 
 .footer-bottom {
     border-top: 1px solid #ddd;
-    padding-top: 1rem;
+    padding-top: 0.5rem;
     text-align: center;
 }
 

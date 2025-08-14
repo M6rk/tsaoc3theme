@@ -1,15 +1,8 @@
 <style>
 .staff-directory-section {
-    max-width: 1400px;
-    margin: 0 auto 2rem auto;
-    padding: 2rem;
-}
-
-.staff-directory-container {
-    background: #FFFFFF;
-    border-radius: 20px;
-    padding: 2.5rem;
-    border: 1px solid rgba(191, 191, 191, 0.2);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem;
 }
 
 .staff-directory-title {
@@ -17,93 +10,66 @@
     font-size: clamp(2rem, 4vw, 2.8rem);
     font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
     text-align: center;
-    margin-bottom: 2rem !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    margin-top: 0 !important;
+    margin: 0 0 3rem 0 !important;
     font-weight: 600;
+    position: relative;
+    padding-bottom: 1.5rem;
 }
 
-.team-section {
-    margin-bottom: 3rem;
+.staff-directory-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #CC0000;
+    border-radius: 2px;
 }
 
-.team-section-title {
+.leadership-section {
+    margin-bottom: 4rem;
+}
+
+.leadership-header {
     color: #CC0000;
-    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-size: 1.8rem;
     font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
-    margin-bottom: 2rem !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    margin-top: 0 !important;
-    text-align: center;
-    border-bottom: 2px solid #f0f0f0;
+    font-weight: 600;
+    margin: 0 0 2rem 0 !important;
     padding-bottom: 0.5rem;
+    border-bottom: 2px solid #CC0000;
+    text-align: left;
 }
 
-.leadership-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
+.staff-section {
     margin-bottom: 2rem;
 }
 
-.staff-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
+.staff-header {
+    color: #CC0000;
+    font-size: 1.8rem;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    font-weight: 600;
+    margin: 0 0 2rem 0 !important;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #CC0000;
+    text-align: left;
 }
 
-.staff-grid .staff-card:nth-child(7):nth-last-child(1) {
-    grid-column: 1 / -1;
-    width: fit-content;
-    margin: 0 auto;
-}
-
-.staff-card {
-    background: #f8f9fa;
+.staff-entry {
+    margin: 1.5rem 0;
     padding: 1.5rem;
+    background: white;
     border-radius: 12px;
-    border-left: 4px solid #CC0000;
-    text-align: center;
-}
-
-.leadership-card {
-    background: #ffffff;
-    padding: 2rem;
-    border-radius: 16px;
-    text-align: center;
-}
-
-.staff-photo {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #CC0000;
-    margin: 0 auto 1rem auto !important;
-    display: block;
-    background-color: #f0f0f0;
-}
-
-.leadership-photo {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid #CC0000;
-    margin: 0 auto 1.5rem auto !important;
-    display: block;
-    background-color: #f0f0f0;
 }
 
 .staff-name {
     color: #CC0000;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     font-weight: bold;
-    margin: 0.5rem 0 !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+    margin: 0 0 0.5rem 0 !important;
     font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
 }
 
@@ -111,9 +77,7 @@
     color: #333;
     font-size: 1.1rem;
     font-weight: 600;
-    margin: 0.5rem 0 !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+    margin: 0 0 1rem 0 !important;
 }
 
 .staff-contact {
@@ -122,11 +86,8 @@
     line-height: 1.5;
 }
 
-/* Override global p margins for contact info */
 .staff-contact p {
     margin: 0.3rem 0 !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
 }
 
 .staff-contact a {
@@ -146,235 +107,193 @@
         padding: 1rem;
     }
     
-    .staff-directory-container {
-        padding: 1.5rem;
-        border-radius: 16px;
-    }
-    
-    .leadership-grid,
-    .staff-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-    
-    .staff-card,
-    .leadership-card {
+    .staff-entry {
         padding: 1.25rem;
+        margin: 1rem 0;
     }
     
-    .staff-photo {
-        width: 100px;
-        height: 100px;
+    .leadership-header,
+    .staff-header {
+        font-size: 1.5rem;
     }
     
-    .leadership-photo {
-        width: 120px;
-        height: 120px;
+    .staff-name {
+        font-size: 1.2rem;
     }
 }
 </style>
 
 <div class="staff-directory-section">
-    <div class="staff-directory-container">
-        <h2 class="staff-directory-title">Staff Directory</h2>
+    <h2 class="staff-directory-title">Staff Directory</h2>
 
-        <!-- Pastoral Team & Administration -->
-        <div class="team-section">
-            <h3 class="team-section-title">Pastoral Team & Administration Office</h3>
-            
-            <div class="leadership-grid">
-                <div class="leadership-card">
-                    <img src="http://tsaoc3.local/wp-content/uploads/2025/07/jen.png" alt="Captain Jennifer Henson" class="leadership-photo" />
-                    <h4 class="staff-name">Captain Jennifer Henson</h4>
-                    <p class="staff-title">Corps Officer / Pastor</p>
-                    <div class="staff-contact">
-                        <p>Tel: <a href="tel:+12502123744">(250) 212-3744</a></p>
-                        <p>Email: <a href="mailto:Jennifer.Henson@salvationarmy.ca">Jennifer.Henson@salvationarmy.ca</a></p>
-                    </div>
-                </div>
-
-                <div class="leadership-card">
-                    <img src="http://tsaoc3.local/wp-content/uploads/2025/07/rob.png" alt="Captain Rob Henson" class="leadership-photo" />
-                    <h4 class="staff-name">Captain Rob Henson</h4>
-                    <p class="staff-title">Corps Officer / Pastor</p>
-                    <div class="staff-contact">
-                        <p>Tel: <a href="tel:+17785832011">(778) 583-2011</a></p>
-                        <p>Email: <a href="mailto:Rob.Henson@salvationarmy.ca">Rob.Henson@salvationarmy.ca</a></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="staff-grid">
-                <div class="staff-card">
-                    <h4 class="staff-name">Donna Thibideau</h4>
-                    <p class="staff-title">Operations Director</p>
-                    <div class="staff-contact">
-                        <p>Tel: <a href="tel:+12508602329">(250) 860-2329 ext. 104</a></p>
-                        <p>Email: <a href="mailto:Donna.Thibideau@salvationarmy.ca">Donna.Thibideau@salvationarmy.ca</a></p>
-                    </div>
-                </div>
-
-                <div class="staff-card">
-                    <h4 class="staff-name">Angela Stadnyk</h4>
-                    <p class="staff-title">Volunteer and Kettle Coordinator</p>
-                    <div class="staff-contact">
-                        <p>Tel: <a href="tel:+12508602329">(250) 860-2329 ext. 105</a></p>
-                        <p>Email: <a href="mailto:Angela.Stadnyk@salvationarmy.ca">Angela.Stadnyk@salvationarmy.ca</a></p>
-                    </div>
-                </div>
-
-                <div class="staff-card">
-                    <h4 class="staff-name">Marc Scaife</h4>
-                    <p class="staff-title">Facilities Coordinator</p>
-                    <div class="staff-contact">
-                        <p>Tel: <a href="tel:+12508602329">(250) 860-2329 ext. 107</a></p>
-                        <p>Email: <a href="mailto:Marcus.Scaife@salvationarmy.ca">Marcus.Scaife@salvationarmy.ca</a></p>
-                    </div>
-                </div>
-
-                <div class="staff-card">
-                    <h4 class="staff-name">Rosy Chan</h4>
-                    <p class="staff-title">Internal Communications and Administration</p>
-                    <div class="staff-contact">
-                        <p>Tel: <a href="tel:+12508602329">(250) 860-2329 ext. 113</a></p>
-                        <p>Email: <a href="mailto:Rosy.Chan@salvationarmy.ca">Rosy.Chan@salvationarmy.ca</a></p>
-                    </div>
-                </div>
-
-                <div class="staff-card">
-                    <h4 class="staff-name">Nathan Bennett</h4>
-                    <p class="staff-title">Youth Ministries Coordinator</p>
-                    <div class="staff-contact">
-                        <p>Tel: <a href="tel:+17785831047">(778) 583-1047</a></p>
-                        <p>Email: <a href="mailto:Nathan.Bennett2@salvationarmy.ca">Nathan.Bennett2@salvationarmy.ca</a></p>
-                    </div>
-                </div>
-                     <div class="staff-card">
-                    <h4 class="staff-name">Ron Côté</h4>
-                    <p class="staff-title">Administration Manager</p>
-                    <div class="staff-contact">
-                        <p>Tel: <a href="tel:+17785831047">(778) 583-1047</a></p>
-                        <p>Email: <a href="mailto:Ron.Cote@salvationarmy.ca">Ronald.Cote1@salvationarmy.ca</a></p>
-                    </div>
-                </div>
-                   <div class="staff-card">
-                    <h4 class="staff-name">Kurtis Knuth</h4>
-                    <p class="staff-title">Hospitality and Administration Assistant</p>
-                    <div class="staff-contact">
-                        <p>Tel: <a href="tel:+17785831047">(778) 583-1047</a></p>
-                        <p>Email: <a href="mailto:Kurtis.Knuth@salvationarmy.ca">Kurtis.Knuth@salvationarmy.ca</a></p>
-                    </div>
-                </div>
+    <!-- Leadership Section -->
+    <div class="leadership-section">
+        <h3 class="leadership-header">Corps Officers</h3>
+        
+        <div class="staff-entry">
+            <h4 class="staff-name">Jennifer Henson</h4>
+            <p class="staff-title">Captain / Corps Officer / Pastor</p>
+            <div class="staff-contact">
+                <p>Tel: <a href="tel:+12502123744">(250) 212-3744</a></p>
+                <p>Email: <a href="mailto:Jennifer.Henson@salvationarmy.ca">Jennifer.Henson@salvationarmy.ca</a></p>
             </div>
         </div>
 
-        <!-- Community Services Team -->
-        <div class="team-section">
-            <h3 class="team-section-title">Community Services Team</h3>
-            
-            <div class="leadership-grid">
-                <div class="leadership-card">
-                    <img src="http://tsaoc3.local/wp-content/uploads/2025/07/1577936853090.png" alt="Sonia Withers" class="leadership-photo" />
-                    <h4 class="staff-name">Sonia Withers</h4>
-                    <p class="staff-title">Community Services Director</p>
-                    <div class="staff-contact">
-                        <p>Tel: <a href="tel:+12507653450">(250) 765-3450 ext. 201</a></p>
-                        <p>Email: <a href="mailto:Sonia.Withers@salvationarmy.ca">Sonia.Withers@salvationarmy.ca</a></p>
-                    </div>
-                </div>
+        <div class="staff-entry">
+            <h4 class="staff-name">Rob Henson</h4>
+            <p class="staff-title">Captain / Corps Officer / Pastor</p>
+            <div class="staff-contact">
+                <p>Tel: <a href="tel:+17785832011">(778) 583-2011</a></p>
+                <p>Email: <a href="mailto:Rob.Henson@salvationarmy.ca">Rob.Henson@salvationarmy.ca</a></p>
             </div>
+        </div>
+    </div>
 
-            <div class="staff-grid">
-                <div class="staff-card">
-                    <h4 class="staff-name">Jamie Johnstone</h4>
-                    <p class="staff-title">Caseworker</p>
-                    <div class="staff-contact">
-                        <p>Tel: <a href="tel:+12507653450">(250) 765-3450 ext. 202</a></p>
-                        <p>Email: <a href="mailto:Jamie.Johnstone@salvationarmy.ca">Jamie.Johnstone@salvationarmy.ca</a></p>
-                    </div>
-                </div>
-
-                <div class="staff-card">
-                    <h4 class="staff-name">Anke Rohleder</h4>
-                    <p class="staff-title">Caseworker</p>
-                    <div class="staff-contact">
-                        <p>Tel: <a href="tel:+12507653450">(250) 765-3450 ext. 203</a></p>
-                        <p>Email: <a href="mailto:Anke.Rohleder@salvationarmy.ca">Anke.Rohleder@salvationarmy.ca</a></p>
-                    </div>
-                </div>
-
-                <div class="staff-card">
-                    <h4 class="staff-name">Diane Unrau</h4>
-                    <p class="staff-title">Caseworker</p>
-                    <div class="staff-contact">
-                        <p>Tel: <a href="tel:+17784849917">(778) 484-9917</a></p>
-                        <p>Email: <a href="mailto:Diane.Unrau@salvationarmy.ca">Diane.Unrau@salvationarmy.ca</a></p>
-                    </div>
-                </div>
-
-                <div class="staff-card">
-                    <h4 class="staff-name">Sandra Penner</h4>
-                    <p class="staff-title">Caseworker</p>
-                    <div class="staff-contact">
-                        <p>Tel: <a href="tel:+17784849796">(778) 484-9796</a></p>
-                        <p>Email: <a href="mailto:Sandra.Penner@salvationarmy.ca">Sandra.Penner@salvationarmy.ca</a></p>
-                    </div>
-                </div>
-
-                <div class="staff-card">
-                    <h4 class="staff-name">Mark Haynes</h4>
-                    <p class="staff-title">Programs and EDS Manager</p>
-                    <div class="staff-contact">
-                        <p>Tel: <a href="tel:+12507653450">(250) 765-3450 ext. 204</a></p>
-                        <p>Email: <a href="mailto:Mark.Haynes@salvationarmy.ca">Mark.Haynes@salvationarmy.ca</a></p>
-                    </div>
-                </div>
-
-                <div class="staff-card">
-                    <h4 class="staff-name">Mike Dickson</h4>
-                    <p class="staff-title">Hospitality and Administrative Assistant (Rutland)</p>
-                    <div class="staff-contact">
-                        <p>Tel: <a href="tel:+12507653450">(250) 765-3450 ext. 200</a></p>
-                        <p>Email: <a href="mailto:Mike.Dickson@salvationarmy.ca">Mike.Dickson@salvationarmy.ca</a></p>
-                    </div>
-                </div>
+    <!-- Staff Section -->
+    <div class="staff-section">
+        <h3 class="staff-header">Staff</h3>
+        
+        <div class="staff-entry">
+            <h4 class="staff-name">Angela Stadnyk</h4>
+            <p class="staff-title">Volunteer and Kettle Coordinator</p>
+            <div class="staff-contact">
+                <p>Tel: <a href="tel:+12508602329">(250) 860-2329 ext. 105</a></p>
+                <p>Email: <a href="mailto:Angela.Stadnyk@salvationarmy.ca">Angela.Stadnyk@salvationarmy.ca</a></p>
             </div>
         </div>
 
-        <!-- Thrift Store Leadership Team -->
-        <div class="team-section">
-            <h3 class="team-section-title">Thrift Store Leadership Team</h3>
-            
-            <div class="leadership-grid">
-                <div class="leadership-card">
-                    <img src="http://tsaoc3.local/wp-content/uploads/2025/07/25821921_web1_210715-KCN-40-over-40-Lenetta_1-1024x683.jpg" alt="Lenetta Parry" class="leadership-photo" />
-                    <h4 class="staff-name">Lenetta Parry</h4>
-                    <p class="staff-title">Community Engagement and Resource Manager</p>
-                    <div class="staff-contact">
-                        <p>Tel: <a href="tel:+12508649633">(250) 864-9633</a></p>
-                        <p>Email: <a href="mailto:Lenetta.Parry@salvationarmy.ca">Lenetta.Parry@salvationarmy.ca</a></p>
-                    </div>
-                </div>
+        <div class="staff-entry">
+            <h4 class="staff-name">Anke Rohleder</h4>
+            <p class="staff-title">Caseworker</p>
+            <div class="staff-contact">
+                <p>Tel: <a href="tel:+12507653450">(250) 765-3450 ext. 203</a></p>
+                <p>Email: <a href="mailto:Anke.Rohleder@salvationarmy.ca">Anke.Rohleder@salvationarmy.ca</a></p>
             </div>
+        </div>
 
-            <div class="staff-grid">
-                <div class="staff-card">
-                    <h4 class="staff-name">Lisa-Marie Pettovello</h4>
-                    <p class="staff-title">Thrift Store Manager</p>
-                    <div class="staff-contact">
-                        <p>Tel: <a href="tel:+17784787000">(778) 478-7000 ext. 301</a></p>
-                        <p>Email: <a href="mailto:LisaMarie.Pettovello@salvationarmy.ca">LisaMarie.Pettovello@salvationarmy.ca</a></p>
-                    </div>
-                </div>
+        <div class="staff-entry">
+            <h4 class="staff-name">Diane Unrau</h4>
+            <p class="staff-title">Caseworker</p>
+            <div class="staff-contact">
+                <p>Tel: <a href="tel:+17784849917">(778) 484-9917</a></p>
+                <p>Email: <a href="mailto:Diane.Unrau@salvationarmy.ca">Diane.Unrau@salvationarmy.ca</a></p>
+            </div>
+        </div>
 
-                <div class="staff-card">
-                    <h4 class="staff-name">Rick Hill</h4>
-                    <p class="staff-title">Warehouse Supervisor</p>
-                    <div class="staff-contact">
-                        <p>Tel: <a href="tel:+17784787000">(778) 478-7000 ext. 300</a></p>
-                        <p>Email: <a href="mailto:Rick.Hill@salvationarmy.ca">Rick.Hill@salvationarmy.ca</a></p>
-                    </div>
-                </div>
+        <div class="staff-entry">
+            <h4 class="staff-name">Donna Thibideau</h4>
+            <p class="staff-title">Operations Director</p>
+            <div class="staff-contact">
+                <p>Tel: <a href="tel:+12508602329">(250) 860-2329 ext. 104</a></p>
+                <p>Email: <a href="mailto:Donna.Thibideau@salvationarmy.ca">Donna.Thibideau@salvationarmy.ca</a></p>
+            </div>
+        </div>
+
+        <div class="staff-entry">
+            <h4 class="staff-name">Kurtis Knuth</h4>
+            <p class="staff-title">Hospitality and Administration Assistant</p>
+            <div class="staff-contact">
+                <p>Tel: <a href="tel:+17785831047">(778) 583-1047</a></p>
+                <p>Email: <a href="mailto:Kurtis.Knuth@salvationarmy.ca">Kurtis.Knuth@salvationarmy.ca</a></p>
+            </div>
+        </div>
+
+        <div class="staff-entry">
+            <h4 class="staff-name">Lenetta Parry</h4>
+            <p class="staff-title">Community Engagement and Resource Manager</p>
+            <div class="staff-contact">
+                <p>Tel: <a href="tel:+12508649633">(250) 864-9633</a></p>
+                <p>Email: <a href="mailto:Lenetta.Parry@salvationarmy.ca">Lenetta.Parry@salvationarmy.ca</a></p>
+            </div>
+        </div>
+
+        <div class="staff-entry">
+            <h4 class="staff-name">Linda Hood</h4>
+            <p class="staff-title">Westbank Thrift Store Manager</p>
+            <div class="staff-contact">
+                <p>Tel: <a href="tel:+12507681850">(250)-768-1850</a></p>
+                <p>Email: <a href="mailto:Linda.Hood@salvationarmy.ca">Linda.Hood@salvationarmy.ca</a></p>
+            </div>
+        </div>
+
+        <div class="staff-entry">
+            <h4 class="staff-name">Marc Scaife</h4>
+            <p class="staff-title">Facilities Coordinator</p>
+            <div class="staff-contact">
+                <p>Tel: <a href="tel:+12508602329">(250) 860-2329 ext. 107</a></p>
+                <p>Email: <a href="mailto:Marcus.Scaife@salvationarmy.ca">Marcus.Scaife@salvationarmy.ca</a></p>
+            </div>
+        </div>
+
+        <div class="staff-entry">
+            <h4 class="staff-name">Mark Haynes</h4>
+            <p class="staff-title">Programs and EDS Manager</p>
+            <div class="staff-contact">
+                <p>Tel: <a href="tel:+12507653450">(250) 765-3450 ext. 204</a></p>
+                <p>Email: <a href="mailto:Mark.Haynes@salvationarmy.ca">Mark.Haynes@salvationarmy.ca</a></p>
+            </div>
+        </div>
+
+        <div class="staff-entry">
+            <h4 class="staff-name">May Popham</h4>
+            <p class="staff-title">Rutland Thrift Store Manager</p>
+            <div class="staff-contact">
+                <p>Tel: <a href="tel:+17784787000">(778) 478-7000</a></p>
+                <p>Email: <a href="mailto:May.Popham@salvationarmy.ca">May.Popham@salvationarmy.ca</a></p>
+            </div>
+        </div>
+
+        <div class="staff-entry">
+            <h4 class="staff-name">Mike Dickson</h4>
+            <p class="staff-title">Hospitality and Administrative Assistant (Rutland)</p>
+            <div class="staff-contact">
+                <p>Tel: <a href="tel:+12507653450">(250) 765-3450 ext. 200</a></p>
+                <p>Email: <a href="mailto:Mike.Dickson@salvationarmy.ca">Mike.Dickson@salvationarmy.ca</a></p>
+            </div>
+        </div>
+
+        <div class="staff-entry">
+            <h4 class="staff-name">Nathan Bennett</h4>
+            <p class="staff-title">Youth Ministries Coordinator</p>
+            <div class="staff-contact">
+                <p>Tel: <a href="tel:+17785831047">(778) 583-1047</a></p>
+                <p>Email: <a href="mailto:Nathan.Bennett2@salvationarmy.ca">Nathan.Bennett2@salvationarmy.ca</a></p>
+            </div>
+        </div>
+
+        <div class="staff-entry">
+            <h4 class="staff-name">Ron Côté</h4>
+            <p class="staff-title">Administration Manager</p>
+            <div class="staff-contact">
+                <p>Tel: <a href="tel:+17785831047">(778) 583-1047</a></p>
+                <p>Email: <a href="mailto:Ronald.Cote1@salvationarmy.ca">Ronald.Cote1@salvationarmy.ca</a></p>
+            </div>
+        </div>
+
+        <div class="staff-entry">
+            <h4 class="staff-name">Rosy Chan</h4>
+            <p class="staff-title">Internal Communications and Administration</p>
+            <div class="staff-contact">
+                <p>Tel: <a href="tel:+12508602329">(250) 860-2329 ext. 113</a></p>
+                <p>Email: <a href="mailto:Rosy.Chan@salvationarmy.ca">Rosy.Chan@salvationarmy.ca</a></p>
+            </div>
+        </div>
+
+        <div class="staff-entry">
+            <h4 class="staff-name">Sandra Penner</h4>
+            <p class="staff-title">Caseworker</p>
+            <div class="staff-contact">
+                <p>Tel: <a href="tel:+17784849796">(778) 484-9796</a></p>
+                <p>Email: <a href="mailto:Sandra.Penner@salvationarmy.ca">Sandra.Penner@salvationarmy.ca</a></p>
+            </div>
+        </div>
+
+        <div class="staff-entry">
+            <h4 class="staff-name">Sonia Withers</h4>
+            <p class="staff-title">Community Services Director</p>
+            <div class="staff-contact">
+                <p>Tel: <a href="tel:+12507653450">(250) 765-3450 ext. 201</a></p>
+                <p>Email: <a href="mailto:Sonia.Withers@salvationarmy.ca">Sonia.Withers@salvationarmy.ca</a></p>
             </div>
         </div>
     </div>
