@@ -1,0 +1,331 @@
+<style>
+    .pathway-section {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 1.5rem;
+    }
+
+    .pathway-title {
+        color: #CC0000;
+        font-size: clamp(2rem, 4vw, 2.8rem);
+        font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+        text-align: center;
+        margin: 0 0 2rem 0 !important;
+        font-weight: 600;
+        position: relative;
+        padding-bottom: 1.5rem;
+    }
+
+    .pathway-title::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 3px;
+        background-color: #CC0000;
+        border-radius: 2px;
+    }
+
+    .contact-section {
+        background: linear-gradient(135deg, #f8f9fa, #ffffff);
+        border-radius: 15px;
+        padding: 1rem;
+        margin-bottom: 3rem;
+        text-align: center;
+    }
+
+    .contact-intro {
+        color: #333;
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem !important;
+        font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    }
+
+    .contact-name {
+        color: #CC0000;
+        font-size: 1.3rem;
+        font-weight: bold;
+        margin: 1rem 0 0.5rem 0 !important;
+    }
+
+    .contact-details {
+        margin: 1rem 0;
+    }
+
+    .contact-details p {
+        margin: 0.5rem 0 !important;
+        font-size: 1.1rem;
+    }
+
+    .contact-details a {
+        color: #CC0000;
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.3s ease;
+    }
+
+    .contact-details a:hover {
+        color: #005AAA;
+        text-decoration: underline;
+    }
+
+    .content-section {
+        margin: 2rem 0;
+    }
+
+    .section-header {
+        color: #CC0000;
+        font-size: 1.8rem;
+        font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+        font-weight: 600;
+        margin: 2.5rem 0 1rem 0 !important;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid #CC0000;
+    }
+
+    .content-text {
+        color: #555;
+        font-size: 1.1rem;
+        line-height: 1.7;
+        margin: 1rem 0 !important;
+        text-align: justify;
+    }
+
+    .highlight-box {
+        background: #fff5f5;
+        border-left: 4px solid #CC0000;
+        padding: 1.5rem;
+        margin: 2rem 0;
+        border-radius: 8px;
+    }
+
+    .highlight-text {
+        color: #444;
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin: 0 !important;
+        font-style: italic;
+    }
+
+    .core-elements-list {
+        margin: 2rem 0;
+    }
+
+    .core-element {
+        background: linear-gradient(135deg, #f8f9fa, #ffffff);
+        border-left: 4px solid #CC0000;
+        padding: 1.5rem;
+        margin: 1.5rem 0;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .element-text {
+        color: #555;
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin: 0 !important;
+    }
+
+    .pillars-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+        margin: 2rem 0;
+    }
+
+    .pillar-item {
+        background: linear-gradient(135deg, #f8f9fa, #ffffff);
+        padding: 1.5rem;
+        border-radius: 12px;
+        text-align: center;
+        border: 1px solid #e9ecef;
+        transition: transform 0.3s ease;
+    }
+
+    .pillar-item:hover {
+        transform: translateY(-5px);
+    }
+
+    .pillar-title {
+        color: #CC0000;
+        font-size: 1.4rem;
+        font-weight: bold;
+        margin: 0 !important;
+        font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    }
+
+    .stats-highlight {
+        background: linear-gradient(135deg, #CC0000, #AA0000);
+        color: white;
+        padding: 2rem;
+        border-radius: 15px;
+        text-align: center;
+        margin: 2rem 0;
+    }
+
+    .stats-text {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin: 0 !important;
+        line-height: 1.6;
+    }
+
+    .scripture-quote {
+        background: #CC0000;
+        color: white;
+        padding: 2rem;
+        border-radius: 15px;
+        text-align: center;
+        margin: 2rem 0;
+        font-style: italic;
+    }
+
+    .scripture-text {
+        font-size: 1.2rem;
+        margin: 0 !important;
+        line-height: 1.6;
+        font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    }
+
+    /* Mobile Responsiveness */
+    @media screen and (max-width: 768px) {
+        .pathway-section {
+            padding: 1rem;
+        }
+
+        .contact-section {
+            padding: 1.5rem;
+        }
+
+        .contact-intro {
+            font-size: 1.1rem;
+        }
+
+        .section-header {
+            font-size: 1.5rem;
+        }
+
+        .content-text {
+            font-size: 1rem;
+        }
+
+        .core-element {
+            padding: 1.2rem;
+        }
+
+        .element-text {
+            font-size: 1rem;
+        }
+
+        .pillars-list {
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        .stats-highlight,
+        .scripture-quote {
+            padding: 1.5rem;
+        }
+
+        .stats-text,
+        .scripture-text {
+            font-size: 1.1rem;
+        }
+    }
+</style>
+
+<div class="pathway-section">
+    <h1 class="pathway-title">Pathway of Hope</h1>
+
+    <!-- Contact Section -->
+    <div class="contact-section">
+        <p class="contact-intro">Please contact us for more information by emailing Sandra, our Pathway of Hope Caseworker.</p>
+        
+        <div class="contact-name">Sandra Penner</div>
+        <div class="contact-details">
+            <p>Email: <a href="mailto:Sandra.Penner@salvationarmy.ca">Sandra.Penner@salvationarmy.ca</a></p>
+            <p>Phone: <a href="tel:+17784849796">(778) 484-9796</a></p>
+        </div>
+    </div>
+
+    <!-- Program Overview -->
+    <div class="content-section">
+        <h2 class="section-header">Program Overview</h2>
+        
+        <p class="content-text">Pathway of Hope is a high impact strengths-based case management approach designed for The Salvation Army, identifying and addressing root cause issues for people experiencing poverty through intensive individualized support for participants to achieve short and long-term goals.</p>
+
+        <div class="highlight-box">
+            <p class="highlight-text">Using intentional care to build and transform community through integrated mission.</p>
+        </div>
+
+        <p class="content-text">While Pathway of Hope can be used in supporting individuals or families, one aim of the initiative is to alleviate intergenerational poverty. Studies have shown that the longer a child is in poverty, the greater the chance he or she will remain in poverty as an adult. Positive change in the lives of parents can create better living conditions for children, and give the work of The Salvation Army a deeper impact. Over time, helping people to achieve stability could reduce the dependence of future generations on The Salvation Army's services.</p>
+    </div>
+
+    <!-- Statistics -->
+    <div class="stats-highlight">
+        <p class="stats-text">Today, about 3.4 million Canadians, including over 622,000 children live in poverty.</p>
+    </div>
+
+    <!-- Breaking the Cycle -->
+    <div class="content-section">
+        <h2 class="section-header">Breaking the Cycle</h2>
+        
+        <p class="content-text">People experiencing poverty often face a cycle of recidivism – where they move from crisis to crisis remaining vulnerable. The Pathway of Hope approach focuses on supporting people in achieving stability through strengths-based case management. We walk alongside participants to support them in shifting their life's trajectory from repeated crises toward sufficiency.</p>
+
+        <p class="content-text">There are four general stages that encompass this journey: (1) crisis, (2) vulnerability, (3) increasing stability, and (4) sufficiency.</p>
+    </div>
+
+    <!-- Core Elements -->
+    <div class="content-section">
+        <h2 class="section-header">Core Elements & Practices</h2>
+        
+        <p class="content-text">Pathway of Hope is an approach to providing enhanced services to people with a desire to take action to break the cycle of crisis and vulnerability. As a ministry unit implements Pathway of Hope, they will adopt a set of practices that allow them to support people in this way.</p>
+
+        <div class="core-elements-list">
+            <div class="core-element">
+                <p class="element-text">Providing targeted services to people with a desire to take action, changing life trajectories and increasing hope.</p>
+            </div>
+
+            <div class="core-element">
+                <p class="element-text">Bringing all The Salvation Army's internal resources to bear, aligning them to the needs of participants, and focused on outcomes.</p>
+            </div>
+
+            <div class="core-element">
+                <p class="element-text">Catalyzing community collaboration in service of shared participants.</p>
+            </div>
+        </div>
+
+        <p class="content-text">Each of these elements is important to the overall effectiveness of the Pathway of Hope approach, and each is accompanied by specified practices that aid in developing stability for participants.</p>
+    </div>
+
+    <!-- Integrated Mission -->
+    <div class="content-section">
+        <h2 class="section-header">Integrated Mission</h2>
+        
+        <p class="content-text">Pathway of Hope is an integrated mission approach to providing service and support in the community. Four characteristics (pillars) define Integrated Mission:</p>
+
+        <div class="pillars-list">
+            <div class="pillar-item">
+                <h3 class="pillar-title">Care</h3>
+            </div>
+            <div class="pillar-item">
+                <h3 class="pillar-title">Community</h3>
+            </div>
+            <div class="pillar-item">
+                <h3 class="pillar-title">Change</h3>
+            </div>
+            <div class="pillar-item">
+                <h3 class="pillar-title">Hope</h3>
+            </div>
+        </div>
+
+        <div class="scripture-quote">
+            <p class="scripture-text">"But let justice and righteousness flow like a river that never runs dry" - Amos 5:24</p>
+        </div>
+
+        <p class="content-text">So we work toward a just world where everyone can live in hope for a future that is bright and an eternity that is brighter still. Each characteristic (care, community, change, and hope) has a firm basis in our beliefs and our theology. This leads us to behaviours that demonstrate each characteristic to the people and communities we serve.</p>
+    </div>
+</div>

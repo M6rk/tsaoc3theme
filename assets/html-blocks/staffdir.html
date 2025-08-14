@@ -1,126 +1,126 @@
 <style>
-.staff-directory-section {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1.5rem;
-}
-
-.staff-directory-title {
-    color: #CC0000;
-    font-size: clamp(2rem, 4vw, 2.8rem);
-    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
-    text-align: center;
-    margin: 0 0 3rem 0 !important;
-    font-weight: 600;
-    position: relative;
-    padding-bottom: 1.5rem;
-}
-
-.staff-directory-title::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 3px;
-    background-color: #CC0000;
-    border-radius: 2px;
-}
-
-.leadership-section {
-    margin-bottom: 4rem;
-}
-
-.leadership-header {
-    color: #CC0000;
-    font-size: 1.8rem;
-    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
-    font-weight: 600;
-    margin: 0 0 2rem 0 !important;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid #CC0000;
-    text-align: left;
-}
-
-.staff-section {
-    margin-bottom: 2rem;
-}
-
-.staff-header {
-    color: #CC0000;
-    font-size: 1.8rem;
-    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
-    font-weight: 600;
-    margin: 0 0 2rem 0 !important;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid #CC0000;
-    text-align: left;
-}
-
-.staff-entry {
-    margin: 1.5rem 0;
-    padding: 1.5rem;
-    background: white;
-    border-radius: 12px;
-}
-
-.staff-name {
-    color: #CC0000;
-    font-size: 1.4rem;
-    font-weight: bold;
-    margin: 0 0 0.5rem 0 !important;
-    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
-}
-
-.staff-title {
-    color: #333;
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin: 0 0 1rem 0 !important;
-}
-
-.staff-contact {
-    color: #555;
-    font-size: 1rem;
-    line-height: 1.5;
-}
-
-.staff-contact p {
-    margin: 0.3rem 0 !important;
-}
-
-.staff-contact a {
-    color: #CC0000;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.staff-contact a:hover {
-    color: #005AAA;
-    text-decoration: underline;
-}
-
-/* Mobile Responsiveness */
-@media screen and (max-width: 768px) {
     .staff-directory-section {
-        padding: 1rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 1.5rem;
     }
-    
-    .staff-entry {
-        padding: 1.25rem;
-        margin: 1rem 0;
+
+    .staff-directory-title {
+        color: #CC0000;
+        font-size: clamp(2rem, 4vw, 2.8rem);
+        font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+        text-align: center;
+        margin: 0 0 3rem 0 !important;
+        font-weight: 600;
+        position: relative;
+        padding-bottom: 1.5rem;
     }
-    
-    .leadership-header,
+
+    .staff-directory-title::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 3px;
+        background-color: #CC0000;
+        border-radius: 2px;
+    }
+
+    .leadership-section {
+        margin-bottom: 4rem;
+    }
+
+    .leadership-header {
+        color: #CC0000;
+        font-size: 1.8rem;
+        font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+        font-weight: 600;
+        margin: 0 0 2rem 0 !important;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid #CC0000;
+        text-align: left;
+    }
+
+    .staff-section {
+        margin-bottom: 2rem;
+    }
+
     .staff-header {
-        font-size: 1.5rem;
+        color: #CC0000;
+        font-size: 1.8rem;
+        font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+        font-weight: 600;
+        margin: 0 0 2rem 0 !important;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid #CC0000;
+        text-align: left;
     }
-    
+
+    .staff-entry {
+        margin: 1.5rem 0;
+        padding: 1.5rem;
+        background: white;
+        border-radius: 12px;
+    }
+
     .staff-name {
-        font-size: 1.2rem;
+        color: #CC0000;
+        font-size: 1.4rem;
+        font-weight: bold;
+        margin: 0 0 0.5rem 0 !important;
+        font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
     }
-}
+
+    .staff-title {
+        color: #333;
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin: 0 0 1rem 0 !important;
+    }
+
+    .staff-contact {
+        color: #555;
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .staff-contact p {
+        margin: 0.3rem 0 !important;
+    }
+
+    .staff-contact a {
+        color: #CC0000;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .staff-contact a:hover {
+        color: #005AAA;
+        text-decoration: underline;
+    }
+
+    /* Mobile Responsiveness */
+    @media screen and (max-width: 768px) {
+        .staff-directory-section {
+            padding: 1rem;
+        }
+
+        .staff-entry {
+            padding: 1.25rem;
+            margin: 1rem 0;
+        }
+
+        .leadership-header,
+        .staff-header {
+            font-size: 1.5rem;
+        }
+
+        .staff-name {
+            font-size: 1.2rem;
+        }
+    }
 </style>
 
 <div class="staff-directory-section">
@@ -129,7 +129,7 @@
     <!-- Leadership Section -->
     <div class="leadership-section">
         <h3 class="leadership-header">Corps Officers</h3>
-        
+
         <div class="staff-entry">
             <h4 class="staff-name">Jennifer Henson</h4>
             <p class="staff-title">Captain / Corps Officer / Pastor</p>
@@ -152,7 +152,7 @@
     <!-- Staff Section -->
     <div class="staff-section">
         <h3 class="staff-header">Staff</h3>
-        
+
         <div class="staff-entry">
             <h4 class="staff-name">Angela Stadnyk</h4>
             <p class="staff-title">Volunteer and Kettle Coordinator</p>
@@ -170,7 +170,14 @@
                 <p>Email: <a href="mailto:Anke.Rohleder@salvationarmy.ca">Anke.Rohleder@salvationarmy.ca</a></p>
             </div>
         </div>
-
+        <div class="staff-entry">
+            <h4 class="staff-name">Darren Withers</h4>
+            <p class="staff-title">Property and Maintenance Manager</p>
+            <div class="staff-contact">
+                <p>Tel: <a href="tel:+17784849917">(250) 470-8819</a></p>
+                <p>Email: <a href="mailto:Darren.Withers@salvationarmy.ca">Darren.Withers@salvationarmy.ca</a></p>
+            </div>
+        </div>
         <div class="staff-entry">
             <h4 class="staff-name">Diane Unrau</h4>
             <p class="staff-title">Caseworker</p>
@@ -226,6 +233,15 @@
         </div>
 
         <div class="staff-entry">
+            <h4 class="staff-name">Margaret-Mary Akuamoah</h4>
+            <p class="staff-title">Facilities Coordinator</p>
+            <div class="staff-contact">
+                <p>Tel: <a href="tel:+12508602329">(778) 484-9790</a></p>
+                <p>Email: <a href="mailto:Margaret-Mary.Akuamoah@salvationarmy.ca">Margaret-Mary.Akuamoah@salvationarmy.ca</a></p>
+            </div>
+        </div>
+
+        <div class="staff-entry">
             <h4 class="staff-name">Mark Haynes</h4>
             <p class="staff-title">Programs and EDS Manager</p>
             <div class="staff-contact">
@@ -263,16 +279,16 @@
 
         <div class="staff-entry">
             <h4 class="staff-name">Ron Côté</h4>
-            <p class="staff-title">Administration Manager</p>
+            <p class="staff-title">Admin and Internal Communications Manager</p>
             <div class="staff-contact">
-                <p>Tel: <a href="tel:+17785831047">(778) 583-1047</a></p>
+                <p>Tel: <a href="tel:+7785817683">(778) 581-7683</a></p>
                 <p>Email: <a href="mailto:Ronald.Cote1@salvationarmy.ca">Ronald.Cote1@salvationarmy.ca</a></p>
             </div>
         </div>
 
         <div class="staff-entry">
             <h4 class="staff-name">Rosy Chan</h4>
-            <p class="staff-title">Internal Communications and Administration</p>
+            <p class="staff-title">Business/HR Assistant</p>
             <div class="staff-contact">
                 <p>Tel: <a href="tel:+12508602329">(250) 860-2329 ext. 113</a></p>
                 <p>Email: <a href="mailto:Rosy.Chan@salvationarmy.ca">Rosy.Chan@salvationarmy.ca</a></p>
