@@ -1,31 +1,6 @@
 <style>
-/* Main Page Title */
-.church-main-title {
-    color: #CC0000;
-    font-size: clamp(2rem, 4vw, 2.8rem);
-    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
-    text-align: center;
-    margin: 0.5rem auto 2rem auto !important;
-    font-weight: 600;
-    position: relative;
-    padding-bottom: 1rem;
-    max-width: 1200px;
-}
-
-.church-main-title::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 3px;
-    background-color: #CC0000;
-    border-radius: 2px;
-}
-
-/* Location Section */
-.location-section {
+/* Ministries Section */
+.ministries-section {
     padding: 1rem 2rem;
     background: white;
     border-radius: 12px;
@@ -36,7 +11,7 @@
     margin: 0 auto;
 }
 
-.location-title {
+.ministries-title {
     color: #CC0000;
     font-size: 2rem;
     text-align: center;
@@ -48,7 +23,7 @@
     margin-top: 0 !important;
 }
 
-.location-title::after {
+.ministries-title::after {
     content: '';
     position: absolute;
     bottom: -8px;
@@ -60,78 +35,52 @@
     border-radius: 2px;
 }
 
-.location-content {
+.ministries-content {
     line-height: 1.8;
     color: #444;
     font-size: 1.1rem;
 }
 
-.location-info {
-    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
-    border-radius: 15px;
-    border-left: 4px solid #CC0000;
-    margin: 2rem 0;
+.ministry-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr); /* Changed from 3 to 2 */
     gap: 2rem;
-    padding: 0;
-    overflow: hidden;
+    margin-top: 2rem;
 }
 
-.location-details {
+.ministry-card {
+    background: linear-gradient(135deg, #fff, #f8f9fa);
     padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid #e9ecef;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
 }
 
-.location-details h3 {
+.ministry-card h3 {
     color: #CC0000;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     margin-bottom: 1rem !important;
     font-family: 'Palatino Linotype', Palatino, serif;
+    text-align: left;
     margin-left: 0 !important;
     margin-right: 0 !important;
     margin-top: 0 !important;
 }
 
-.location-details .address {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 1rem !important;
-    line-height: 1.5;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-}
-
-.location-details .service-time {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #CC0000;
+.ministry-card p {
+    color: #555;
+    line-height: 1.6;
     margin-bottom: 1.5rem !important;
+    flex-grow: 1;
     margin-left: 0 !important;
     margin-right: 0 !important;
 }
 
-.location-map {
-    background: #e9ecef;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 200px;
-    position: relative;
-}
-
-.location-map iframe {
-    width: 100%;
-    height: 100%;
-    min-height: 250px;
-    border: 0;
-    border-radius: 0 15px 15px 0;
-}
-
-.location-button {
+.ministry-button {
     display: inline-block;
     background: #EE2D3D;
     color: white;
@@ -142,10 +91,12 @@
     font-size: 1.1rem;
     margin: 0.5rem 0.5rem;
     transition: all 0.3s ease;
-    text-align:center;
+    align-self: flex-start;
+    margin-top: 1.5rem;
+    margin-left: 0;
 }
 
-.location-button:hover {
+.ministry-button:hover {
     background: #CC0000;
     transform: translateY(-2px);
     color: white;
@@ -153,65 +104,62 @@
 }
 
 /* Mobile Responsiveness */
-@media screen and (max-width: 768px) {
-    .church-main-title {
-        font-size: 2rem !important;
+@media screen and (max-width: 1200px) {
+       .ministry-grid {
+        grid-template-columns: 1fr; 
     }
-    
-    .location-section {
+}
+
+@media screen and (max-width: 768px) {
+    .ministries-section {
         padding: 2rem 1rem;
     }
     
-    .location-title {
+    .ministries-title {
         font-size: 1.8rem;
     }
     
-    .location-info {
+    .ministry-grid {
         grid-template-columns: 1fr;
-        gap: 0;
-    }
-    
-    .location-details {
-        padding: 1.5rem;
-    }
-    
-    .location-map {
-        min-height: 200px;
-    }
-    
-    .location-map iframe {
-        min-height: 200px;
-        border-radius: 0 0 15px 15px;
+        gap: 1.5rem;
     }
 }
 </style>
 
-<!-- Main Page Title -->
-<h1 class="church-main-title">Okanagan Central Community Church</h1>
-
-<section class="location-section">
-    <h2 class="location-title">Location</h2>
-    <div class="location-content">
-        <div class="location-info">
-            <div class="location-details">
-                <h3>Visit Us</h3>
-                <div class="address">
-                    1480 Sutherland Ave<br>
-                    Kelowna, BC<br>
-                    (corner of Burtch & Sutherland)
+<section class="ministries-section">
+    <h2 class="ministries-title">Ministries</h2>
+    <div class="ministries-content">
+        <div class="ministry-grid">
+            <div class="ministry-card">
+                <div>
+                    <h3>Kids & Youth</h3>
+                    <p>Children and Youth are always welcome at Okanagan Central Community Church. We offer Kelsa Kids during our Sunday morning worship services, allowing kids to worship and learn in creative, fun ways and our youth program.</p>
                 </div>
-                <div class="service-time">Join us Sundays at 10:30 am</div>
-                <a href="#" class="location-button">Get Directions</a>
+                <a href="/kids" class="ministry-button">Learn More</a>
             </div>
-            <div class="location-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7271.577045980841!2d-119.48155821688515!3d49.88207875886523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x537d8cada65dcd5f%3A0xd9fd5520a69da867!2sThe%20Salvation%20Army%20Okanagan%20Central%20Community%20Church!5e0!3m2!1sen!2sca!4v1752688144837!5m2!1sen!2sca" 
-                        width="100%" 
-                        height="100%" 
-                        style="border:0; border-radius: 0 15px 15px 0;" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
+            
+            <div class="ministry-card">
+                <div>
+                    <h3>Women</h3>
+                    <p>Our women's ministry provides a safe and engaging environment for women to grow in their faith, build lasting friendships, and discover their purpose while having fun together.</p>
+                </div>
+                <a href="/womens-ministry" class="ministry-button">Learn More</a>
+            </div>
+
+              <div class="ministry-card">
+                <div>
+                    <h3>Men</h3>
+                    <p>Our men's ministry provides a safe and engaging environment for men to grow in their faith, build lasting friendships, and discover their purpose while having fun together.</p>
+                </div>
+                <a href="/mens-ministry" class="ministry-button">Learn More</a>
+            </div>
+            
+            <div class="ministry-card">
+                <div>
+                    <h3>Seniors</h3>
+                    <p>New Vista Ministries exists to provide a specific ministry to the whole person (body, mind and spirit) for adults 50+ within our church and community.</p>
+                </div>
+                <a href="#" class="ministry-button">Learn More</a>
             </div>
         </div>
     </div>

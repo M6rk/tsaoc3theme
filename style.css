@@ -292,8 +292,8 @@ header {
 }
 
 .social-link svg {
-    width: 32px;
-    height: 32px;
+    width: 36px;
+    height: 36px;
 }
 
 .social-link img {
@@ -984,8 +984,8 @@ hr {
     }
 
     .social-link svg {
-        width: 25px;
-        height: 25px;
+        width: 40px;
+        height: 40px;
     }
 
     .logo {
@@ -1043,8 +1043,8 @@ hr {
     }
 
     .donate-button {
-        font-size: 16px;
-        padding: 0.4rem 0.6rem;
+        font-size: 15px;
+        padding: 0.5rem 1rem;
         white-space: nowrap;
     }
 
