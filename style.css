@@ -968,7 +968,7 @@ hr {
 
     /* Adjust donate button for mobile */
     .donate-button {
-        font-size: 14px;
+        font-size: 18px;
         padding: 0.5rem 0.8rem;
         white-space: nowrap;
         margin-left: 0rem;
@@ -1038,12 +1038,12 @@ hr {
     }
 
     .social-link svg {
-        width: 20px;
-        height: 20px;
+        width: 30px;
+        height: 30px;
     }
 
     .donate-button {
-        font-size: 12px;
+        font-size: 16px;
         padding: 0.4rem 0.6rem;
         white-space: nowrap;
     }
