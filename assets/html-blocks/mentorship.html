@@ -1,0 +1,308 @@
+<style>
+    .mentorship-wrapper {
+        max-width: 1200px;
+        margin: 0 auto 2rem auto;
+        padding: 2rem;
+    }
+
+    .mentorship-container {
+        background: #FFFFFF;
+        border-radius: 20px;
+        padding: 2.5rem;
+    }
+
+    .page-title {
+        color: #CC0000;
+        font-size: clamp(2rem, 4vw, 2.8rem);
+        font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+        text-align: center;
+        margin-bottom: 2rem !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-top: 0 !important;
+        font-weight: 600;
+        position: relative;
+        padding-bottom: 1rem;
+    }
+
+    .page-title::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 3px;
+        background-color: #CC0000;
+        border-radius: 2px;
+    }
+
+    .intro-section {
+        background: #f8f9fa;
+        padding: 2rem;
+        border-radius: 16px;
+        border-left: 4px solid #CC0000;
+        margin-bottom: 3rem;
+        text-align: center;
+    }
+
+    .intro-section p {
+        color: #333;
+        font-size: 1.1rem;
+        line-height: 1.7;
+        margin: 1rem 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .pathway-section {
+        background: #ffffff;
+        border: 1px solid #e9ecef;
+        padding: 2.5rem;
+        border-radius: 16px;
+        margin-bottom: 3rem;
+    }
+
+    .pathway-title {
+        color: #CC0000;
+        font-size: 1.8rem;
+        font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+        text-align: center;
+        margin-bottom: 2rem !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-top: 0 !important;
+        font-weight: 600;
+    }
+
+    .treasure-map {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        position: relative;
+        margin: 2rem 0;
+        padding: 2rem 0;
+    }
+
+    .pathway-step {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        position: relative;
+    }
+
+    .step-number {
+        background: #CC0000;
+        color: white;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    .step-title {
+        color: #CC0000;
+        font-weight: bold;
+        font-size: 1.1rem;
+        margin: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-top: 0 !important;
+        font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    }
+
+    .resources-section {
+        background: linear-gradient(135deg, #CC0000, #AA0000);
+        color: white;
+        padding: 2rem;
+        border-radius: 16px;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .resources-section h3 {
+        color: white;
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 1rem !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-top: 0 !important;
+        font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    }
+
+    .resources-section p {
+        color: white;
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin: 1rem 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .church-renewal-link {
+        background: white;
+        color: #CC0000;
+        padding: 1rem 2rem;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: bold;
+        display: inline-block;
+        margin-top: 1rem;
+        transition: all 0.3s ease;
+    }
+
+    .church-renewal-link:hover {
+        background: #f8f9fa;
+        color: #AA0000;
+        text-decoration: none;
+    }
+
+    .info-section {
+        background: #ffffff;
+        border: 1px solid #e9ecef;
+        padding: 2rem;
+        border-radius: 16px;
+        text-align: center;
+    }
+
+    .info-section h3 {
+        color: #CC0000;
+        font-size: 1.4rem;
+        font-weight: bold;
+        margin-bottom: 1rem !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-top: 0 !important;
+        font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    }
+
+    .info-section p {
+        color: #333;
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin: 0.8rem 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .contact-info {
+        background: rgba(204, 0, 0, 0.05);
+        padding: 1.5rem;
+        border-radius: 12px;
+        margin-top: 1.5rem;
+    }
+
+    .contact-info p {
+        margin: 0.6rem 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        color: #333;
+        font-size: 1rem;
+    }
+
+    .contact-info a {
+        color: #CC0000;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    .contact-info a:hover {
+        text-decoration: underline;
+    }
+
+    /* Mobile Responsiveness */
+    @media screen and (max-width: 768px) {
+        .mentorship-wrapper {
+            padding: 1rem;
+        }
+
+        .mentorship-container {
+            padding: 1.5rem;
+        }
+
+        .treasure-map {
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .step-number {
+            width: 40px;
+            height: 40px;
+            font-size: 1rem;
+        }
+
+        .page-title {
+            font-size: 2rem !important;
+        }
+
+        .intro-section,
+        .pathway-section,
+        .resources-section,
+        .info-section {
+            padding: 1.5rem;
+        }
+
+        .contact-info {
+            padding: 1rem;
+        }
+    }
+</style>
+
+<div class="mentorship-wrapper">
+    <div class="mentorship-container">
+        <h1 class="page-title">Mentorship & Discipleship</h1>
+        
+        <div class="intro-section">
+            <p>Join our mentorship program designed to help you grow in your faith and develop Christian leadership. Our small group mentorship program welcomes adults of all ages.</p>
+        </div>
+
+        <div class="pathway-section">
+            <h2 class="pathway-title">Your Discipleship Journey</h2>
+            
+            <div class="treasure-map">
+                <div class="pathway-step">
+                    <div class="step-number">1</div>
+                    <h3 class="step-title">Abide</h3>
+                </div>
+                
+                <div class="pathway-step">
+                    <div class="step-number">2</div>
+                    <h3 class="step-title">Grow Character</h3>
+                </div>
+                
+                <div class="pathway-step">
+                    <div class="step-number">3</div>
+                    <h3 class="step-title">Lead Well</h3>
+                </div>
+                
+                <div class="pathway-step">
+                    <div class="step-number">4</div>
+                    <h3 class="step-title">Mentorship Pathway</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="resources-section">
+            <h3>Church Renewal Resources</h3>
+            <p>We use the Church Renewal resources for our mentorship group, providing proven materials and guidance for spiritual growth and leadership development.</p>
+            
+            <a href="https://churchrenewal.com" target="_blank" class="church-renewal-link" rel="noopener noreferrer">
+                Click Here to Visit Church Renewal
+            </a>
+        </div>
+
+        <div class="info-section">
+            <div class="contact-info">
+                <p><strong>For more information:</strong></p>
+                <p><strong>Email:</strong> <a href="mailto:OkanaganCentral.Church@salvationarmy.ca">OkanaganCentral.Church@salvationarmy.ca</a></p>
+            </div>
+        </div>
+    </div>
+</div>

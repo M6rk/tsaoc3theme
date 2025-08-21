@@ -5,12 +5,6 @@
         padding: 2rem;
     }
 
-    .involve {
-        color: white !important;
-        text-align: center;
-    }
-
-
     .emergency-container {
         background: #FFFFFF;
         border-radius: 20px;
@@ -65,105 +59,30 @@
         font-weight: 600;
     }
 
-    .examples-section {
-        margin: 3rem 0 !important;
+    .images-section {
+        margin: 2rem 0;
     }
 
-    .examples-title {
-        color: #CC0000;
-        font-size: 2rem;
-        font-weight: bold;
-        text-align: center;
-        margin-bottom: 2rem !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-        margin-top: 0 !important;
-        font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
-    }
-
-    .response-category {
-        background: #ffffff;
-        border: 1px solid #e9ecef;
-        border-radius: 16px;
-        margin-bottom: 2rem;
-        overflow: hidden;
-    }
-
-    .category-header {
-        background: linear-gradient(135deg, #CC0000, #AA0000);
-        color: white;
-        padding: 1.5rem 2rem;
-        font-size: 1.5rem;
-        font-weight: bold;
-        margin: 0 !important;
-        font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
-    }
-
-    .category-content {
-        padding: 2rem;
-    }
-
-    .response-item {
-        background: #f8f9fa;
-        padding: 1.5rem;
+    .emergency-image {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        object-position: center 40%;
         border-radius: 12px;
-        margin-bottom: 1.5rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
     }
-
-    .response-item h4 {
-        color: #CC0000;
-        font-size: 1.3rem;
-        font-weight: bold;
-        margin-bottom: 0.8rem !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-        margin-top: 0 !important;
-    }
-
-    .response-item p {
-        color: #333;
-        font-size: 1.1rem;
-        line-height: 1.6;
-        margin: 0.8rem 0 !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-    }
-
-    .mission-statement {
-        background: linear-gradient(135deg, #f8f9fa, #ffffff);
-        padding: 2rem;
-        border-radius: 16px;
-        margin: 2rem 0 !important;
-        border: 2px solid #CC0000;
-        text-align: center;
-    }
-
-    .mission-statement p {
-        color: #333;
-        font-size: 1.2rem;
-        line-height: 1.7;
-        margin: 1rem 0 !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-        font-style: italic;
-    }
-
-    .mission-statement .highlight {
-        color: #CC0000;
-        font-weight: bold;
-        font-size: 1.3rem;
-    }
-
-    .contact-section {
+    
+    .volunteer-section {
         background: #CC0000;
         color: white;
         padding: 2rem;
         border-radius: 16px;
         text-align: center;
-        margin-top: 3rem;
+        margin: 2rem 0;
     }
 
-    .contact-section h3 {
+    .volunteer-section h3 {
         color: white !important;
         font-size: 1.8rem;
         margin-bottom: 1rem !important;
@@ -171,53 +90,48 @@
         margin-right: 0 !important;
         margin-top: 0 !important;
         font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+        font-weight: 600;
     }
 
-    .contact-section p {
+    .volunteer-section p {
         color: white;
         font-size: 1.2rem;
-        margin: 0.8rem 0 !important;
+        margin: 1rem 0 !important;
         margin-left: 0 !important;
         margin-right: 0 !important;
     }
 
-    .contact-section a {
-        color: white;
-        text-decoration: underline;
-        font-weight: bold;
-    }
-
-    .contact-section a:hover {
-        color: #f8f9fa;
-    }
-
-    .stats-highlight {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 1rem;
-        margin: 2rem 0 !important;
-    }
-
-    .stat-item {
-        background: rgba(204, 0, 0, 0.1);
+    .volunteer-contact {
+        background: #f8f9fa;
+        color: #333;
         padding: 1.5rem;
         border-radius: 12px;
-        text-align: center;
-        border: 1px solid rgba(204, 0, 0, 0.2);
+        margin-top: 1.5rem;
     }
 
-    .stat-number {
+    .volunteer-contact .contact-name {
         color: #CC0000;
-        font-size: 2rem;
+        font-size: 1.3rem;
         font-weight: bold;
-        display: block;
-        margin-bottom: 0.5rem;
+        margin: 0 0 1rem 0 !important;
     }
 
-    .stat-label {
+    .volunteer-contact p {
         color: #333;
-        font-size: 1rem;
-        font-weight: 600;
+        font-size: 1.1rem;
+        margin: 0.5rem 0 !important;
+    }
+
+    .volunteer-contact a {
+        color: #CC0000;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s ease;
+    }
+
+    .volunteer-contact a:hover {
+        color: #005AAA;
+        text-decoration: underline;
     }
 
     /* Mobile Responsiveness */
@@ -235,31 +149,23 @@
             padding: 1.5rem;
         }
 
-        .category-content {
+        .emergency-image {
+            height: 220px;
+        }
+
+        .volunteer-section {
             padding: 1.5rem;
         }
 
-        .response-item {
+        .volunteer-contact {
             padding: 1.2rem;
-        }
-
-        .mission-statement {
-            padding: 1.5rem;
-        }
-
-        .contact-section {
-            padding: 1.5rem;
-        }
-
-        .stats-highlight {
-            grid-template-columns: 1fr;
         }
     }
 </style>
 
 <div class="emergency-section">
     <div class="emergency-container">
-        <h2 class="emergency-title">Emergency Services</h2>
+        <h2 class="emergency-title">Emergency Disaster Services</h2>
 
         <!-- Introduction -->
         <div class="intro-section">
@@ -274,6 +180,24 @@
             <p>Our highly-trained volunteers work in teams to provide a well-disciplined and well-rounded approach to
                 helping with a disaster. Our teams respond from their
                 hearts and give hope even when it seems that all is lost.</p>
+        </div>
+
+        <!-- Images Section -->
+        <div class="images-section">
+            <img src="https://kelownasalvationarmy.ca/wp-content/uploads/2025/08/kelowna-wildfire-firefighter-camp.jpg" alt="EDS Volunteers in Action" class="emergency-image">
+        </div>
+
+        <!-- Volunteer Section -->
+        <div class="volunteer-section">
+            <h3>Interested in Volunteering for the EDS Team?</h3>
+            <p>Join our dedicated team of Emergency Disaster Services volunteers and make a real difference in your community during times of crisis.</p>
+            
+            <div class="volunteer-contact">
+                <p>For additional information, please get in touch with our Volunteer Coordinator:</p>
+                <div class="contact-name">Angela Stadnyk</div>
+                <p>Tel: <a href="tel:+12508602329">(250) 860-2329 ext. 105</a></p>
+                <p>Email: <a href="mailto:Angela.Stadnyk@salvationarmy.ca">Angela.Stadnyk@salvationarmy.ca</a></p>
+            </div>
         </div>
 
     </div>

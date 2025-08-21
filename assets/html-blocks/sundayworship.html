@@ -1,278 +1,302 @@
 <style>
-.worship-section {
-    max-width: 1200px;
-    margin: 0 auto 2rem auto;
-    padding: 2rem;
-}
-
-.worship-container {
-    background: #FFFFFF;
-    border-radius: 20px;
-    padding: 0 2.5rem 2.5rem 2.5rem;
-}
-
-.worship-title {
-    color: #CC0000;
-    font-size: clamp(2rem, 4vw, 2.8rem);
-    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
-    text-align: center;
-    margin-bottom: 0.5rem !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    margin-top: 0 !important;
-    font-weight: 600;
-    position: relative;
-    padding-bottom: 1rem;
-}
-
-.worship-title::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 60px;
-    height: 3px;
-    background-color: #CC0000;
-    border-radius: 2px;
-}
-
-.pastors-section {
-    display: grid;
-    grid-template-columns: 300px 1fr;
-    gap: 2rem;
-    align-items: center;
-    background: #f8f9fa;
-    padding: 2rem;
-    border-radius: 16px;
-    margin-bottom: 2rem;
-    border-left: 4px solid #CC0000;
-}
-
-.pastors-image {
-    width: 100%;
-    max-width: 300px;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 12px;
-}
-
-.pastors-info h3 {
-    color: #CC0000;
-    font-size: 1.8rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    margin-top: 0 !important;
-    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
-}
-
-.pastors-info p {
-    color: #666;
-    font-size: 1.2rem;
-    font-style: italic;
-    margin: 0 !important;
-}
-
-.times-directions {
-    background: linear-gradient(135deg, #CC0000, #AA0000);
-    color: white;
-    padding: 2rem;
-    border-radius: 16px;
-    margin-bottom: 2rem;
-}
-
-.times-directions h3 {
-    color: white !important;
-    font-size: 2rem;
-    margin-bottom: 1rem !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    margin-top: 0 !important;
-    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
-}
-
-.times-directions p {
-    color: white;
-    font-size: 1.2rem;
-    margin: 0.8rem 0 !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-}
-
-.service-time {
-    background: rgba(255, 255, 255, 0.2);
-    padding: 1rem;
-    border-radius: 8px;
-    margin: 1rem 0 !important;
-    text-align: center;
-}
-
-.service-time p {
-    font-size: 1.4rem;
-    font-weight: bold;
-    margin: 0 !important;
-}
-
-.address-info {
-    background: rgba(255, 255, 255, 0.15);
-    padding: 1rem;
-    border-radius: 8px;
-    margin: 1rem 0 !important;
-}
-
-.map-btn {
-    background: white;
-    color: #CC0000;
-    border: none;
-    padding: 0.8rem 1.5rem;
-    border-radius: 20px;
-    font-size: 1rem;
-    font-weight: bold;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    display: inline-block;
-    margin-top: 1rem;
-}
-
-.map-btn:hover {
-    background: #f8f9fa;
-    color: #CC0000;
-    text-decoration: none;
-}
-
-.faq-section {
-    margin-top: 3rem;
-}
-
-.faq-title {
-    color: #CC0000;
-    font-size: 2rem;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 2rem !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    margin-top: 0 !important;
-    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
-}
-
-.faq-item {
-    background: #f8f9fa;
-    padding: 2rem;
-    border-radius: 16px;
-    margin-bottom: 1.5rem;
-    border-left: 4px solid #CC0000;
-}
-
-.faq-item h4 {
-    color: #CC0000;
-    font-size: 1.4rem;
-    font-weight: bold;
-    margin-bottom: 1rem !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    margin-top: 0 !important;
-}
-
-.faq-item p {
-    color: #333;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    margin: 0.8rem 0 !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-}
-
-.form-link {
-    background: #ffffff;
-    border: 2px solid #CC0000;
-    padding: 1rem;
-    border-radius: 8px;
-    margin: 1rem 0 !important;
-    text-align: center;
-}
-
-.form-link a {
-    color: #CC0000;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.form-link a:hover {
-    text-decoration: underline;
-}
-
-.contact-section {
-    background: #CC0000;
-    color: white;
-    padding: 2rem;
-    border-radius: 16px;
-    text-align: center;
-    margin-top: 2rem;
-}
-
-.contact-section h4 {
-    color: white !important;
-    font-size: 1.6rem;
-    margin-bottom: 1rem !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    margin-top: 0 !important;
-}
-
-.contact-section p {
-    color: white;
-    font-size: 1.1rem;
-    margin: 0.8rem 0 !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-}
-
-.contact-section a {
-    color: white;
-    text-decoration: underline;
-}
-
-.contact-section a:hover {
-    color: #f8f9fa;
-}
-
-/* Mobile Responsiveness */
-@media screen and (max-width: 768px) {
     .worship-section {
-        padding: 1rem;
+        max-width: 1200px;
+        margin: 0 auto 2rem auto;
+        padding: 2rem;
     }
-    
+
     .worship-container {
-        padding: 1.5rem;
-        border-radius: 16px;
+        background: #FFFFFF;
+        border-radius: 20px;
+        padding: 0 2.5rem 2.5rem 2.5rem;
     }
-    
+
+    .worship-title {
+        color: #CC0000;
+        font-size: clamp(2rem, 4vw, 2.8rem);
+        font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+        text-align: center;
+        margin-bottom: 0.5rem !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-top: 0 !important;
+        font-weight: 600;
+        position: relative;
+        padding-bottom: 1rem;
+    }
+
+    .worship-title::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 60px;
+        height: 3px;
+        background-color: #CC0000;
+        border-radius: 2px;
+    }
+
     .pastors-section {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-        padding: 1.5rem;
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        gap: 2rem;
+        align-items: center;
+        background: #f8f9fa;
+        padding: 2rem;
+        border-radius: 16px;
+        margin-bottom: 2rem;
+        border-left: 4px solid #CC0000;
+    }
+
+    .pastors-image {
+        width: 100%;
+        max-width: 300px;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 12px;
+    }
+
+    .pastors-info h3 {
+        color: #CC0000;
+        font-size: 1.8rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-top: 0 !important;
+        font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    }
+
+    .pastors-info p {
+        color: #666;
+        font-size: 1.2rem;
+        font-style: italic;
+        margin: 0 !important;
+    }
+
+    .times-directions {
+        background: linear-gradient(135deg, #CC0000, #AA0000);
+        color: white;
+        padding: 2rem;
+        border-radius: 16px;
+        margin-bottom: 2rem;
+    }
+
+    .times-directions h3 {
+        color: white !important;
+        font-size: 2rem;
+        margin-bottom: 1rem !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-top: 0 !important;
+        font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    }
+
+    .times-directions p {
+        color: white;
+        font-size: 1.2rem;
+        margin: 0.8rem 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .service-time {
+        background: rgba(255, 255, 255, 0.2);
+        padding: 1rem;
+        border-radius: 8px;
+        margin: 1rem 0 !important;
         text-align: center;
     }
-    
-    .pastors-image {
-        max-width: 250px;
-        margin: 0 auto;
+
+    .service-time p {
+        font-size: 1.4rem;
+        font-weight: bold;
+        margin: 0 !important;
     }
-    
-    .times-directions {
-        padding: 1.5rem;
+
+    .address-info {
+        background: rgba(255, 255, 255, 0.15);
+        padding: 1rem;
+        border-radius: 8px;
+        margin: 1rem 0 !important;
     }
-    
+
+    .map-btn {
+        background: white;
+        color: #CC0000;
+        border: none;
+        padding: 0.8rem 1.5rem;
+        border-radius: 20px;
+        font-size: 1rem;
+        font-weight: bold;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        display: inline-block;
+        margin-top: 1rem;
+    }
+
+    .map-btn:hover {
+        background: #f8f9fa;
+        color: #CC0000;
+        text-decoration: none;
+    }
+
+    .faq-section {
+        margin-top: 3rem;
+    }
+
+    .faq-title {
+        color: #CC0000;
+        font-size: 2rem;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 2rem !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-top: 0 !important;
+        font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    }
+
     .faq-item {
-        padding: 1.5rem;
+        background: #f8f9fa;
+        padding: 2rem;
+        border-radius: 16px;
+        margin-bottom: 1.5rem;
+        border-left: 4px solid #CC0000;
     }
-    
+
+    .faq-item h4 {
+        color: #CC0000;
+        font-size: 1.4rem;
+        font-weight: bold;
+        margin-bottom: 1rem !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-top: 0 !important;
+    }
+
+    .faq-item p {
+        color: #333;
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin: 0.8rem 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .pdf-download {
+        background:#CC0000; 
+        color: white;
+        padding: 1.2rem;
+        border-radius: 12px;
+        margin: 1rem 0 !important;
+        text-align: center;
+        border: none;
+        transition: transform 0.3s ease;
+    }
+
+    .pdf-download:hover {
+        transform: translateY(-2px);
+    }
+
+    .pdf-download a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .pdf-download a:hover {
+        color: white;
+        text-decoration: none;
+    }
+
+    .pdf-icon {
+        font-size: 1.2rem;
+    }
+
     .contact-section {
-        padding: 1.5rem;
+        background: #CC0000;
+        color: white;
+        padding: 2rem;
+        border-radius: 16px;
+        text-align: center;
+        margin-top: 2rem;
     }
-}
+
+    .contact-section h4 {
+        color: white !important;
+        font-size: 1.6rem;
+        margin-bottom: 1rem !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-top: 0 !important;
+    }
+
+    .contact-section p {
+        color: white;
+        font-size: 1.1rem;
+        margin: 0.8rem 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .contact-section a {
+        color: white;
+        text-decoration: underline;
+    }
+
+    .contact-section a:hover {
+        color: #f8f9fa;
+    }
+
+    /* Mobile Responsiveness */
+    @media screen and (max-width: 768px) {
+        .worship-section {
+            padding: 1rem;
+        }
+        
+        .worship-container {
+            padding: 1.5rem;
+            border-radius: 16px;
+        }
+        
+        .pastors-section {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        .pastors-image {
+            max-width: 250px;
+            margin: 0 auto;
+        }
+        
+        .times-directions {
+            padding: 1.5rem;
+        }
+        
+        .faq-item {
+            padding: 1.5rem;
+        }
+        
+        .contact-section {
+            padding: 1.5rem;
+        }
+
+        .pdf-download {
+            padding: 1rem;
+        }
+
+        .pdf-download a {
+            font-size: 1rem;
+        }
+    }
 </style>
 
 <div class="worship-section">
@@ -329,8 +353,11 @@
                 <h4>What do I need to know about Giving Money?</h4>
                 <p>Tithing is an expression of thanksgiving and offering as part of Worship. This helps with our ability to offer church ministry. If you are new to our church we do not expect you to tithe. For regular attenders you can tithe via the offering plate or you can set up direct deposit using this form.</p>
                 
-                <div class="form-link">
-                    <a href="#authorization-form" target="_blank">OCCC Authorization Form for Contributions & Donations 2020</a>
+                <div class="pdf-download">
+                    <a href="https://kelownasalvationarmy.ca/wp-content/uploads/2025/08/KCC_PAD-Authorization-Form-for-Contributions-Donations-2016.pdf" target="_blank">
+                        <span class="pdf-icon">📄</span>
+                        Download KCC PAD Authorization Form for Contributions & Donations 2016
+                    </a>
                 </div>
                 
                 <p>If you'd like to be receipted for your tithe please put your name and address on a tithe envelope. We will send Direct Deposit receipts directly to you.</p>
@@ -341,7 +368,7 @@
         <div class="contact-section">
             <h4>What if I want to learn more?</h4>
             <p>Talk to a pastor after worship, or give us a phone call!</p>
-            <p>You can also reach us by email: <a href="/contact">contact us</a>.</p>
+            <p>You can also reach us by email at <a href="mailto:OkanaganCentral.Info@salvationarmy.ca">OkanaganCentral.Info@salvationarmy.ca</a>.</p>
         </div>
     </div>
 </div>

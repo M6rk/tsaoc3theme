@@ -1,0 +1,240 @@
+<style>
+/* Ministries Page Layout */
+.ministries-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Main Page Title */
+.ministries-main-title {
+    color: #CC0000;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    text-align: center;
+    margin-bottom: 2rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.ministries-main-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #CC0000;
+    border-radius: 2px;
+}
+
+/* Section Styling */
+.ministries-section {
+    background: white;
+    border-radius: 12px;
+    padding: 3rem 2rem;
+    margin-bottom: 2rem;
+}
+
+.section-title {
+    color: #CC0000;
+    font-size: 2.2rem;
+    text-align: center;
+    font-family: 'Palatino Linotype', Palatino, serif;
+    margin-bottom: 3rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #CC0000;
+    border-radius: 2px;
+}
+
+/* Cards Grid */
+.ministries-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.ministry-card {
+    background: #FFFFFF;  
+    padding: 0;
+    border-radius: 15px;
+    border: 1px solid #BFBFBF;  
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+}
+
+.ministry-image {
+    width: 100%;
+    height: 200px;
+    background: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.ministry-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    object-position: center 30%; 
+}
+
+.ministry-content {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.ministry-card h3 {
+    color: #CC0000;
+    font-size: 1.5rem;
+    margin-bottom: 1rem !important;
+    font-family: 'Palatino Linotype', Palatino, serif;
+    text-align: left;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+}
+
+.ministry-card p {
+    color: #7F7F7F;  
+    line-height: 1.7;
+    font-size: 1.1rem;
+    flex-grow: 1;
+    margin-bottom: 1.5rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+/* Button Styling */
+.ministries-button {
+    display: inline-block;
+    background: #EE2D3D;  
+    color: #FFFFFF;  
+    padding: 0.8rem 2rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-top: auto;
+    align-self: flex-start;
+    transition: all 0.3s ease;
+}
+
+.ministries-button:hover {
+    background: #CC0000;
+    color: white;
+    text-decoration: none;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .ministries-container {
+        padding: 1rem;
+    }
+    
+    .ministries-main-title {
+        font-size: 2rem !important;
+    }
+    
+    .ministries-section {
+        padding: 2rem 1rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .ministries-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .ministry-content {
+        padding: 1.5rem;
+    }
+    
+    .ministry-image {
+        height: 150px;
+    }
+}
+</style>
+
+<div class="ministries-container">
+    <!-- Main Page Title -->
+    <h1 class="ministries-main-title">Ministries</h1>
+
+    <!-- Ministries Section -->
+    <section class="ministries-section">
+        <div class="ministries-grid">
+            <div class="ministry-card">
+                <div class="ministry-image">
+                    <img style="object-position: center 35%;" src="https://kelownasalvationarmy.ca/wp-content/uploads/2025/07/event_kids.jpg" alt="Kids & Youth">
+                </div>
+                <div class="ministry-content">
+                    <h3>Kids & Youth</h3>
+                    <p>Okanagan Central Community Church loves children and youth. We provide a nurturing environment where young people can discover and develop a deep, meaningful relationship with Jesus Christ while seeking joy in service to the Church and community.</p>
+                    <a href="/kids" class="ministries-button">Learn More</a>
+                </div>
+            </div>
+            
+            <div class="ministry-card">
+                <div class="ministry-image">
+                    <img style="object-position: center 50%;" src="https://kelownasalvationarmy.ca/wp-content/uploads/2025/07/thumbnail_IMG_5100-768x1024.jpg" alt="Women's Ministry">
+                </div>
+                <div class="ministry-content">
+                    <h3>Women's Ministry</h3>
+                    <p>We believe every woman is made in the image of God, and that God has called women to be transforming influences in our communities. This group aims to equip, empower, encourage and enrich women leaders in Kingdom building.</p>
+                    <a href="/womens-ministry" class="ministries-button">Learn More</a>
+                </div>
+            </div>
+            
+            <div class="ministry-card">
+                <div class="ministry-image">
+                    <img style="object-position: center 50%;" src="https://kelownasalvationarmy.ca/wp-content/uploads/2025/07/481186858_663061666118779_6852883391168509936_n.jpg" alt="Men's Ministry">
+                </div>
+                <div class="ministry-content">
+                    <h3>Men's Ministry</h3>
+                    <p>Our Men's Ministry provides opportunities for fellowship, spiritual growth, and service. We gather regularly to support one another in our faith journey and make a positive impact in our community through Christian brotherhood.</p>
+                    <a href="/mens-ministry" class="ministries-button">Learn More</a>
+                </div>
+            </div>
+            
+            <div class="ministry-card">
+                <div class="ministry-image">
+                    <img style="object-position: center 50%;" src="https://kelownasalvationarmy.ca/wp-content/uploads/2025/08/Image.png" alt="New Vista Seniors Program">
+                </div>
+                <div class="ministry-content">
+                    <h3>New Vista Seniors Program</h3>
+                    <p>Our New Vista program offers a welcoming community for older adults to connect, learn, and grow together. We provide meaningful activities, fellowship opportunities, and spiritual support in a warm and caring environment.</p>
+                    <a href="/seniors" class="ministries-button">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
