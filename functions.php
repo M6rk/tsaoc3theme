@@ -128,6 +128,28 @@ function mytheme_footer_customizer($wp_customize)
         'section' => 'footer_columns',
         'type' => 'text',
     ));
+
+    $wp_customize->add_setting('footer_contact_donate_text', array(
+        'default' => 'Donate Now',
+        'sanitize_callback' => 'sanitize_text_field',
+    ));
+
+    $wp_customize->add_control('footer_contact_donate_text', array(
+        'label' => 'Donate Button Text',
+        'section' => 'footer_columns', // Use your existing footer section name
+        'type' => 'text',
+    ));
+
+    $wp_customize->add_setting('footer_contact_donate_url', array(
+        'default' => '#',
+        'sanitize_callback' => 'esc_url_raw',
+    ));
+
+    $wp_customize->add_control('footer_contact_donate_url', array(
+        'label' => 'Donate Button URL',
+        'section' => 'footer_columns', // Use your existing footer section name
+        'type' => 'url',
+    ));
 }
 add_action('customize_register', 'mytheme_footer_customizer');
 

@@ -26,6 +26,8 @@
                     $city = get_theme_mod('footer_contact_city');
                     $address = get_theme_mod('footer_contact_address');
                     $phone = get_theme_mod('footer_contact_phone');
+                    $donate_text = get_theme_mod('footer_contact_donate_text', 'Donate');
+                    $donate_url = get_theme_mod('footer_contact_donate_url', '#');
                     ?>
 
                     <?php if ($business_name): ?>
@@ -42,6 +44,14 @@
 
                     <?php if ($phone): ?>
                         <li>Phone: <?php echo esc_html($phone); ?></li>
+                        
+                    <?php endif; ?>
+                          <?php if ($donate_text && $donate_url && $donate_url !== '#'): ?>
+                        <li class="footer-donate-button">
+                            <a href="<?php echo esc_url($donate_url); ?>" class="donate-btn" target="_blank">
+                                <?php echo esc_html($donate_text); ?>
+                            </a>
+                        </li>
                     <?php endif; ?>
                 </ul>
             </div>
@@ -72,36 +82,6 @@
         </div>
     </div>
 </footer>
-<!-- <button id="backToTop" class="back-to-top" aria-label="Back to top">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
-    </svg>
-</button> -->
-<script>
-    // Back to Top functionality
-    document.addEventListener('DOMContentLoaded', function () {
-        const backToTopButton = document.getElementById('backToTop');
-
-        if (backToTopButton) {
-            // Show/hide back to top button based on scroll position
-            window.addEventListener('scroll', function () {
-                if (window.pageYOffset > 300) {
-                    backToTopButton.classList.add('show');
-                } else {
-                    backToTopButton.classList.remove('show');
-                }
-            });
-
-            // Back to top click handler
-            backToTopButton.addEventListener('click', function () {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            });
-        }
-    });
-</script>
 <?php wp_footer(); ?>
 </body>
 

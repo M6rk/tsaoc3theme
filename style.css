@@ -25,7 +25,7 @@ Version: 1.0
 }
 
 .header-cover {
-    max-height: 492px !important;
+    max-height: 492px;
     height: 200%;
     min-height: 425px;
     overflow: hidden;
@@ -37,23 +37,23 @@ Version: 1.0
 .wp-block-column h4,
 .wp-block-column h5,
 .wp-block-column h6 {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .wp-block-column p {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .wp-block-column img {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 /*Cover height to match */
 .header-cover {
-    max-height: 390px !important;
+    max-height: 390px;
     min-height: 390px;
     height: 390px;
     overflow: hidden;
@@ -76,8 +76,8 @@ p {
     margin-right: clamp(3rem, 30vw, 400px);
     margin-top: 1rem;
     margin-bottom: 1.5rem; 
-    font-size: 1.1rem !important;
-    line-height: 1.8 !important; 
+    font-size: 1.1rem;
+    line-height: 1.8; 
 }
 
 .wp-block-cover h1,
@@ -140,17 +140,17 @@ h1.entry-title,
 h1.page-title,
 .wp-block-post-title,
 h1 {
-    color: #CC0000 !important;
-    font-size: clamp(2rem, 4vw, 2.8rem) !important;
-    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif !important;
-    text-align: center !important;
-    margin-bottom: 2rem !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    margin-top: 0 !important;
-    font-weight: 600 !important;
+    color: #CC0000;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    text-align: center;
+    margin-bottom: 2rem;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    font-weight: 600;
     position: relative;
-    padding-bottom: 1rem !important;
+    padding-bottom: 1rem;
 }
 
 /* Underline to headings */
@@ -175,16 +175,16 @@ h1::after {
     h1.page-title,
     .wp-block-post-title,
     h1 {
-        font-size: 2rem !important;
-        padding-bottom: 0.8rem !important;
+        font-size: 2rem;
+        padding-bottom: 0.8rem;
     }
     
     .wp-block-post-content p,
     .entry-content p,
     .page-content p {
-        font-size: 1rem !important;
-        margin-left: clamp(1rem, 5vw, 2rem) !important;
-        margin-right: clamp(1rem, 5vw, 2rem) !important;
+        font-size: 1rem;
+        margin-left: clamp(1rem, 5vw, 2rem);
+        margin-right: clamp(1rem, 5vw, 2rem);
     }
 }
 
@@ -807,6 +807,29 @@ footer p {
 .charitable-registration {
     font-size: 0.9rem;
     color: #666;
+}
+
+.footer-donate-button {
+    margin-top: 1rem !important;
+}
+
+.donate-btn {
+    background: #EE2D3D !important;
+    color: white !important;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none !important;
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: inline-block;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+.donate-btn:hover {
+    background: #CC0000 !important;
+    border-color: #CC0000;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(204, 0, 0, 0.3);
 }
 
 /* ========================================
