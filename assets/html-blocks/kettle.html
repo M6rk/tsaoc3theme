@@ -1,0 +1,173 @@
+<style>
+.volunteer-opportunities-section {
+    max-width: 1200px;
+    margin: 0 auto 2rem auto;
+    padding: 2rem;
+}
+
+.volunteer-opportunities-container {
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.volunteer-opportunities-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.volunteer-opportunities-text {
+    color: #333;
+    line-height: 1.6;
+}
+
+.volunteer-opportunities-title {
+    color: #CC0000;
+    font-size: clamp(1.8rem, 3vw, 2.2rem);
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    margin-bottom: 1rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+    font-weight: 600;
+}
+
+.volunteer-opportunities-title::after {
+    display: none !important;
+}
+
+.volunteer-opportunities-description {
+    font-size: clamp(1rem, 2vw, 1.1rem);
+    color: #555;
+    margin-bottom: 1.5rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+}
+
+.volunteer-opportunities-contact {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+}
+
+.volunteer-opportunities-contact p {
+    margin: 0.5rem 0 !important;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.volunteer-opportunities-contact a {
+    color: #CC0000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.volunteer-opportunities-contact a:hover {
+    color: #005AAA;
+    text-decoration: underline;
+}
+
+.volunteer-opportunities-button {
+    display: inline-block;
+    background: #CC0000;
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.volunteer-opportunities-button:hover {
+    background: #EE2D3D;
+    transform: translateY(-2px);
+    color: white;
+    text-decoration: none;
+}
+
+.volunteer-opportunities-image {
+    position: relative;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+.volunteer-opportunities-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+    transition: transform 0.3s ease;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .volunteer-opportunities-section {
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .volunteer-opportunities-container {
+        padding: 1.5rem;
+        border-radius: 16px;
+    }
+    
+    .volunteer-opportunities-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .volunteer-opportunities-image {
+        height: 280px;
+        border-radius: 12px;
+    }
+    
+    .volunteer-opportunities-contact {
+        padding: 1.25rem;
+    }
+    
+    .volunteer-opportunities-contact p {
+        font-size: 1rem;
+    }
+    
+    .volunteer-opportunities-button {
+        font-size: 1rem;
+        padding: 0.7rem 1.5rem;
+    }
+}
+</style>
+
+<div class="volunteer-opportunities-section">
+    <div class="volunteer-opportunities-container">
+        <div class="volunteer-opportunities-content">
+            <div class="volunteer-opportunities-text">
+                <h2 class="volunteer-opportunities-title">Kettle Volunteers</h2>
+                <p class="volunteer-opportunities-description">
+                    The Salvation Army Kettle Campaign is one of Canada’s most recognized annual charitable events. Every holiday season, our iconic red kettles appear at locations throughout the community, raising vital funds to support local programs and services.
+                </p>
+                <p class="volunteer-opportunities-description">
+                    Kettle volunteers are the heart of this campaign! By giving just a few hours of your time to ring the bell and greet donors, you help make a real difference for individuals and families in need in our community.
+                </p>
+                <div class="volunteer-opportunities-contact">
+                    <p><strong>Interested in volunteering as a Kettle Host? Please contact our Volunteer and Kettle Coordinator, Angela Stadnyk:</strong></p>
+                    <p><strong>Tel:</strong> <a href="tel:+12508602329">(250) 860-2329 ext. 105</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:Angela.Stadnyk@salvationarmy.ca">Angela.Stadnyk@salvationarmy.ca</a></p>
+                </div>
+            </div>
+            <div class="volunteer-opportunities-image">
+                <img src="https://kelownasalvationarmy.ca/wp-content/uploads/2025/08/Become-a-kettle-bell-volunteer-1.png" alt="Salvation Army Kettle Volunteer" />
+            </div>
+        </div>
+    </div>
+</div>

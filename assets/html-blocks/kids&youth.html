@@ -202,6 +202,14 @@
         text-decoration: underline;
     }
 
+    /* Make the contact section span full width and center it */
+    .contact-section-wide {
+        width: 100%;
+        max-width: none;
+        margin: 2rem 0 0 0;
+        display: block;
+    }
+
     /* Mobile Responsiveness */
     @media screen and (max-width: 768px) {
         .kids-youth-wrapper {
@@ -247,6 +255,11 @@
         .contact-info {
             padding: 1rem;
         }
+        .contact-section-wide {
+            width: 100%;
+            max-width: none;
+            margin: 2rem 0 0 0;
+        }
     }
 </style>
 
@@ -268,7 +281,7 @@
 
                 <div class="content-section">
                     <p>Okanagan Central Community Church loves children. During the Sunday Gathering, children ages 2 to 12 are
-                        invited to attend children's church during the adult sermon.</p>
+                        invited to attend children's church during the adult sermon.</p><br><br><br>
                 </div>
 
                 <div class="quote-section">
@@ -291,7 +304,7 @@
 
                 <div class="content-section">
                     <p>Okanagan Central Community Church seeks to provide a place where youth can discover and develop a deep,
-                        meaningful relationship with Jesus Christ. We also want them to seek joy in service to the Church
+                        meaningful relationship with Jesus Christ. We also want them to seek to find joy in service to the Church
                         and the community.</p>
                 </div>
 
@@ -300,18 +313,19 @@
                         walk humbly with your God."</p>
                     <p class="quote-attribution">Micah 6:8b (NLT)</p>
                 </div>
+            </div>
+        </div>
 
-                <div class="contact-section">
-                    <h3>Youth Ministry Contact</h3>
-                    <p>For more information on our youth programs, please reach out to our Youth Ministries Coordinator:</p>
+        <!-- Youth Ministry Contact section moved outside the columns and full width -->
+        <div class="contact-section contact-section-wide">
+            <h3>Youth Ministry Contact</h3>
+            <p>For more information on our youth programs, please reach out to our Youth Ministries Coordinator:</p>
 
-                    <div class="contact-info">
-                        <p><strong>Nathan Bennett</strong><br>Youth Ministries Coordinator</p>
-                        <p><strong>Email:</strong> <a
-                                href="mailto:Nathan.Bennett2@salvationarmy.ca">Nathan.Bennett2@salvationarmy.ca</a></p>
-                        <p><strong>Tel:</strong> <a href="tel:+17785831047">(778) 583-1047</a></p>
-                    </div>
-                </div>
+            <div class="contact-info">
+                <p><strong>Nathan Bennett</strong><br>Youth Ministries Coordinator</p>
+                <p><strong>Email:</strong> <a
+                        href="mailto:Nathan.Bennett2@salvationarmy.ca">Nathan.Bennett2@salvationarmy.ca</a></p>
+                <p><strong>Tel:</strong> <a href="tel:+17785831047">(778) 583-1047</a></p>
             </div>
         </div>
     </div>
